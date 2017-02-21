@@ -1,0 +1,16 @@
+
+<div class="hb data string col-sm-6">
+    <label class="hb control-label">
+        <span ng-if="node.required" class="simpleHb__asterix">*</span>
+        {{node.title | translate | emptyTranslate}}
+    </label>
+    <div class="hb" ng-if="node.schema.enum" hb-enum="node"></div>
+    <div class="hb" ng-if="!node.schema.enum">
+        <span class="hb error-color" ng-show="node.error">{{ node.validationMessage | translate | emptyTranslate}}</span>
+        <input id="{{node.fullName}}" type="text" ng-model="node.value" class="simpleHb__imageCapture_field hb form-control" ng-class="{error: node.error}"
+               ng-change="node.validate()" hb-field="node"/>
+
+        <image-capture model="node.value"></image-capture>
+    </div>
+
+</div>

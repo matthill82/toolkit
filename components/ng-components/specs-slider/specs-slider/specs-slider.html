@@ -1,0 +1,22 @@
+<div>
+	<a class="spec-slider-toggle btn btn-cws pull-right" ng-click="open()"><span class="{{toggleIcon}}"></span></a>
+	
+	<aside class="drctv-specs-slider specs-slider" ng-click="close()" ng-class="{'specs-slider-open': visible}">
+		<div class="specs-slider-panel" ng-style="!!panelWidth && {'width': panelWidth}" ng-click="$event.stopPropagation()">
+			
+			<div class="specs-slider-header">
+				<div class="specs-slider-title-bar">
+					<h1 ng-bind="::title"></h1>
+					<a class="{{ ::closeIconClass }}" ng-click="close()"></a>
+					<a class="{{ ::resetIconClass }}" ng-click="reset()"></a>
+				</div>
+			</div>
+
+			<ng-include src="overlayPath" class="specs-slider-included-content"></ng-include>
+
+			<div class="specs-slider-footer">
+				<button ng-click="goTo(ctaPath)" ng-bind="::ctaLabel" class="btn btn-cws"></button>
+			</div>
+		</div>
+	</aside>
+</div>

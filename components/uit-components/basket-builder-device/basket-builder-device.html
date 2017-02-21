@@ -1,0 +1,61 @@
+<div class="basketBuilderDevice">
+    <div class="basketBuilderDevice" ng-click="$ctrl.handleClick($event)">
+        <uit-title-block title="Phone"></uit-title-block>
+        <div class="basketBuilderDevice__image"
+             ng-class="{'basketBuilderDevice__image--expand' : $ctrl.expand, 'basketBuilderDevice__image--closed' : !$ctrl.expand }">
+            <div class="basketBuilderDevice__image-inner">
+                <button class="basketBuilderDevice__image-button" ng-click="$ctrl.goTo($ctrl.imageLink)"><img ng-src="{{ :: $ctrl.setImage | relativeUrl }}"></button>
+            </div>
+            <div ng-show="$ctrl.expand" class="basketBuilderDevice__button-container"
+                 ng-init="!$ctrl.model.imeiScanned">
+                <button ng-click="$ctrl.goTo($ctrl.imeiLink)" ng-class="{'imei--scanned': $ctrl.model.imeiScanned}"
+                   class="basketBuilderDevice__button">
+                    <span ng-if="$ctrl.model.imeiScanned" class="{{:: $ctrl.buttonActiveIcon }}"></span>
+                    {{ $ctrl.model.imeiScanned ? $ctrl.buttonLabelActive : $ctrl.buttonLabel }}
+                </button>
+            </div>
+        </div>
+        <uit-modal params='{"url" : $ctrl.setImage, "description" : $ctrl.setImage.desciption }' type="custom" size="md">
+            <div class="uitModal__body">
+                <div class="uitModal__image">
+                    <img alt="{{ :: $ctrl.params.description}}" title="{{ :: $ctrl.params.description}}" ng-src="{{ :: $ctrl.params.url}}" />
+                </div>
+            </div>
+        </uit-modal>
+        <div class="basketBuilderDevice__details">
+            <div class="basketBuilderDevice__details-inner">
+                <div class="basketBuilderDevice__details-inner-item-top">
+                    <div class="basketBuilderDevice__details-inner__title">
+                        <h3>{{ ::$ctrl.model.data.device.model }} {{ :: $ctrl.model.data.device.manufacturer }}</h3>
+                    </div>
+                    <div class="basketBuilderDevice__details-inner__sub-title">
+                        <ul>
+                            <li>{{ :: $ctrl.model.data.device.capacity.amount }} {{
+                                ::$ctrl.model.data.device.capacity.unit
+                                }} {{ :: $ctrl.model.data.device.colour }}
+                            </li>
+                            <li>{{ :: $ctrl.model.selectedOffering.terminMonths }} {{::
+                                $ctrl.model.selectedOffering.termLengthUnits }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div ng-show="$ctrl.expand">
+                    <div class="basketBuilderDevice__details-inner-item-middle">
+                        <button class="basketBuilderDevice__plain" ng-click="$ctrl.goTo($ctrl.detailsLink)" ng-click="$event.stopPropagation()"><span
+                            class="{{:: $ctrl.detailsIcon }}"></span> {{::$ctrl.detailsLabel}}</button>
+                    </div>
+
+                    <div class="basketBuilderDevice__details-inner-item">
+                        <div class="basketBuilderDevice__details-inner-item-edit pull-right">
+                            <button class="basketBuilderDevice__plain" ng-click="$ctrl.goTo($ctrl.editLink)" ng-click="$event.stopPropagation()"><span
+                                class="{{:: $ctrl.editIcon }}"></span> {{::
+                                $ctrl.editLabel}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

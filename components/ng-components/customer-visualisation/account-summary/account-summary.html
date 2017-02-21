@@ -1,0 +1,15 @@
+<div class="customer" ng-if="$ctrl.account !== undefined">
+    <h5 class="customer-heading-title">Customer Account Summary</h5>
+    <!-- grab the attr on the component and that value will be revealed -->
+    <h6 class="block">Full Name</h6>
+    <p>{{ $ctrl.account.billingName.firstName + ' ' +  $ctrl.account.billingName.lastName }}</p>
+
+    <h6>Billing Address</h6>
+    <p>{{$ctrl.account.billingAddress.line1}}</p>
+    <p>{{$ctrl.account.billingAddress.city}}</p>
+    <p>{{$ctrl.account.billingAddress.zipCode}}</p>
+
+    <h6>Device Availability</h6>
+    <p></p>
+
+</div>

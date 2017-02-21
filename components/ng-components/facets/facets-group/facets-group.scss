@@ -1,0 +1,183 @@
+.prsi-list {
+    font-size: $prsi-button-fs;
+    margin: -10px -5px 0;
+    padding: 0;
+    list-style: none;
+
+    .col {
+        padding: 0 5px;
+    }
+
+    .prsi-list-button {
+        width: 100%;
+        height: 60px;
+        margin-top: 10px;
+        padding: 5px;
+        color: $prsi-button-color;
+        border: 1px solid $prsi-button-border;
+        border-radius: 5px;
+        outline: 0;
+        background: $prsi-button-bg;
+        box-shadow: none;
+    }
+
+    .facet-icon {
+        display: block;
+        height: 30px;
+        background-color: transparent;
+        background-position: 50% 50%;
+        background-size: contain;
+    }
+
+    .active {
+        .prsi-list-button {
+            color: $prsi-button-active-color;
+            border: 2px solid $prsi-button-active-border;
+            background-color: $prsi-button-active-bg;
+        }
+    }
+}
+
+.prsi-show-hide-button {
+    font-family: $font-family-base;
+    font-size: $prsi-show-hide-fs;
+    font-weight: $font-family-base-weight;
+    line-height: $prsi-show-hide-lh;
+    margin-top: 10px;
+    padding: 0;
+    color: $prsi-show-hide-color;
+    border: 0;
+    outline: none;
+    background: none transparent;
+    box-shadow: none;
+
+    .show-hide-icon {
+        line-height: 1;
+        font-size: 17px;
+        top: -2px;
+    }
+}
+
+//
+// Dropdown mode
+//
+.prsi-display-mode-dropdown {
+    position: relative;
+    width: 100%;
+
+    &.prsi-show-icons-false {
+        .prsi-list-button {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .prsi-dd-handle {
+            .prsi-list-button {
+                padding-left: 0;
+
+                span {
+                    margin-top: -5px;
+                    float: left;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .prsi-list {
+        position: absolute;
+        z-index: 4;
+        top: 35px;
+        width: 100%;
+        box-shadow: 0 3px 3px;
+        color: $prsi-button-color;
+        border: $prsi-button-border;
+        background: $prsi-dd-bg;
+        margin: 0;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .col {
+            width: 100%;
+            padding: 0;
+            border-bottom: $prsi-button-border;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        .active {
+            color: $prsi-button-active-color;
+            background-color: $prsi-button-active-bg;
+
+            .prsi-list-button {
+                border: 0;
+            }
+        }
+    }
+
+    .prsi-list-button {
+        margin: 0;
+        border: 0;
+        float: left;
+        width: 100%;
+        height: 30px;
+
+        span {
+            height: 20px;
+        }
+    }
+
+
+}
+.prsi-list-wrapper {
+    position: relative;
+    margin-top: 10px;
+}
+
+.prsi-dd-handle {
+    float: left;
+    width: 100%;
+    border: $prsi-button-border;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+    text-align: left;
+    line-height: 30px;
+    overflow: hidden;
+    color: $prsi-button-color;
+    background: $prsi-button-bg;
+    outline: 0;
+
+    .prsi-dd-handle-icon {
+        float: right;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 10px;
+        background: $prsi-dd-arrow-bg;
+        color: $prsi-dd-arrow-color;
+        top: 0;
+        text-align: center;
+    }
+
+
+    .prsi-list {
+        display: inline;
+        box-shadow: none;
+        position: static;
+        border: 0;
+
+        .prsi-list-button {
+            margin-right: -30px;
+        }
+
+        .prsi-any-label {
+            margin-top: -5px;
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

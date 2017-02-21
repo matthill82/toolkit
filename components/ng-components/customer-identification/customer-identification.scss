@@ -1,0 +1,18 @@
+.customerIdentification {
+    background-color: $customer-identification-background-color;
+    margin: auto;
+    padding: 30px;
+    width: 312px;
+}
+
+.customerIdentification__label {
+    color: $customer-identification-label-color;
+    font-size: 14px;
+    &:not(:first-child) {
+        padding-top: 20px;
+    }
+}
+
+.customerIdentification__details {
+    font-size: 20px;
+}

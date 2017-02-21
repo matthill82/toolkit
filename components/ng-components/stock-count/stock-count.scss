@@ -1,0 +1,32 @@
+.stock-counter {
+	color: $stock-count-text-color;
+	font-family: $stock-count-font-family;
+}
+
+.details-container {
+	.stock-counter-container {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width: 100%;
+		text-align: right;
+		border-bottom: 1px solid $stock-count-border-color;
+	}
+}
+
+.product-slide {
+	.product-stock-counter {
+		padding-top: 10px;
+		width: 100%;
+		text-align: right;
+		.stock-counter {
+			padding-bottom: 3px;
+		}
+	}
+}
+
+.stock-counter-container {
+	margin-top: 4px;
+	.stock-counter {
+		font-size: $stock-count-font-size;
+	}
+}

@@ -1,0 +1,37 @@
+<div class="header" ng-class="{ 'header--fixed': $ctrl.headerType, 'header--relative': !$ctrl.headerType }">
+    <div class="header__left" ng-controller="NavigationMenuController">
+        <span class="header__burger-menu {{ :: $ctrl.burgerIcon }}"
+              ng-class="{ 'cwsicon cwsicon-hamburger' : !$ctrl.burgerIcon }" ng-click="$ctrl.openBurgerMenu()">
+            <span class="header__updates" ng-class="{'header__found': $ctrl.updatesFound}"></span>
+        </span>
+        <div ng-model="user" ng-class="{'header__welcome-message--hide': !$ctrl.hasValidUser()}"
+             class="header__welcome-message">
+            <span class="header__avatar">
+                <img ng-class="{'header__disabled': $ctrl.hideAvatars === 'true'}"
+                     ng-src="{{ :: $ctrl.defaultAvatar }}">
+            </span>
+            <span class="header_text">{{ :: $ctrl.getAvatarMsg() }}</span>
+            <uit-insert-placeholder uip-style-class="header__name"
+                              uip-sentence="$ctrl.avatarMsg"
+                              uip-replace-text="$ctrl.user.meta.firstName">
+            </uit-insert-placeholder>
+        </div>
+    </div>
+    <div class="header__logo-container">
+        <img
+            class="header__logo"
+            ng-class="{'header__active': $ctrl.showModalFlag, 'header__disabled': $ctrl.isModalHidden === 'true'}"
+            ng-click="$ctrl.openRestart($ctrl.isModalHidden, $ctrl.headerTemplate)"
+            ng-src="{{ :: $ctrl.logoImg }}">
+    </div>
+    <div class="header__right">
+        <span class="header__store-label">
+            <uit-insert-placeholder uip-style-class="header__store"
+                              uip-sentence="$ctrl.storeLabel"
+                              uip-replace-text="$ctrl.user.meta.depth1Name[0]">
+            </uit-insert-placeholder>
+        </span>
+        <a href ng-click="$ctrl.goToRoute($ctrl.basketLink)"><span
+            class="header__basket-icon {{ :: $ctrl.basketIcon }}"></span></a>
+    </div>
+</div>

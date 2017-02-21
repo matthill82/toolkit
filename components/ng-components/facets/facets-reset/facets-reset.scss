@@ -1,0 +1,17 @@
+.drctv-facets-reset {
+    float: right;
+    margin-bottom: 20px;
+
+    button {
+        font-size: $prs-reset-fs;
+        font-weight: $prs-reset-fw;
+        line-height: 30px;
+        padding: 0 5px;
+
+        .reset-icon {
+            font-size: 20px;
+            font-weight: 400;
+            margin-right: 5px;
+        }
+    }
+}

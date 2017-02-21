@@ -1,0 +1,10 @@
+<ul class="benefits" ng-if="$ctrl.benefits.length" same-height="benefits">
+    <li
+        ng-if="benefitCategory.length"
+        ng-repeat="benefitCategory in $ctrl.benefits | limitTo : $ctrl.benefitsLimit"
+    >
+        <span ng-repeat="benefit in :: benefitCategory">
+            {{ :: benefit.value }}&nbsp;
+        </span>
+    </li>
+</ul>

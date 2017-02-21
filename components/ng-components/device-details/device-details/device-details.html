@@ -1,0 +1,52 @@
+<div class="component row">
+    <div class="col-xs-3">
+        <a ng-click="dd.saveDevice(dd.device.id, buyLink)">
+            <img id="featureImg" class="feature-img" title="{{dd.fullName}}" ng-src="{{dd.featureImg}}" alt="{{dd.fullName}}">
+        </a>
+    </div>
+    <div class="col-xs-8 device-details">
+        <h1>{{dd.device.manufacturer | htmlToPlaintext}} {{dd.device.name | htmlToPlaintext}}</h1>
+        <p class="intro">{{dd.device.description}} <!----the following read more/less needs implemented ---> </p> 
+        <div class="device-details">
+            <h2 ng-if="dd.device.available_colours.length <= 1 && dd.capacitiesIsOneOrLess()">{{colourSizeOneOptionMsg}}</h2> 
+            <h2 ng-if="dd.device.available_colours.length <= 1 && !dd.capacitiesIsOneOrLess()">{{colourSizeOneColourMsg}}</h2>
+            <h2 ng-if="dd.device.available_colours.length > 1 && dd.capacitiesIsOneOrLess()">{{colourSizeOneCapacityMsg}}</h2>
+            <h2 ng-if="dd.device.available_colours.length > 1 && !dd.capacitiesIsOneOrLess()">{{colourSizeMsg}}</h2>
+            <ul class="colors">
+                <li ng-repeat="color in dd.device.available_colours" ng-class="{active: dd.isActiveColor($index)}">
+                    <a href="javascript:;" ng-click="dd.selectColor($index)">
+                        <div class="circle" style="background-color:{{color.hex}}"></div>
+                        <p>{{color.name}}</p>
+                    </a>
+                </li>
+            </ul>			
+            <ul class="capacity" ng-if="dd.capacitiesExists()">
+                <li ng-repeat="capacity in dd.device.available_capacities" ng-class="{active: dd.isActiveCapacity($index)}">
+                    <a href="javascript:;" ng-click="dd.selectCapacity($index)">
+                        <p>{{capacity.amount}}{{capacity.unit}}</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="capacity" ng-if="dd.deviceHasCapacity() && (!dd.capacitiesExists())">
+                <li class="active">
+                    <a href="javascript:;">
+                        <p>{{dd.device.capacity[0].amount}}{{dd.device.capacity[0].unit}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h2 >{{buyMsg}}</h2>
+        <p>{{phoneLabel}} {{dd.fullName}}</p>
+        <div class="btn-buy">
+            <a class="btn btn-cws" role="button" ng-click="dd.saveDevice(dd.device.id, buyLink, actionMode)" >{{buyLabel}}</a>
+        </div>
+    </div>
+	<div class="col-xs-1 device-details">
+		
+		<div  class="actions dr-button-next-previous component">
+			<a style="{{fwdButtonXOffsetStyle}}" ng-click="dd.saveDevice(dd.device.id, buyLink, true)"><span class="{{fwdButtonIcon}}" aria-hidden="true" style="{{fwdButtonIconSizeStyle}}"></span><span class="sr-only">{{fwdButtonLabel}}</span></a>
+		</div>
+		
+
+	</div>
+</div>

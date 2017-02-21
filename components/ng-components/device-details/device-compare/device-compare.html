@@ -1,0 +1,15 @@
+<div
+    ng-class="{'not-visible': $ctrl.compareIsHidden == 'true'}"
+    ng-switch="$ctrl.isCompare == 'true' ? 'COMPARE_SCREEN' : 'STANDARD'"
+>
+    <a
+        class="compare-icon cwsicon {{ $ctrl.isInCompare() ? $ctrl.compareActive : $ctrl.compareInactive }}"
+        ng-click="$ctrl.addRemoveCompare()"
+        ng-switch-when="STANDARD"
+    ></a>
+    <a
+        class="bin-compare {{ :: $ctrl.removeFromCompareIcon }}"
+        ng-click="$ctrl.removeCompare($event)"
+        ng-switch-when="COMPARE_SCREEN"
+    ></a>
+</div>

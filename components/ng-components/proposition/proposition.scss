@@ -1,0 +1,174 @@
+.proposition-item {
+    margin-bottom: 20px;
+    border: 1px solid $propl-border-color;
+    border-top-width: 3px;
+    float: left;
+    width: 100%;
+    position: relative;
+
+    .col-xs-3-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+    }
+    .proposition-img-wrapper {
+        position: absolute;
+        top: -12px;
+        bottom: -12px;
+        left: -11px;
+        right: -11px;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.proposition-container {
+    float: left;
+    width: 100%;
+
+    .proposition-box-inclusion {
+        padding: 15px 0 0;
+        border-left: 1px solid $propl-border-color;
+    }
+
+    .proposition-title {
+         font-size: 23px;
+         margin: 0;
+    }
+    .product-number {
+        font-size: 12px;
+    }
+
+    .proposition-row {
+        margin-right: 0;
+        margin-left: 0;
+
+        .manufacturer-logo {
+            display: inline-block;
+            min-height: 85px;
+            width: 100%;
+            background-position: 50%;
+            background-size: contain;
+        }
+
+        .inclusions-container {
+            background-color: $b-inclusions-background;
+            padding: 10px 0;
+
+            .inclusions {
+                margin-top: 6px;
+                padding: 5px 0;
+                text-align: center;
+                border-right: 1px solid $b-inclusions-container-background;
+            }
+
+            div {
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+
+    .proposition-row-details {
+        padding-bottom: 0;
+        border-top: 1px solid $propl-border-color;
+        text-align: center;
+
+        .icon {
+            width: 100%;
+            color: $propl-icon-color;
+        }
+    }
+
+    .media {
+        margin-top: 15px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .media-left,
+        .media-right,
+        .media-body {
+            font-size: $b-featurebox-size;
+            font-weight: $b-featurebox-weight;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .media-left,
+        .media > .pull-left {
+            padding-right: 10px;
+        }
+
+        .media-middle {
+            vertical-align: middle;
+        }
+
+        .media-object {
+            width: 60px;
+        }
+    }
+
+    .value {
+        font-family: $b-inclusions-value-font-family;
+        font-size: $b-inclusions-value-size;
+        font-weight: $b-inclusions-value-weight;
+        line-height: $b-inclusions-value-fontheight;
+        margin-top: 8px;
+        color: $b-inclusions-value-color;
+    }
+
+    .label {
+        font-family: $b-inclusions-unit-font-family;
+        font-size: $b-inclusions-unit-size;
+        font-weight: $b-inclusions-unit-weight;
+        color: $b-inclusions-unit-color;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .proposition-box-price {
+        text-align: right;
+
+        .price {
+            font-family: $b-price-value-font-family;
+            font-size: $b-price-value-size;
+            font-weight: $b-price-value-weight;
+            line-height: $b-price-value-fontheight;
+            padding: 0;
+            padding-top: 9px;
+            color: $b-price-value-color;
+        }
+
+        .saving-amount {
+            font-family: $b-price-value-font-family;
+            font-size: $b-upprice-value-size;
+            font-weight: $b-price-value-weight;
+            line-height: $b-upfront-price-value-fontheight;
+            color: $b-price-value-color;
+        }
+    }
+
+    .cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent none;
+        box-shadow: none;
+    }
+}

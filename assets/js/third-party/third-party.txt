@@ -1,0 +1,26 @@
+Slick Carousel (Device Selector) - MIT
+http://vasyabigi.github.io/angular-slick/
+
+Filter - MIT
+https://github.com/a8m/angular-filter
+
+Angular Slider - rzslider.min
+https://github.com/angular-slider/angularjs-slider
+
+Angular Toast
+https://github.com/CodeSeven/toastr/tree/v1.2.2
+http://codeseven.github.io/toastr/demo.html
+
+Data Swarm
+Architecture: https://confluence.cwscloud.net/display/FE/honeyBee+Data+Swarm+Integration
+Integration: https://confluence.cwscloud.net/display/TS/Integration+Guide
+requires bluebird.min.js
+API URLS: 
+author.recommend-qa.cwscloud.net
+publisher.recommend-qa.cwscloud.net
+psi.recommend-qa.cwscloud.net
+frontend.recommend-qa.cwscloud.net
+reporting-api.recommend-qa.cwscloud.net
+tracker-api.recommend-qa.cwscloud.net
+ui.recommend-qa.cwscloud.net
+client.recommend-qa.cwscloud.net

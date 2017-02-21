@@ -1,0 +1,87 @@
+<carousel-container class="ml-customers-list" ng-if="$ctrl.customers.length" ng-class="{'dragged': $ctrl.dragged}">
+    <carousel-go-to class="ml-customers-carousel-left" direction="previous" icon="{{ :: $ctrl.leftButtonIcon }}" text="{{ :: $ctrl.leftButtonText }}"></carousel-go-to>
+    <div class="ml-customers-carousel">
+        <carousel slides-shown="4">
+            <div ng-repeat="customer in $ctrl.customers track by $index"
+                class="ml-customers-tile ml-customers-tile-group-{{ customer.groupId }}"
+                ng-class="{'ml-customers-tile-dragged': $ctrl.draggedIndex === $index}"
+            >
+                <div class="ml-tile-image">
+                    <div ng-if="customer.selections.device.id === undefined">
+                        <img ng-src="{{ $ctrl.deviceEmptyImage }}" />
+                    </div>
+                    <div ng-if="customer.selections.device.id !== undefined" ng-switch="customer.selections.device.available_colours[customer.selections.deviceColor].imagery[0].url ? 'HAS_IMAGE' : 'NO_IMAGE' ">
+                        <img ng-switch-when="HAS_IMAGE" ng-src="{{ customer.selections.device.available_colours[customer.selections.deviceColor].imagery[0].url }}" alt="">
+                        <img ng-switch-when="NO_IMAGE" ng-src="{{ customer.selections.device.available_colours[0].imagery[0].url }}" alt="">
+                    </div>
+                </div>
+
+                <div class="ml-tile-info">
+
+                    <div class="ml-tile-top-line">
+
+                        <div class="ml-tile-top-checkbox">
+                            <input type="checkbox" name="select" ng-click="$ctrl.toggleCustomer($index)" ng-checked="customer.selected" id="select-customer-{{$index}}" />
+                        </div>
+
+                        <label for="select-customer-{{$index}}" class="ml-tile-customer-name">{{ customer.name }}</label>
+
+                        <div class="ml-tile-top-remove">
+                            <a class="ml-tile-top-remove-button {{ $ctrl.removeButtonIcon }}" ng-click="$ctrl.removeCustomer($index)"></a>
+                        </div>
+
+                    </div>
+
+                    <div class="ml-tile-customer-number">{{ customer.lineNumber }}</div>
+
+                    <ng-switch on="customer.selections.deviceDisplayName ? 'HAS_DEVICE' : 'NO_DEVICE'">
+                        <div class="ml-tile-device-name" ng-switch-when="HAS_DEVICE">{{ customer.selections.deviceDisplayName }}</div>
+                        <div class="ml-tile-device-name" ng-switch-when="NO_DEVICE">{{ $ctrl.deviceEmptyText }}</div>
+                    </ng-switch>
+
+                    <div class="ml-tile-payment-options dropdown" ng-if="$ctrl.displayMode !== 'simple'">
+                        <span class="dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              ng-click="$ctrl.isPaymentOptionsVisible = !$ctrl.isPaymentOptionsVisible"
+                              ng-class="{'ml-tile-payment-options-expanded': $ctrl.isPaymentOptionsVisible}"
+                        >
+                            {{ $ctrl.paymentOptionsLabel }}
+                            <span ng-if="$ctrl.paymentOptionsIcon" class="dropdown-toggle-icon {{ $ctrl.paymentOptionsIcon }}"></span>
+                        </span>
+
+
+                        <multi-line-payment-options
+                            ng-show="$ctrl.isPaymentOptionsVisible"
+                            customer-id="{{ $index }}"
+                            offerings="customer.hBCustomerOfferings"
+                            selected-offering="{{ customer.selections.hBofferingType }}"
+                            on-select="$ctrl.setPaymentOption(customerId, offeringKey)"
+                        ></multi-line-payment-options>
+
+                    </div>
+                </div>
+            </div>
+        </carousel>
+    </div>
+    <carousel-go-to class="ml-customers-carousel-right" direction="next" icon="{{ :: $ctrl.rightButtonIcon }}" text="{{ :: $ctrl.rightButtonText }}"></carousel-go-to>
+</carousel-container>
+
+<ul class="ml-dots list-unstyled" ng-if="$ctrl.groupingEnabled && $ctrl.customers.length" ng-class="{'dragged': $ctrl.dragged}">
+    <li ng-repeat="customer in $ctrl.customers track by $index"
+        class="ml-dots-item ml-dots-customer {{ $ctrl.isNumber(customer.groupId) ? 'ml-dots-group-' + customer.groupId : '' }}"
+        ng-class="{'dropzone': $ctrl.isNumber(customer.groupId) && $ctrl.draggedIndex !== $index}"
+        ng-click="$ctrl.toggleCustomer($index)"
+        group-id="{{ customer.groupId }}"
+    ></li>
+
+    <li class="ml-dots-separator"></li>
+
+    <li class="ml-dots-item ml-dots-add"
+        ng-class="{'dropzone': $ctrl.isDraggedInAGroup === false && $ctrl.isNumber($ctrl.newGroupId)}"
+    ></li>
+
+    <li class="ml-dots-item ml-dots-remove"
+        ng-class="{'dropzone': $ctrl.isDraggedInAGroup === true}"
+    ></li>
+</ul>

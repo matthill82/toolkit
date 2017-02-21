@@ -1,0 +1,13 @@
+<div class="dr-answer" ng-click="toggleAnswer(answer)">
+  <div class="dr-questions-icons" ng-class="{'active': isAnswerSelected(answer.id)}">
+    <div class="dr-answer-content">
+      <span ng-if="answer.icon !== ''" class="{{answer.icon}}" aria-hidden="true"></span>
+
+      <img ng-if="answer.image !== ''"
+           ng-src="{{ isAnswerSelected(answer.id) && answer.imageSelected ? answer.imageSelected : answer.image | relativeUrl  }}"/>
+
+      <span class="answer-text"
+            ng-class="{'answer-push-text': answer.text!=='' && (answer.image !=='' || answer.icon !== '' )}">{{answer.text}}</span>
+    </div>
+  </div>
+</div>

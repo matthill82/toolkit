@@ -1,0 +1,17 @@
+<div class="featuredProduct">
+    <h2 class="featuredProduct__header">{{ $ctrl.brand || $ctrl.product.device.manufacturer }}</h2>
+    <h2 class="featuredProduct__header">{{ $ctrl.title || $ctrl.product.device.name }}</h2>
+    <p class="featuredProduct__description">
+        {{ $ctrl.description }}
+    </p>
+    <uit-price-format
+        class="featuredProduct__price"
+        number="$ctrl.displayPrice"
+    ></uit-price-format>
+    <uit-product-select
+        on-select="$ctrl.select()"
+        on-is-selected="$ctrl.isSelected()"
+        select-text="{{ :: $ctrl.ctaSelectText }}"
+        selected-text="{{ :: $ctrl.ctaSelectedText }}"
+    ></uit-product-select>
+</div>

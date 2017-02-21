@@ -1,0 +1,63 @@
+<div class="container-fluid search-result-list">
+
+    <div class="row result-box"  ng-repeat="deviceObj in searchResults"
+         ng-init="product = deviceObj.item.hits.hits[0]._source">
+        <div class="panel panel-default panel-table">
+
+            <div class="panel-body">
+                <div class="tr">
+                    <div class="td image-block">
+                        <div class="product-image">
+                            <img src="{{product.device.available_colours[0].imagery[0].url}}"/>
+                        </div>
+                    </div>
+                    
+                    <div class="td content-td">
+                        <div class="tr tr-top">
+                            <div class="td td-processor"><img src="http://brain-images.cdn.dixons.com/file/86/80/00/00/intel_cpu_core_i3_4th_gen-868.png"/></div>
+                            <div class="td  header-td ">
+                                <div class="tr">
+                                    <div class="">
+                                        <h6>{{product.device.name}}</h6>
+                                    </div>   
+                                </div>
+                                <div class="tr">
+                                    <div class="product-code">product code: {{product.id}}
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="td td-price">£{{product.offering[0].upfrontPrice.net.value}}</div>
+
+                        </div>
+                        <div class="tr">
+                            <div class="td feature-box">
+                                <div class="feature-value">{{getFeatureValue(product,'Screen size','SCREEN',null)}}</div>
+                                <div class="feature-img"><img ng-if="getFeatureValue(product,'Screen size','SCREEN',null)" src="/static/core/assets/dam/size.gif"/></div>
+                            </div>
+                            <div class="td feature-box">
+                                <div class="feature-value">{{getFeatureValue(product,'Memory (RAM)','SPECIFICATION',null)}}</div>
+                                <div class="feature-img"><img ng-if="getFeatureValue(product,'Memory (RAM)','SPECIFICATION',null)" src="/static/core/assets/dam/grids.gif"/></div>
+                            </div>
+                            <div class="td feature-box">
+                                <div class="feature-value">{{getFeatureValue(product,'Processor','SPECIFICATION',getGHz)}}</div>
+                                <div class="feature-img"><img ng-if="getFeatureValue(product,'Processor','SPECIFICATION',getGHz)" src="/static/core/assets/dam/clock.gif"/></div>
+                            </div>
+                            <div class="td feature-box">
+                                <div class="feature-value">{{getFeatureValue(product,'Storage','SPECIFICATION',null)}}</div>
+                                <div class="feature-img"><img ng-if="getFeatureValue(product,'Storage','SPECIFICATION',null)" src="/static/core/assets/dam/ssd.gif"/></div>
+                            </div>
+                            <div class="td feature-box">
+                                <div class="feature-value">{{getFeatureValue(product,'Battery life','POWER',null)}}</div>
+                                <div class="feature-img"><img ng-if="getFeatureValue(product,'Battery life','POWER',null)" src="/static/core/assets/dam/battery.gif"/></div> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,174 @@
+// Slider
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  margin: 50px 0 20px;
+
+  .summarybox {
+    margin-bottom: 0;
+  }
+
+
+  .slick-disabled {
+    display: none !important;
+  }
+}
+
+
+.decrease-top-padding {
+    margin-top: 26px;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0 -15px 0 0;
+  padding: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+
+  &:focus {
+    outline: none;
+  }
+
+  .dragging {
+    //cursor: pointer;
+    cursor: hand;
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    &::before,
+    &::after {
+      display: table;
+      content: '';
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    .slick-slide {
+      //display: none;
+      float: left;
+      height: 100%;
+      min-height: 1px;
+
+      [dir='rtl'] {
+        float: right;
+      }
+
+      .slick-loading {
+        img {
+          display: none;
+        }
+
+        .slick-track {
+          visibility: hidden;
+        }
+
+        .slick-slide {
+          visibility: hidden;
+        }
+      }
+
+      .dragging {
+        img {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.slick-initialized {
+  .slick-slide {
+    display: block;
+  }
+}
+
+.slick-vertical {
+  .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+
+.slick-arrow {
+	display: inline-block !important;
+    position: absolute !important;
+    font-size: $dr-arrow-icon-size !important;
+    top: 90px !important;
+  .slick-hidden {
+    display: none;
+  }
+}
+
+.slick-prev {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2000;
+  opacity: .5;
+  width: 40px !important;
+  height: 70px !important;
+  background-position: initial !important;
+  background-repeat: no-repeat;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  left: 8px;
+}
+
+.slick-next {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2000;
+  opacity: .5;
+  width: 40px !important;
+  height: 70px !important;
+  background-position: initial !important;
+  background-repeat: no-repeat;
+  right: 8px !important;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.stick {
+  max-height: 101px;
+  overflow: hidden;
+}
+
+.slick-slide {
+  &:focus,
+  a {
+    outline: none;
+  }
+}
+
+

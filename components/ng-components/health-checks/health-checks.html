@@ -1,0 +1,22 @@
+<div class="health-checks">
+    <div class="health-checks-header row">
+        <div class="col-xs-3">
+            {{ :: $ctrl.headerTimeText }}
+        </div>
+        <div class="col-xs-3">
+            {{ :: $ctrl.headerNameText }}
+        </div>
+        <div class="col-xs-2">
+            {{ :: $ctrl.headerResponseTimeText }}
+        </div>
+        <div class="col-xs-4">
+            {{ :: $ctrl.headerResponseText }}
+        </div>
+    </div>
+    <ng-transclude></ng-transclude>
+    <button
+        class="health-checks-scan pull-right"
+        ng-click="$ctrl.scan()"
+        ng-disabled="$ctrl.scanning"
+    >{{ :: $ctrl.buttonScanText }}</button>
+</div>

@@ -1,0 +1,10 @@
+<div class="richtext">
+    <div class="richtext__info-box" ng-style="{'overflow-y': $ctrl.showMoreContent ? 'scroll' : 'hidden', 'height' : $ctrl.readMore ? $ctrl.initialHeight : 'auto'}">
+        <div class="{{:: $ctrl.childClass }}">
+            <div ng-transclude></div>
+        </div>
+    </div>
+    <div ng-if="$ctrl.readMore" ng-hide="$ctrl.showMoreContent">
+        <p ng-click="$ctrl.showHiddenContent()">{{ :: $ctrl.readMore }}</p>
+    </div>
+</div>

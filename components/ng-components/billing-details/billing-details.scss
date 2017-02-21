@@ -1,0 +1,22 @@
+.billingDetails {
+    display: flex;
+    flex-direction: column;
+    background-color: $billingDetails-background-color;
+    padding: 10px;
+
+    &__title {
+        flex: 1;
+    }
+    &__row {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0 0;
+    }
+    &__column {
+        flex: 1;
+        padding: 0;
+    }
+    &__details {
+        margin: 0;
+    }
+}

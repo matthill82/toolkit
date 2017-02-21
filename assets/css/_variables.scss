@@ -1,0 +1,109 @@
+// --- CWS Core Theme Colours --- //
+$primary-colour-1: #00224f !default;
+$primary-colour-2: #004299 !default;
+$primary-colour-3: #386d9a !default;
+$primary-colour-4: #e5f0ff !default;
+$primary-colour-5: #f9f9f9 !default;
+
+$secondary-colour-1: #008CA8 !default;
+$secondary-colour-2: #5a5b5c !default;
+$secondary-colour-3: #9c9c9c !default;
+$secondary-colour-4: #f3f4f6 !default;
+$secondary-colour-5: #e9eaeb !default;
+
+$prime-colour-1: #38c6f4 !default;
+$prime-colour-2: #fcaf17 !default;
+$prime-colour-3: #9d127d !default;
+$prime-colour-4: #fff !default;
+$prime-colour-5: #000 !default;
+
+$body-bg-home  : #000 !default;
+$body-bg-login : #000 !default;
+
+//warnings
+$warning-color      : #f0ad4e !default;
+$danger-color       : #d9534f !default;
+$success-color      : #51A351 !default;
+$info-color         : #2F96B4 !default;
+$warning-color-text : #fff !default;
+$danger-color-text  : #fff !default;
+$error-color        : #ee1940 !default;
+$error-bg-color     : rgba($error-color, 0.1) !default;
+
+//reward tier colours
+$reward-colour-A: #dfa800 !default;
+$reward-colour-B: #dfa750 !default;
+$reward-colour-C: #dfac80 !default;
+$reward-colour-D: #bc1c16 !default;
+$reward-colour-E: #bc2188 !default;
+$reward-colour-F: #bc3f99 !default;
+$reward-colour-G: #39a746 !default;
+$reward-colour-H: #39c009 !default;
+$reward-colour-I: #45bccc !default;
+
+//buttons
+$btn-font-size            : 20px !default;
+$btn-sec-font-size        : 20px !default;
+$btn-font-color           : #fff !default;
+$btn-sec-font-color       : #fff !default;
+$btn-background-color     : $prime-colour-1 !default;
+$btn-sec-background-color : $prime-colour-2 !default;
+
+// modals //
+$modal-bg-color            : #fff !default;
+$modal-bg-transperant      : rgba(0,0,0,0) !default;
+$modal-image-bg-color      : $primary-colour-5 !default;
+$modal-bg-fade-transperant : rgba(0,0,0,.7) !default;
+$modal-text-color          : $secondary-colour-2 !default;
+$modal-header-background-color: $prime-colour-4 !default;
+$modal-header-text-color: $prime-colour-5 !default;
+$modal-close-icon-colour: $prime-colour-5 !default;
+
+//
+// Fonts
+//
+$font-family-base             : 'fontnormal' !default;
+$font-family-bold-base        : 'fontbold' !default;
+$fontnormal-family-files      : '' !default;
+$fontbold-family-files        : '' !default;
+$font-family-base-weight      : 600 !default;
+$font-family-base-lightweight : 500 !default;
+$h1-family                    : $font-family-base !default;
+$h2-family                    : $font-family-base !default;
+$h3-family                    : $font-family-base !default;
+$h4-family                    : $font-family-base !default;
+$h5-family                    : $font-family-base !default;
+$h6-family                    : $font-family-base !default;
+
+$font-size-h1: 40px !default;
+$font-size-h2: 34px !default;
+$font-size-h3: 30px !default;
+$font-size-h4: 24px !default;
+$font-size-h5: 23px !default;
+$font-size-h6: 22px !default;
+
+$richtext-li-text-size: 16px !default;
+$richtext-li-text-color: $secondary-colour-2 !default;
+$styled-li-text-size: 18px !default;
+$styled-li-text-color: $primary-colour-1 !default;
+$styled-li-icon-size: 18px !default;
+$styled-li-icon-color: $primary-colour-1 !default;
+$styled-li-border-color: #fff !default;
+$styled-li-fw: 700 !default;
+
+$bold-font-family: $font-family-bold-base !default;
+$bold-font-weight: 700 !default;
+
+$col-separator-border-colour: $primary-colour-1 !default;
+
+$glyphicon-family-files: local('CWSiconFont'), url('../assets/fonts/CWSiconFont-Regular.ttf') format('ttf'), url('../assets/fonts/CWSiconFont-Regular.otf') format('otf'), url('../assets/fonts/CWSiconFont-Regular.woff') format('woff'),url('../assets/fonts/CWSiconFont-Regular.eot') format('eot'),url('../assets/fonts/CWSiconFont-Regular.svg') format('svg') !default;
+
+$grid-gutter-width: 30px;
+$row-plan-wrapper-margin-top: 40px;
+
+//$fontnormal-family-files: '' !default;
+//$fontbold-family-files : '' !default;
+
+
+
+

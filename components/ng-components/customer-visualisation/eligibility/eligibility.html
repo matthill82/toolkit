@@ -1,0 +1,25 @@
+<div class="eligibility" ng-if="$ctrl.eligibility !== undefined">
+    <div class="left-column">
+        <h5 class="eligibility-heading-title">Eligibility</h5>
+        <h6 class="hb-node">Loan eligibility</h6>
+        <p>{{:: $ctrl.eligibility.loanLeaseEligibilityInd}}</p>
+
+        <h6 class="hb-node">Lease eligibility</h6>
+        <p>{{:: $ctrl.eligibility.subscriber.loanLeaseEligibilityInd}}</p>
+
+        <h6 class="hb-node">Lease existing</h6>
+        <p ng-if="$ctrl.eligibility.subscriber.leaseExistInd"></p>
+
+    </div>
+    <div class="right-column">
+        <h6 class="hb-node">Eligible from</h6>
+        <p>{{ :: $ctrl.eligibility.subscriber.eligibleDate}}</p>
+
+        <h6 class="hb-node">Eligible from</h6>
+        <p>{{ :: $ctrl.eligibility.subscriber.eligibleTierList[0].eligibleTierDate}}</p>
+
+        <h6 class="hb-node">Lease ends</h6>
+        <p ng-if="$ctrl.eligibility.subscriber.leaseExistInd === 'true'"></p>
+    </div>
+
+</div>

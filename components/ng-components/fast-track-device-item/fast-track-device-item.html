@@ -1,0 +1,18 @@
+<button class="ftdb" ng-click="$ctrl.goTo()" ng-if="$ctrl.title">
+    <div class="ftdb__thumb">
+        <img class="ftdb__thumb__img" ng-src="{{ :: $ctrl.deviceImgUrl }}" alt="" />
+    </div>
+
+    <div class="ftdb__text">
+        <div class="ftdb__text__message">{{ :: $ctrl.message }}</div>
+        <h2 class="ftdb__text__title">{{ :: $ctrl.title }}</h2>
+        <div class="ftdb__text__price">
+            <span class="ftdb__text__price__prefix">{{ :: $ctrl.pricePrefix }}</span>
+            <span class="ftdb__text__price__value">
+                <uit-price-format
+                    number=":: $ctrl.price"
+                ></uit-price-format>
+            </span>
+        </div>
+    </div>
+</button>

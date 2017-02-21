@@ -1,0 +1,29 @@
+        {  
+            "name": "",
+            "description ": "",
+            "manufacturer": "",
+            "model" : "",
+            "capacity" : {
+                "amount " : "",
+                "unit " : ""
+            },
+            "colour": "",
+            "operating_system": "",
+            "sim_type": "",
+            "features": [
+                {
+                    "category":"",
+                    "name":"",
+                    "value":"",
+                    "position": 0
+                }
+            ],
+            "imagery": [
+                {
+                    "type":"",
+                    "description":"",
+                    "url":""
+                }
+            ]
+
+        }

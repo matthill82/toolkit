@@ -1,0 +1,8 @@
+<div class="dr-plans-results-summary" ng-show="carriersCount !== undefined">
+    <span ng-if="showCarriers">
+        <span class="prs-count">{{carriersCount}}</span>
+        {{carriersLabel | pluralize:carriersCount:carriersLabelPl}}{{separator}}
+    </span>
+    <span class="prs-count">{{plansCount}}</span>
+    {{plansLabel | pluralize:plansCount:plansLabelPl}}
+</div>

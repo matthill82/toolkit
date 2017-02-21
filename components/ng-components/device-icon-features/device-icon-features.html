@@ -1,0 +1,20 @@
+<div class="icons-features icons-features--{{$ctrl.align}}">
+    <div class="row icons-features__container" ng-repeat="mappingRow in $ctrl.chunkedMappings">
+        <div class="featurecol" style="flex: 0 0 {{ $ctrl.getGridColumnSize() + '%' }}" ng-repeat="mapping in mappingRow">
+            <div ng-class="{'feature' : ! $parent.$last}" class="text-center">
+                <div ng-if="mapping.featureIcon !== '-'">
+                    <div class="text-center feature-icon cwsicon {{mapping.featureIcon}}"></div>
+                </div>
+                <div ng-if="mapping.featureIcon === '-' && mapping.featureImage !== '-'">
+                    <img class="feature-icon" ng-src="{{:: mapping.featureImage | relativeUrl }}">
+                </div>
+                <div ng-if="mapping.useFeatureValue === 'false'">
+                    <div class="feature-text">{{mapping.featureText}}</div>
+                </div>
+                <div ng-if="mapping.useFeatureValue === 'true'">
+                    <div class="feature-text">{{mapping.featureValue}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

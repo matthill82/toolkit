@@ -1,0 +1,39 @@
+<div id="images-panel" class="images-panel col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 dr-device-images component" ng-hide="dd.isNoImageryToDisplay(dd.device.imagery)">
+    <div id="mobile-accessories" class="mobile-accessories col-lg-12 col-md-12 col-sm-12">
+        <ul>
+            <li ng-if="$index<5" ng-repeat="image in dd.device.imagery">
+                <div class="image-outer">
+                    <div class="image-inner">
+                        <a href="javascript:;" ng-click="dd.openLightbox(image.url, image.description, $index)" data-toggle="modal" data-target="#imgModal"><img alt="{{image.description}}" title="{{image.description}}" data-ng-src="{{image.url}}"></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Modal ng-click="dd.backDropClicked()" -->
+    <div class="modal-backdrop fade in" ng-class="{active: dd.showLightbox()}"></div>
+    <div class="modal bootstrap-dialog fade in" id="clearModal" role="dialog" ng-class="{active: dd.showLightbox()}">
+        <div class="modal-dialog modal-lg type-normal">
+            <div class="modal-content">
+                <div class="modal-body"  >
+                    <button type="button" ng-click="dd.cancelLightbox()" class="close" ng-class='closeicon' data-dismiss="modal"></button>
+                    <img  id="detail-image-{{dd.selected}}" ng-click="dd.nextImage($event, 0)"  ng-swipe-right="dd.nextImage($event,-1)" ng-swipe-left="dd.nextImage($event,1)" ng-src="{{dd.selectedLightboxImageUrl}}">          
+
+                </div>
+                <div class="modal-footer">
+                    <ul>
+                        <li  ng-if="$index<5" ng-repeat="image in dd.device.imagery">
+                            <div class="image-outer" ng-class="{'active':$index == dd.selected}">
+                                <div class="image-inner">
+                                    <a  href="javascript:;" ng-click="dd.openLightbox(image.url, image.description, $index)" data-toggle="modal" data-target="#imgModal">
+                                        <img ng-class="{'active':$index == dd.selected}" class="images-link" alt="{{image.description}}" title="{{image.description}}" data-ng-src="{{image.url}}"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

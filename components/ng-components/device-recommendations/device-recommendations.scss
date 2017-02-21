@@ -1,0 +1,25 @@
+.device-recommendations {
+    margin-top: 10px;
+}
+
+.device-recommendations-wait-animation {
+    $drwa-bg: rgba($device-recommendations-mask-bg, .2);
+
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: $drwa-bg;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text {
+    font-size: $drwa-loading-text-fs;
+    color: $drwa-loading-text-color;
+}

@@ -1,0 +1,75 @@
+$bundle-height: 75px;
+
+.bundle {
+    margin: 0 10px;
+    border: 1px solid $bundle-border-color;
+
+    .row {
+        margin: 0;
+    }
+
+    .col-xs-4 {
+        padding: 10px 0 5px 20px;
+        height: $bundle-height;
+    }
+
+    .save-text {
+        font-weight: $bundle-save-text-font-weight;
+    }
+
+    .bandle-main-price {
+        font-weight: $bundle-main-price-text-font-weight;
+        font-size: $bundle-main-price-text-size;
+        color: $bundle-main-price-color;
+    }
+
+    .price-text {
+        margin-bottom: 0;
+    }
+
+    .you-save {
+        color: $bundle-you-save-color;
+    }
+
+    .bundle-upsell-message {
+        border: 3px solid $bundle-border-color;
+        padding: 0;
+        position: relative;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .more-text {
+        color: $bundle-more-text-color;
+        font-size: $bundle-more-text-size;
+        line-height: $bundle-more-text-line-height;
+        margin: 0 8px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .pullout {
+        font-size: $bundle-pullout-text-size;
+    }
+
+    .small {
+        font-size: $bundle-small-text-size;
+    }
+
+    .text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .bundle-no-selection {
+        color: $bundle-more-text-color;
+        font-size: $bundle-more-text-size;
+        height: $bundle-height;
+        line-height: $bundle-height;
+        text-align: center;
+    }
+}
+
+

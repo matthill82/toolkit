@@ -1,0 +1,5 @@
+<div class="device-details">
+    <div ng-if="dd.productNameLoaded">
+        <h1 class="device-details--title">{{dd.shortenText(dd.device.manufacturer + ' ' + dd.device.name, nameMaxLength, nameSymbolCutoff)}} <!--{{dd.device.manufacturer | htmlToPlaintext}} {{dd.device.name | htmlToPlaintext}}--></h1>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.vertical-slider-item {
+  .device-tags {
+    margin-left: 15px;
+    margin-right: 15px;
+    &.row {
+      margin-top: 0;
+    }
+  }
+
+  .product-title {
+    h6 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .pricing {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .product-stock-count {
+    font-size: $stock-count-font-size;
+    text-align: right;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .product-features {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .price-discount {
+    text-align: left;
+  }
+  .product-price {
+    text-align: left;
+  }
+  .compare-icon {
+    color: $vs-compare-icon-color;
+    font-weight: $vs-compare-icon-font-weight;
+    font-size: $vs-compare-icon-size;
+  }
+}
+
+
+

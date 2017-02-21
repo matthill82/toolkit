@@ -1,0 +1,23 @@
+<div class="container-fluid product-grid-container">
+    <div class="row">
+        <uit-product-item
+            class="col-xs-4 product-grid"
+
+            ds-journey-type="{{ :: $ctrl.journeyType }}"
+
+            ng-if="$ctrl.products.length"
+            ng-repeat="product in $ctrl.products"
+
+            on-select="$ctrl.select(product)"
+            on-select-image="$ctrl.selectImage(product)"
+            on-is-selected="$ctrl.isSelected(product)"
+
+            features-array="$ctrl.features"
+            product="product"
+            select-text="{{ :: $ctrl.selectText }}"
+            selected-text="{{ :: $ctrl.selectedText }}"
+
+            pr-layout-type="{{ :: $ctrl.layoutType }}"
+        ></uit-product-item>
+    </div>
+</div>

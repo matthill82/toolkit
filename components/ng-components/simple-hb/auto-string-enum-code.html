@@ -1,0 +1,12 @@
+<script type="text/ng-template" id="hb/field-templates/auto-string-enum-code.html">
+    <div class="hb data enum-code">
+        <label class="hb control-label">
+            <span ng-if="node.required" class="simpleHb__asterix">*</span>
+            {{node.title | translate}}
+        </label>
+        <div class="hb" hb-enum="node" hb-enum-filters="hbPrefix | translate"></div>
+        <div class="hb description">
+            {{node.description}}
+        </div>
+    </div>
+</script>

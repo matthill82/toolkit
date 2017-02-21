@@ -1,0 +1,107 @@
+// Layout note, fills its parent container which must be at least tall enough to fit it.
+.basket-summary {
+    border-left: 1px solid $bs-border-color;
+
+    .basket-summary-content {
+        width: 100%;
+        font-family: $bs-font-family;
+    }
+
+    .checkout {
+        background: $bs-checkout-button-background-colour;
+        color: $bs-checkout-button-text-colour;
+        display: block;
+        font-size: $bs-checkout-button-font-size;
+        line-height: $bs-checkout-button-line-height;
+        margin: 36px 10px 26px;
+        text-align: center;
+    }
+
+    .savings {
+        border-bottom: 1px solid $bs-savings-border-bottom;
+        color: $bs-savings-text-colour;
+        font-size: $bs-savings-font-size;
+        line-height: $bs-savings-line-height;
+        margin: 0 10px;
+
+        .amount {
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        .label {
+            float: left;
+            padding-left: 10px;
+        }
+    }
+
+    .title {
+        background: $bs-title-background-colour;
+        color: $bs-title-text-colour;
+        font-size: $bs-title-font-size;
+        line-height: $bs-title-line-height;
+        text-align: center;
+    }
+
+    .total {
+        border-bottom: 1px solid $bs-total-border-bottom;
+        color: $bs-total-text-colour;
+        font-size: $bs-total-font-size;
+        line-height: $bs-total-line-height;
+        margin: 0 10px;
+
+        .amount {
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        .label {
+            float: left;
+            padding-left: 10px;
+        }
+    }
+}
+
+.basket-summary-container {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    width: 23%;
+    height: 100%;
+
+    .basket-summary-panel {
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+    }
+}
+
+.modal-basket {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $bs-modal-header-text-colour;
+        padding-bottom: 30px;
+    }
+
+    p {
+        color: $bs-modal-text-colour;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+    }
+
+    span {
+        color: $bs-modal-text-colour;
+    }
+}
+

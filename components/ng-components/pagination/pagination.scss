@@ -1,0 +1,52 @@
+.dr-pagination {
+    line-height: 44px;
+    margin-bottom: 20px;
+
+    .vh {
+        visibility: hidden;
+    }
+
+    .pagination-middle {
+        display: inline-block;
+        margin: 0 20px;
+        vertical-align: middle;
+
+        select {
+            line-height: 44px;
+            min-width: 70px;
+            height: 44px;
+            margin-left: 10px;
+            border: 1px solid $pagination-dd-border;
+            border-radius: 5px;
+            outline: 0;
+        }
+
+        .current-page {
+            font-weight: $pagination-current-page-fw;
+        }
+    }
+
+    .pagination-stats {
+        font-size: $pagination-stats-fs;
+        color: $pagination-stats-color;
+    }
+
+    .toggle-all {
+        font-weight: $pagination-toggle-all-fw;
+        font-size: $pagination-toggle-all-fs;
+        line-height: 1;
+        font-family: $pagination-toggle-all-ff;
+        margin-top: 10px;
+        color: $pagination-toggle-all-color;
+        border: 0;
+        outline: 0;
+        background: none transparent;
+        box-shadow: none;
+    }
+
+    option {
+        &[hidden] {
+            display: none;
+        }
+    }
+}

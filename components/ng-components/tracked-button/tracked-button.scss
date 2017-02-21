@@ -1,0 +1,98 @@
+.trackedButton {
+  margin: 1.5em 0;
+  margin-top: 40px;
+  clear: both;
+  zoom: 1;
+}
+
+.trackedButton__checkbox {
+  margin-top: 1rem;
+
+  .trackedButton__checkbox-input {
+    opacity: 0;
+    float: left;
+
+    + .trackedButton__checkbox-label {
+      margin: 0 0 0 30px;
+      position: relative;
+      cursor: pointer;
+      float: left;
+      display: block;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -35px;
+        top: -3px;
+        width: 30px;
+        height: 30px;
+        background: $vs-background-100-white;
+        border: 1px solid $tracked-button-checkbox-colour;
+      }
+
+      &::after {
+        font-family: 'CWSiconFont';
+        font-size: 24px;
+        content: '\00a5';
+        color: $tracked-button-checkbox-colour-active;
+        position: absolute;
+        left: -30px;
+        top: -1px;
+        -webkit-transition: all .2s ease;
+        transition: all .3s ease;
+        -ms-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    + label ~ label {
+      margin: 0 0 0 40px;
+    }
+
+    &:checked {
+
+      + .trackedButton__checkbox-label {
+
+        &::before {
+          border: 1px solid $tracked-button-checkbox-colour-active;
+        }
+
+        &::after {
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}
+
+.trackedButton__checkbox,
+.trackedButton__button {
+    width: 50%;
+  &--left {
+    float: left;
+  }
+  &--right {
+    float: right;
+  }
+  }
+
+.trackedButton__button {
+  & button {
+      margin-left: 3rem;
+      padding: {
+        left: 3rem;
+        right: 3rem;
+      }
+    }
+  }
+
+.tracked-button-test-page {
+  margin-top: 2em;
+}

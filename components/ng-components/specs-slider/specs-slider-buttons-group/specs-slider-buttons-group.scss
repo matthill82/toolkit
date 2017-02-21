@@ -1,0 +1,56 @@
+.drctv-specs-sider-buttons-group {
+    clear: both;
+    overflow: hidden;
+    margin: 0 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid $ssbg-border-bottom;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    .ssbg-title {
+        font: {
+            size: $ssbg-title-fs;
+            family: $ssbg-title-ff;
+        }
+        float: left;
+        margin-bottom: 10px;
+        color: $ssbg-title-color;
+    }
+
+    .hint {
+        float: right;
+        font-size: $ssbg-hint-icon-size;
+        color: $ssbg-hint-icon-colour;
+    }
+
+    .list-unstyled {
+        clear: both;
+        overflow: hidden;
+        margin: -10px;
+
+        li {
+            font-size: $ssbg-button-fs;
+            line-height: $ssbg-button-lh;
+            display: flex;
+            float: left;
+            flex-direction: column;
+            width: 80px;
+            height: 80px;
+            margin: 0 10px 20px;
+            padding: 3px;
+            text-align: center;
+            color: $ssbg-button-color;
+            border: 1px solid $ssbg-button-border;
+            background: $ssbg-button-bg;
+            justify-content: center;
+        }
+
+        .active {
+            color: $ssbg-button-active-color;
+            border: 1px solid  $ssbg-button-active-border;
+            background: $ssbg-button-active-bg;
+        }
+    }
+}

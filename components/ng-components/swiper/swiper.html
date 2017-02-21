@@ -1,0 +1,114 @@
+<div
+    class="swiper-top-wrap swiper-{{$ctrl.displayType}}"
+    ng-class="{
+        'horizontal-swiper': $ctrl.layoutType === 'horizontal-left' || $ctrl.layoutType === 'horizontal-right',
+        'swiper-disabled': $ctrl.isDisabled()
+    }"
+    ng-show="$ctrl.attachments.length"
+>
+    <div class="swiper-wrap">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="attachment in :: $ctrl.attachments | orderBy: 'index'">
+                    <div class="swiper-header">
+                        <div class="col-xs-4 swiper-header-image">
+                            <img ng-src="{{:: attachment.imageUrl | relativeUrl }}" alt="">
+                        </div>
+                        <div class="col-xs-8 header-text">
+                            <h6 class="text-left">{{ :: attachment.name }}</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-body" >
+                        <ul same-height="{{:: $ctrl.heightCategory}}">
+                            <li
+                                class="swiper-first-benefit"
+                                ng-if=":: attachment.data.productBenefit1"
+                            >
+                                {{ :: attachment.data.productBenefit1 }}
+                            </li>
+                            <li ng-if=":: attachment.data.productBenefit2">
+                                {{ :: attachment.data.productBenefit2 }}
+                            </li>
+                            <li ng-if=":: attachment.data.productBenefit3">
+                                {{ :: attachment.data.productBenefit3 }}
+                            </li>
+                            <li ng-if=":: attachment.data.productBenefit4">
+                                {{ :: attachment.data.productBenefit4 }}
+                            </li>
+                        </ul>
+                        <h6 class="swiper-price">
+                            <span ng-if=":: $ctrl.displaySeparateSellingPriceText === 'true'">
+                                <uit-price-format
+                                        number=":: attachment.data.separatePrice"
+                                ></uit-price-format>
+                            </span>
+                            <span ng-if=":: $ctrl.displaySeparateSellingPriceText !== 'true'">
+                                <uit-price-format
+                                        number=":: attachment.price"
+                                ></uit-price-format>
+                            </span>
+                            <div
+                                class="swiper-saving"
+                                ng-show="$ctrl.displaySaving !== 'false' && attachment.saving"
+                            >
+                                {{ :: $ctrl.savingText }}&nbsp;
+                                <uit-price-format
+                                    number=":: attachment.saving"
+                                ></uit-price-format>
+                            </div>
+                        </h6>
+                        <p class="swiper-price-text" ng-if=":: $ctrl.displaySeparateSellingPriceText === 'true'">{{ :: $ctrl.priceText }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination" ng-show=":: $ctrl.attachments.length > 1"></div>
+        </div>
+
+        <div
+            class="swiper-select"
+            ng-class="{
+                'swiper-select-selected': $ctrl.isSelected(),
+                'swiper-select-right': $ctrl.layoutType === 'horizontal-right'
+            }"
+            ng-click="$ctrl.select()"
+        >
+            <span class="swiper-selected-text">{{:: $ctrl.selectedText}}</span>
+            <span class="swiper-not-selected-text">{{:: $ctrl.selectText}}</span>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-backdrop fade in" ng-class="{active: $ctrl.isOpen}" style=""></div>
+        <div
+            class=" modal fade bootstrap-dialog"
+            tabindex="-1"
+            role="dialog"
+            ng-style="$ctrl.isOpen ? {'display': 'block'} : {'display': 'none'}"
+            ng-click="$ctrl.isOpen =!$ctrl.isOpen" ng-if="$ctrl.isOpen"
+        >
+            <div class="modal-dialog {{ :: $ctrl.hintModalSize }}" role="document">
+                <div class="modal-content" ng-click="$event.stopPropagation()">
+                    <div class="modal-header no-warning">
+                        <button
+                            aria-label="Close"
+                            class="close {{ :: $ctrl.hintModalCloseIcon }}"
+                            data-dismiss="modal"
+                            ng-click="$ctrl.isOpen = false"
+                            type="button"
+                        ></button>
+                        <h4 class="modal-title" id="myModalLabel">{{ :: $ctrl.hintModalTitle }}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div ng-if="$ctrl.isOpen" ng-include="$ctrl.hintContentUrl | relativeUrl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span
+        class="swiper-info-icon {{ :: $ctrl.hintIcon }}"
+        ng-click="$ctrl.isOpen = !$ctrl.isOpen"
+    ></span>
+</div>

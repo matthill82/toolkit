@@ -1,0 +1,19 @@
+.productImage {
+    height: 100%;
+
+    &__image {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
+    }
+}
+
+carousel {
+    .productImage__image {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

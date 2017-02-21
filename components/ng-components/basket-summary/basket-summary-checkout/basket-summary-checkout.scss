@@ -1,0 +1,26 @@
+basket-summary-checkout,
+.basketSummaryCheckout {
+    display: flex;
+    background-color: $basketSummary-background;
+}
+
+.basketSummaryCheckout--full {
+    width: 100%;
+    padding: $grid-gutter-width;
+}
+
+.basketSummaryCheckout__button {
+    @extend %button-primary;
+    opacity: 1;
+
+    &:active,
+    &:focus {
+        color: $basketSummary-checkout-button-disabled;
+        opacity: .8;
+    }
+}
+
+.basketSummaryCheckout__button--disabled {
+    color: $basketSummary-checkout-button-disabled;
+    opacity: .8;
+}

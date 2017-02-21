@@ -1,0 +1,15 @@
+<script type="text/ng-template" id="hb/field-templates/auto-boolean.html">
+    <br>
+    <label>
+        <input ng-id="{{node.fullName}}" type="checkbox" ng-model="node.value" class="hb" ng-class="{error: node.error}"
+               ng-change="node.validate()" hb-field="node"/>
+        &nbsp;&nbsp;
+        <span ng-if="node.required" class="simpleHb__asterix">*</span>
+        {{node.title | translate | emptyTranslate}}
+    </label>
+
+    <div>
+        {{node.description}}
+    </div>
+
+</script>

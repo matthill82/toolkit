@@ -1,0 +1,28 @@
+<nav class="dr-pagination" ng-if="pagination.totalPages">
+    <div class="row" ng-show="paginationMode === 'paged'">
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-cws" ng-click="paginationUpdate(-1)" ng-class="{'vh': pagination.currentPage === 1}">
+                <span ng-if="prevIcon !== ''" ng-class="prevIcon"></span>
+                {{prevLabel}}
+            </button>
+
+            <div class="pagination-middle">
+                <span class="pagination-stats" ng-bind-html="pagesSummary"></span>
+
+                <select ng-show="pagination.totalPages > 1" ng-model="paginationGoToPage" ng-change="paginationDropdownChange()">
+                    <option ng-repeat="item in pagesNumbers track by $index" value="{{$index+1}}">{{$index + 1}}</option>
+                    <option value="{{paginationGoToLabel}}" disabled selected hidden>{{paginationGoToLabel}}</option>
+                </select>
+            </div>
+
+            <button class="btn btn-cws" ng-click="paginationUpdate(1)"  ng-class="{'vh': pagination.currentPage ===  pagination.totalPages}" >
+                {{nextLabel}}
+                <span ng-if="nextIcon !== ''" ng-class="nextIcon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="col-xs-12 text-center">
+        <button class="toggle-all" ng-show="paginationMode === 'paged'" ng-click="changePaginationMode('all')">{{showAllLabel}}</button>
+        <button class="toggle-all" ng-show="paginationMode === 'all'"  ng-click="changePaginationMode('paged')">{{showXPerPage}}</button>
+    </div>
+</nav>

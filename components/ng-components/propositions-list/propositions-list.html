@@ -1,0 +1,12 @@
+<div class="drctv-propositions-list">
+    <ul class="list-unstyled" ng-if="results.length">
+        <li ng-repeat="propositionItem in results" class="proposition-item">
+            <proposition></proposition>
+        </li>
+    </ul>
+
+    <div ng-if="!results.length">
+        <h2>{{noResultsTitle}}</h2>
+        <p>{{noResultsMessage}}</p>
+    </div>
+</div>

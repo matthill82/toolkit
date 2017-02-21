@@ -1,0 +1,28 @@
+.product-slide {
+  .benefits {
+	  padding-top: 10px;
+    font-size: $product-slide-benefits-text-size;
+    font-weight: $product-slide-benefits-text-weight;
+    li {
+      &:empty {
+        display: none;
+      }
+    }
+  }
+  h6 {
+    text-align: left;
+    font-size: $product-slide-head-text-size;
+    font-family: $product-slide-head-font-family;
+  }
+  .sticker {
+    top: 85px;
+    left: 18px;
+  }
+}
+.product-select {
+  text-align: center;
+  padding: 6px;
+  background-color: $product-slide-background-colour;
+  color: $product-slide-text-colour-inverse;
+  font-size: $product-slide-cta-text-size;
+}

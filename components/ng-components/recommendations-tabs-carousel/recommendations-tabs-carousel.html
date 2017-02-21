@@ -1,0 +1,100 @@
+<div class="row recommendations-tabs-carousel">
+    <div class="tabbed-carriers-display">
+        <div class="col-xs-12">
+            <div class="container-fluid">
+                <div class="row row-horizon">
+                    <div class="col-xs-8 recommended-no-results"
+                         ng-if="$ctrl.areTherePropositions === false">
+                        <h1>{{$ctrl.noResultsTitle}}</h1>
+                        <p>{{$ctrl.noResultsMsg}}</p>
+                        <button ng-click="$ctrl.goToNoResultsButtonPath()" class="btn btn-cws">
+                            {{$ctrl.noResultsButtonLabel}}
+                        </button>
+                    </div>
+                    <div class="col-xs-2 recommendations-tabs-carousel__device-tile" ng-show="$ctrl.deviceTileShown">
+                        <device-tile></device-tile>
+                    </div>
+
+                    <carousel-container class="col-xs-10">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <carousel-go-to direction="previous"
+                                                class="recommendations-tabs-carousel__arrow"
+                                                icon="cwsicon cwsicon-arrow-left"></carousel-go-to>
+                            </div>
+                            <div class="col-xs-10">
+                                <carousel slides-shown="3" fixed-height="full">
+                                    <div same-height="plan" class="recommended-proposition-item"
+                                         ng-repeat="item in $ctrl.propositionItems"
+                                         ng-if="item.itemIsVisible"
+                                         ng-show="($ctrl.selectedTab == '' || item.serviceProvider == $ctrl.selectedTab)"
+                                         ng-hide="(!$ctrl.enableCarousel && item.itemIndex < 4)"
+                                         ng-class="{ 'recommended-proposition-item-first' : item.itemIsFirst, 'recommended-proposition-item-last' : item.itemIsLast, 'col-xs-3': !$ctrl.enableCarousel, 'col-xs-3': $ctrl.enableCarousel }">
+
+                                        <div
+                                            ng-hide="item.itemIsLast || item.itemIndex == $ctrl.getShownLength() || (!$ctrl.enableCarousel && item.itemIndex > 2)">
+                                            <div class="recommend-better-summary"
+                                                 ng-class="{disabled : $ctrl.hideDifferenceText($index)}"
+                                                 ng-bind-html="$ctrl.sanitize($ctrl.getDifferenceText(item.offering[0].id))">
+                                            </div>
+                                        </div>
+
+                                        <recommended-plan
+                                            message-position="$ctrl.messagePosition"
+                                            item-index="$index"
+                                            item="item"
+                                            url="$ctrl.url"
+
+                                            content-propositions="$ctrl.contentPropositions"
+                                            propositions="$ctrl.propositions"
+
+                                            downsell-plan="$ctrl.downsellPlan"
+                                            upsell1="$ctrl.upsell1"
+                                            upsell2="$ctrl.upsell2"
+                                            upsell-other="$ctrl.upsellOther"
+                                            recommended-plan="$ctrl.recommendedPlan"
+
+                                            sell-text-upsell1="$ctrl.sellTextUpsell1"
+                                            sell-text-upsell2="$ctrl.sellTextUpsell2"
+                                            sell-text-upsell-other="$ctrl.sellTextUpsellOther"
+                                            sell-text-downsell="$ctrl.sellTextDownsell"
+                                            sell-text-best-match="$ctrl.sellTextBestMatch"
+
+                                            monthly-cost-label="$ctrl.monthlyCostLabel"
+                                            upfront-cost-label="$ctrl.upfrontCostLabel"
+                                            free-label="$ctrl.freeLabel"
+                                            benefit-icon="$ctrl.benefitIcon"
+                                            talk-label="$ctrl.talkLabel"
+                                            text-label="$ctrl.textLabel"
+                                            talk-points-color="$ctrl.talkPointsColor"
+                                            talk-points="$ctrl.talkPoints"
+                                            text-points="$ctrl.textPoints"
+                                            text-points-color="$ctrl.textPointsColor"
+                                            label-data="$ctrl.labelData"
+                                            points-data="$ctrl.pointsData"
+                                            points-data-color="$ctrl.pointsDataColor"
+                                            unlimited-text="$ctrl.unlimitedText">
+                                        </recommended-plan>
+                                    </div>
+                                </carousel>
+                            </div>
+                            <div class="col-xs-1">
+                                <carousel-go-to direction="next"
+                                                class="recommendations-tabs-carousel__arrow"
+                                                icon="cwsicon cwsicon-arrow-right"></carousel-go-to>
+                            </div>
+                        </div>
+                    </carousel-container>
+
+
+                    <div same-height="plan" class="col-xs-4 recommended-proposition-item active"
+                         ng-show="$ctrl.getShownLength() < 2"></div>
+                    <div same-height="plan"
+                         class="col-xs-3 recommended-proposition-item recommended-proposition-item-last active"
+                         ng-show="$ctrl.getShownLength() < 3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+.basket-total {
+    border-left: 1px solid $bt-border-left-colour;
+    color: $bt-text-colour;
+    display: block;
+    float: right;
+    font-size: $bt-font-size;
+    padding: 13px 6px 13px 40px;
+    text-align: right;
+    font-family: $bt-font-family;
+
+    .savings {
+        float: left;
+        padding-right: 40px;
+    }
+
+    .total {
+        float: left;
+    }
+}

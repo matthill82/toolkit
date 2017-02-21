@@ -1,0 +1,15 @@
+<div class="billingDetails">
+    <h4 class="billingDetails__title">Billing details</h4>
+    <div class="billingDetails__row">
+        <div class="billingDetails__column">
+            <p class="billingDetails__details">{{:: $ctrl.account.billingName.firstName}} {{:: $ctrl.account.billingName.lastName}}</p>
+            <p class="billingDetails__details">{{:: $ctrl.account.mobileNumber}}</p>
+            <p class="billingDetails__details">{{:: $ctrl.account.email}}</p>
+        </div>
+        <div class="billingDetails__column">
+            <p class="billingDetails__details">{{:: $ctrl.account.billingAddress.line1}}</p>
+            <p class="billingDetails__details">{{:: $ctrl.account.billingAddress.line2}}</p>
+            <p class="billingDetails__details">{{:: $ctrl.account.billingAddress.zipCode}} {{:: $ctrl.account.billingAddress.city}}</p>
+        </div>
+    </div>
+</div>

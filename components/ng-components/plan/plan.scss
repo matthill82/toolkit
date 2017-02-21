@@ -1,0 +1,221 @@
+.plan-container {
+    overflow: hidden;
+
+    .plan-box-inclusion {
+        padding: 15px 0 0;
+    }
+
+    .feature-box {
+         position: absolute;
+         bottom: 0;
+         display: inline-block;
+         margin-left: 40px;
+         padding-bottom: 10px;
+
+         .cwsicon {
+             font-size: $b-tick-icon-size;
+         }
+     }
+
+    .plan-row {
+        margin-right: 0;
+        margin-left: 0;
+
+        .carrier-logo {
+            display: inline-block;
+            height: 85px;
+            margin-left: 30px;
+
+            .vodafone {
+                margin-top: 25px;
+            }
+
+            .ee {
+                margin-top: 20px;
+            }
+
+            .id {
+                margin-top: 30px;
+            }
+
+            .o2 {
+                margin-top: 23px;
+            }
+
+            div {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .inclusions-container {
+            background-color: $b-inclusions-background;
+
+            .inclusions {
+                margin-top: 6px;
+                padding: 5px 0;
+                text-align: center;
+                border-right: 1px solid $b-inclusions-container-background;
+            }
+
+            div {
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+
+    .plan-row-details {
+        padding-bottom: 0;
+
+        .generation {
+            .cwsicon {
+                color: $b-inclusions-icon-color;
+            }
+        }
+
+        .tariff-month {
+            .cwsicon {
+                color: $b-tariffmonth-icon-color;
+            }
+        }
+
+        .cwsicon {
+            font-size: $b-icon-size;
+        }
+
+        .feature {
+            text-align: center;
+            height: 115px;
+
+            .icon {
+                width: 100%;
+                height: auto;
+                margin: 15px 0 5px;
+                color: $b-feature-icon-color;
+            }
+        }
+    }
+
+    .tariff-month {
+        padding-top: 6px;
+        padding-left: 26px;
+    }
+
+    .media {
+        margin-top: 15px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .media-left,
+        .media-right,
+        .media-body {
+            font-size: $b-featurebox-size;
+            font-weight: $b-featurebox-weight;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .media-left,
+        .media > .pull-left {
+            padding-right: 10px;
+        }
+
+        .media-middle {
+            vertical-align: middle;
+        }
+
+        .media-object {
+            width: 60px;
+        }
+    }
+
+    .value {
+        font-family: $b-inclusions-value-font-family;
+        font-size: $b-inclusions-value-size;
+        font-weight: $b-inclusions-value-weight;
+        line-height: $b-inclusions-value-fontheight;
+        margin-top: 8px;
+        color: $b-inclusions-value-color;
+    }
+
+    .unit {
+        font-family: $b-inclusions-unit-font-family;
+        font-size: $b-inclusions-unit-size;
+        font-weight: $b-inclusions-unit-weight;
+        color: $b-inclusions-unit-color;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .plan-box-price {
+        text-align: right;
+
+        .price {
+            font-family: $b-price-value-font-family;
+            font-size: $b-price-value-size;
+            font-weight: $b-price-value-weight;
+            line-height: $b-price-value-fontheight;
+            padding: 0;
+            padding-top: 9px;
+            color: $b-price-value-color;
+        }
+
+        .unit {
+            padding-left: 5px;
+            color: $b-price-unit-color;
+        }
+
+        .upfront-price {
+            font-family: $b-price-value-font-family;
+            font-size: $b-upprice-value-size;
+            font-weight: $b-price-value-weight;
+            line-height: $b-upfront-price-value-fontheight;
+            color: $b-price-value-color;
+        }
+    }
+
+    .cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent none;
+        box-shadow: none;
+    }
+}
+
+.plan-box-tile  {
+    text-align: center;
+
+    .plan-device-image {
+        max-width: 100%;
+        margin-top: 10px;
+        max-height: 218px;
+
+        &.display-title {
+            max-height: 172px;
+        }
+
+        &.display-colors {
+            max-height: 188px;
+
+            &.display-title {
+                max-height: 147px;
+            }
+        }
+    }
+
+    .summarybox {
+        margin: 0;
+        border: 0;
+    }
+}

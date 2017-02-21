@@ -1,0 +1,37 @@
+<div
+    class="{{ :: $ctrl.AccessoriesCrossSellContainerController.cssColumnClass }}"
+    ng-if="$ctrl.AccessoriesCrossSellContainerController.accessoriesForCategories[$ctrl.category2]"
+>
+    <div class="accessoriesCrossSellItem richtext__info-box"
+        ng-repeat="item in $ctrl.AccessoriesCrossSellContainerController.accessories | filter: { device: { id: $ctrl.AccessoriesCrossSellContainerController.accessoriesForCategories[$ctrl.category2] } } | limitTo: 1"
+    >
+        <div class="accessoriesCrossSellItem__category" ng-click="$ctrl.categoryOnClick()">
+            {{ :: $ctrl.categoryLabel }}
+        </div>
+
+        <div class="accessoriesCrossSellItem__title accessoriesCrossSellItem__title--brand">
+            {{ item.device.manufacturer }}
+        </div>
+
+        <div class="accessoriesCrossSellItem__title accessoriesCrossSellItem__title--name">
+            {{ item.device.name }}
+        </div>
+
+        <div class="accessoriesCrossSellItem__image" ng-click="$ctrl.imageOnClick(item.device.id)">
+            <img ng-src="{{ item.device.imagery[0].url }}" alt="{{ item.device.brand }} {{ item.device.name }}">
+        </div>
+
+        <div class="accessoriesCrossSellItem__price">
+            <uit-price-format
+                number="item.offering[0].upfrontPrice.net.value"
+            ></uit-price-format>
+        </div>
+
+        <uit-product-select
+            on-select="$ctrl.select(item)"
+            on-is-selected="$ctrl.isSelected(item)"
+            select-text="{{ :: $ctrl.AccessoriesCrossSellContainerController.basketCtaSelectLabel }}"
+            selected-text="{{ :: $ctrl.AccessoriesCrossSellContainerController.basketCtaSelectedLabel }}"
+        ></uit-product-select>
+    </div>
+</div>

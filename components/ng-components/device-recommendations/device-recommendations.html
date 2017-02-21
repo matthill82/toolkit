@@ -1,0 +1,79 @@
+<div class="device-recommendations">
+
+    <vertical-slider
+            vs-direction="vertical"
+            vs-select-cta="{{:: $ctrl.selectCta}}"
+            vs-img-cta="{{:: $ctrl.imgCta}}"
+            vs-currency-rules="{{:: $ctrl.currencyRules}}"
+            vs-journey-type="{{:: $ctrl.journeyType}}"
+            vs-limit="10"
+            vs-bracket="1"
+            vs-button-text="{{:: $ctrl.buttonText}}"
+
+            vs-layout-type="details"
+
+            feature-feature-list="{{:: $ctrl.featureFeatureList}}"
+            feature-display="{{:: $ctrl.featureDisplay}}"
+    >
+    </vertical-slider>
+
+
+	<upsell-message
+			um-data="$ctrl.upsellMessages.b12"
+			price-currency-config="{{:: $ctrl.currencyRules}}"
+			ng-if="$ctrl.upsellMessages.b12.priceDelta"
+		>
+	</upsell-message>
+
+
+    <vertical-slider
+            vs-direction="vertical"
+            vs-select-cta="{{:: $ctrl.selectCta}}"
+            vs-img-cta="{{:: $ctrl.imgCta}}"
+            vs-currency-rules="{{:: $ctrl.currencyRules}}"
+            vs-journey-type="{{:: $ctrl.journeyType}}"
+            vs-limit="1"
+            vs-bracket="2"
+            vs-button-text="{{:: $ctrl.buttonText}}"
+
+            vs-layout-type="details"
+
+            feature-feature-list="{{:: $ctrl.featureFeatureList}}"
+            feature-display="{{:: $ctrl.featureDisplay}}"
+    >
+    </vertical-slider>
+
+
+	<upsell-message
+			um-data="$ctrl.upsellMessages.b23"
+			price-currency-config="{{:: $ctrl.currencyRules}}"
+			ng-if="$ctrl.upsellMessages.b23.priceDelta"
+		>
+	</upsell-message>
+
+
+    <vertical-slider
+            vs-direction="vertical"
+            vs-select-cta="{{:: $ctrl.selectCta}}"
+            vs-img-cta="{{:: $ctrl.imgCta}}"
+            vs-currency-rules="{{:: $ctrl.currencyRules}}"
+            vs-journey-type="{{:: $ctrl.journeyType}}"
+            vs-limit="1"
+            vs-bracket="3"
+            vs-button-text="{{:: $ctrl.buttonText}}"
+
+            vs-layout-type="details"
+
+            feature-feature-list="{{:: $ctrl.featureFeatureList}}"
+            feature-display="{{:: $ctrl.featureDisplay}}"
+    >
+    </vertical-slider>
+
+    <div class="hide-in-edit-design-aemmode device-recommendations-wait-animation"
+         ng-show="$ctrl.animationEnabled && $ctrl.showAnimation">
+        <div class="loading-text">{{ $ctrl.loadingText }}</div>
+        <img ng-src="{{:: $ctrl.animationPath}}" alt="" />
+    </div>
+
+
+</div>

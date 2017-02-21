@@ -1,0 +1,22 @@
+<div class="data-calc-slider-row dr-plans-data-slider component">
+	<div class="row">
+		<div class="slider-area" ng-class="{'slider-area-partial': showBubble === 'true' , 'slider-area-full': showBubble === 'false' }">
+			<label class="data-calc-slider-label">
+				<span>{{mainTitle}}</span> 
+				<span class="rightlabel">{{secondTitle}}</span>
+			</label>
+			<input type="number" value="slider.value" ng-model="slider.value" name="{{sliderId}}" id="{{sliderId}}" class="planslider" ng-init="conversion=dataConversion">
+			<rzslider  
+					  rz-slider-model="slider.min"
+					  rz-slider-high="slider.max"
+					  rz-slider-options="slider.options">
+			</rzslider>
+                        
+		</div>
+		<div ng-class="{'': showBubble === 'true' , 'disabled': showBubble === 'false' }" class="bubble-area">
+			<div class="data-calc-slider-bubble" >
+				<span>{{slider.min}}<br/><span class="units">{{units}}</span></span>
+			</div>
+		</div>
+	</div>
+</div>

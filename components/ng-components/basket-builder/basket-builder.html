@@ -1,0 +1,53 @@
+<div class="fl fl--full-height fl--flex-direction-column fl--margin-top basketBuilder">
+    <div class="fl fl--margin-bottom"
+         ng-class="{'fl--flex-grow-2': $ctrl.panelOpen === 'device', 'fl--flex-grow-1': !$ctrl.panelOpen === 'device'}">
+        <div>
+            <uit-basket-builder-device
+                    propositions="{{:: $ctrl.devicePropositions }}"
+                    journey-type="{{:: $ctrl.difJourneyType }}"
+                    feature-icons="{{:: $ctrl.numberFeatureIcons }}"
+                    button-label="{{:: $ctrl.deviceButtonLabel }}"
+                    button-label-active="{{:: $ctrl.deviceButtonLabelActive }}"
+                    button-active-icon="{{:: $ctrl.deviceButtonActiveIcon }}"
+                    details-label="{{:: $ctrl.deviceDetailsLabel }}"
+                    details-icon="{{:: $ctrl.deviceDetailsIcon }}"
+                    details-link="{{:: $ctrl.deviceDetailsLink }}"
+                    edit-label="{{:: $ctrl.deviceEditLabel }}"
+                    edit-icon="{{:: $ctrl.deviceEditIcon }}"
+                    edit-link="{{:: $ctrl.deviceEditLink }}"
+                    image-link="{{:: $ctrl.deviceImageLink }}"
+                    imei-link="{{:: $ctrl.deviceImeiLink }}"
+                    not-started-label="{{:: $ctrl.deviceNotStartedLabel }}"
+                    cta-link="{{:: $ctrl.deviceCtaLink }}"
+                    in-progress-label="{{:: $ctrl.deviceInProgressLabel }}"
+                    section-type="phone"
+                    disabled-state="$ctrl.planDisabledState"
+                    panel-open="$ctrl.panelOpen"
+            >
+            </uit-basket-builder-device>
+        </div>
+    </div>
+    <div class="fl"
+         ng-class="{'fl--flex-grow-2': $ctrl.panelOpen === 'plan', 'fl--flex-grow-1': !$ctrl.panelOpen === 'plan'}">
+        <div>
+            <uit-basket-builder-plan
+                title="{{:: $ctrl.planTitle }}"
+                full-plan-label="{{:: $ctrl.planFullPlanLabel }}"
+                plan-feature-icon="{{:: $ctrl.planFeatureIcon }}"
+                not-started-label="{{:: $ctrl.planNotStartedLabel }}"
+                in-progress-label="{{:: $ctrl.planInProgressLabel }}"
+                cta-link="{{:: $ctrl.planCtaLink }}"
+                edit-link="{{:: $ctrl.planEditLink }}"
+                edit-label="{{:: $ctrl.planEditLabel }}"
+                edit-icon="{{:: $ctrl.planEditIcon }}"
+                full-plan-link="{{:: $ctrl.planFullPlanLink }}"
+                full-plan-icon="{{:: $ctrl.planFullPlanIcon }}"
+                journey-type="{{:: $ctrl.difJourneyType }}"
+                section-type="plan"
+                disabled-state="$ctrl.planDisabledState"
+                panel-open="$ctrl.panelOpen"
+            >
+            </uit-basket-builder-plan>
+        </div>
+    </div>
+</div>

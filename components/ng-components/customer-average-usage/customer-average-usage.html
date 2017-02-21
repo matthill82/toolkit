@@ -1,0 +1,12 @@
+<div class="customerAverageUsage">
+    <uit-title-block title="{{ :: $ctrl.title}}"></uit-title-block>
+    <div class="customerAverageUsage__details">
+        <uit-device-usage
+            orientation="horizontal"
+            data="$ctrl.averageUsageList">
+        </uit-device-usage>
+        <a ng-show="false" href="{{:: $ctrl.ctaPath }}" class="customerAverageUsage__info-link">
+            <span class="customerAverageUsage__info-icon {{:: $ctrl.ctaIcon }}"></span>
+        </a>
+    </div>
+</div>

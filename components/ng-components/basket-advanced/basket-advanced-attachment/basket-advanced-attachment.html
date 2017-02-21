@@ -1,0 +1,20 @@
+<div class="basket-advanced-attachment">
+    <img class="image" ng-src="{{ :: $ctrl.basketItem.imageUrl | relativeUrl }}" alt=" " ng-if="$ctrl.basketItem.imageUrl !== '-'">
+    <div class="details">
+        <div class="name">{{ :: $ctrl.basketItem.name }}</div>
+        <div class="monthly" ng-if="$ctrl.basketItem.selectedOffering.offeringType == 'monthlyContract'">
+            {{ :: $ctrl.monthlyPaymentText }}
+            <div class="monthly-price">
+                <uit-price-format
+                    number=":: $ctrl.basketItem.price"
+                ></uit-price-format>
+            </div>
+        </div>
+        <div class="product-code">{{ :: $ctrl.codeText }} {{ :: $ctrl.basketItem.id }}</div>
+        <uit-price-format
+            class="item-price"
+            number=":: $ctrl.basketItem.price"
+        ></uit-price-format>
+    </div>
+    <a class="remove {{ :: $ctrl.removeIcon }}" ng-click="$ctrl.remove()"></a>
+</div>

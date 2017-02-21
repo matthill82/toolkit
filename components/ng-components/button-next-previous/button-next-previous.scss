@@ -1,0 +1,10 @@
+.actions > a {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    margin-top: 16px;
+    cursor: pointer;
+    -webkit-transition: opacity .35s linear 0s;
+            transition: opacity .35s linear 0s;
+    opacity: .5;
+}

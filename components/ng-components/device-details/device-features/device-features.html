@@ -1,0 +1,12 @@
+<div id="device-features" class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 dr-device-features component" ng-hide="dd.isNoKeyFeaturesToDisplay(dd.device.key_features)" style="display:none;">
+		<h1>{{featuresTitle | htmlToPlaintext}}</h1>
+	
+	<div ng-repeat="feature in dd.device.key_features | limitTo : 1">
+		<div class="col-lg-5 col-md-5">
+			
+		</div>
+		<div class="col-lg-5 col-md-5">
+			<h3>{{feature.name | htmlToPlaintext}}</h3>
+			<p>{{feature.description | htmlToPlaintext}}</p>
+		</div>
+</div>

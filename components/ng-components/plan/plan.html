@@ -1,0 +1,107 @@
+<div class="plan-container">
+    <div class="plan-box-tile col-xs-3" ng-if="displayTile" ng-class="">
+        <img class="plan-device-image" ng-src="{{planItem.device.imagery[0].url}}" alt="" ng-class="{'display-colors': displayColors, 'display-title': displayTitle}" />
+
+        <h2 ng-if="displayTitle" class="plan-device-name h4">{{planItem.device.name}}</h2>
+
+        <div class="summarybox"  ng-if="displayColors">
+            <ul class="color-boxes">
+                <li ng-repeat="color in planItem.device.available_colours" style="background-color:{{color.hex}}">
+                    <p class="sr-only">{{color.name}}</p> <!-- best practice for screen readers -->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="plan-box-inclusion"  ng-class="{'col-xs-9': displayTile, 'col-xs-12': !displayTile}">
+        <div class="row plan-row">
+            <div class="col-xs-7">
+                <div class="carrier-logo">
+                    <div class="network-logo {{pc.getCarrierClass(planItem.serviceProvider)}}"></div>
+                </div>
+                <div class="feature-box">
+                    <div class="row" ng-repeat="feature in planItem.tariff.features | limitTo:4">
+                        <div class="media">
+                            <div class="media-left"><span class="cwsicon cwsicon-tick"></span></div>
+                            <div class="media-body">{{feature.value}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 plan-box-price">
+                <p class="price">
+                    <uit-price-format number="planItem.offering[0].monthlyContract.regularInstallmentAmount.net.value"></uit-price-format>
+                    <span class="unit">{{perMonthLabel}}</span>
+                </p>
+                <p class="upfront-price">
+                    <uit-price-format number="planItem.offering[0].upfrontPrice.net.value"></uit-price-format>
+                    <span class="unit">{{upfrontCostLabel}}</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row plan-row plan-row-details">
+            <div class="col-xs-12 inclusions-container">
+                <div class="row" ng-if="displayedDetails === 'plan'">
+                    <div class="col-md-15 col-lg-15 col-sm-15 inclusions">
+                        <div class="canvas-wrap">
+                            <graph-small
+                                canvas-color="{{textPointsColor}}"
+                                canvas-id="allowance-canvas-1"
+                                canvas-position="{{pc.getAllowanceGraphPosition(planItem.tariff.textAllowance.number, planItem.tariff.textAllowance.units, planItem.tariff.textAllowance.unlimited, textPoints)}}"
+                            ></graph-small>
+                        </div>
+                        <p class="value">{{pc.getAllowanceValue(planItem.tariff.textAllowance.number, planItem.tariff.textAllowance.units, planItem.tariff.textAllowance.unlimited, unlimitedText)}}</p>
+                        <p class="unit">{{textLabel}}</p>
+                    </div>
+                    <div class="col-md-15 col-lg-15 col-sm-15 inclusions">
+                        <div class="canvas-wrap">
+                            <graph-small
+                                canvas-color="{{talkPointsColor}}"
+                                canvas-id="allowance-canvas-2"
+                                canvas-position="{{pc.getAllowanceGraphPosition(planItem.tariff.talkAllowance.number, planItem.tariff.talkAllowance.units, planItem.tariff.talkAllowance.unlimited, talkPoints)}}"
+                            ></graph-small>
+                        </div>
+                        <p class="value">{{pc.getAllowanceValue(planItem.tariff.talkAllowance.number, planItem.tariff.talkAllowance.units, planItem.tariff.talkAllowance.unlimited, unlimitedText)}}</p>
+                        <p class="unit">{{talkLabel}}</p>
+                    </div>
+                    <div class="col-md-15 col-lg-15 col-sm-15 inclusions">
+                        <div class="canvas-wrap">
+                            <graph-small
+                                canvas-color="{{dataPointsColor}}"
+                                canvas-id="allowance-canvas-3"
+                                canvas-position="{{pc.getAllowanceGraphPosition(planItem.tariff.dataAllowance.number, planItem.tariff.dataAllowance.units, planItem.tariff.dataAllowance.unlimited, dataPoints)}}"
+                            ></graph-small>
+                        </div>
+                        <p class="value">{{pc.getAllowanceValue(planItem.tariff.dataAllowance.number, planItem.tariff.dataAllowance.units, planItem.tariff.dataAllowance.unlimited, unlimitedText)}}</p>
+                        <p class="unit">{{dataLabel}}</p>
+                    </div>
+                    <div class="col-md-15 col-lg-15 col-sm-15 inclusions tariff-month">
+                        <span class="{{contractIcon}}"></span>
+                        <p class="value">{{planItem.tariff.recurringPrice.frequency}} {{planItem.tariff.recurringPrice.units}}</p>
+                        <p class="value">{{planItem.offering[0].termInMonths}} {{contractLengthLabel | pluralize:planItem.offering[0].termInMonths}}</p>
+                        <p class="unit">{{contractLabel}}</p>
+                    </div>
+                    <div class="col-md-15 col-lg-15 col-sm-15 inclusions generation">
+                        <span class="{{generationIcon}}"></span>
+                        <p class="value">{{pc.getGeneration(planItem.device.features)}}</p>
+                        <p class="unit">{{bandwidthLabel}}</p>
+                    </div>
+                </div>
+
+                <div class="row" ng-if="displayedDetails === 'device'">
+                    <div class="col-md-15 col-lg-15 col-sm-15 feature" ng-repeat="feature in displayedFeatures">
+                        <div class="icon-wrap">
+                            <span class="icon {{feature.icon}}"></span>
+                        </div>
+                        <p class="value">{{pc.getFeatureValue(planItem.device.features, feature.dataPoint) | htmlEntities}}</p>
+                        <p class="unit">{{feature.label}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button ng-click="pc.goToPlanCta(planItem.id)" ng-if="planCtaEnabled" class="cta"></button>
+
+</div>

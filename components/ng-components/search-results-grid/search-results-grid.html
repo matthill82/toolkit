@@ -1,0 +1,52 @@
+<div class="row search-results-grid">
+    <form class="col-xs-12 search-form" name="searchForm">
+        <div class="search-box">
+            <label class="search-label">
+                <span class="search-title">{{ :: $ctrl.searchTitleText }}</span>
+                <input
+                    autocomplete="off"
+                    class="search-input"
+                    hide-status-bar
+                    name="query"
+                    ng-model="$ctrl.query"
+                    ng-model-options="{debounce: 500}"
+                    placeholder="{{ :: $ctrl.searchPlaceholderText }}"
+                    type="search"
+                >
+            </label>
+            <span ng-if="!$ctrl.query" class="search-icon {{ :: $ctrl.searchIcon}}"></span>
+            <span ng-if="$ctrl.query" ng-click="$ctrl.query = ''" class="search-icon {{ :: $ctrl.clearSearchIcon }}"></span>
+            <span class="search-scan" ng-if="$ctrl.enableBarcodeScan">
+                    <barcode-scanner-field model="$ctrl.query"></barcode-scanner-field>
+            </span>
+        </div>
+
+    </form>
+    <div
+        class="col-xs-12 search-no-results"
+        ng-if="!$ctrl.pending && $ctrl.query.length >= $ctrl.searchAtCharacterCount && !$ctrl.products.length"
+    >
+        <div class="search-no-results-title">{{ :: $ctrl.noResultsTitleText }}</div>
+        <div class="search-no-results-message">{{ :: $ctrl.noResultsMessageText }}</div>
+    </div>
+    <div
+        class="search-results"
+        ng-if="$ctrl.products.length"
+    >
+        <uit-product-item
+            class="col-xs-4 product-grid"
+
+            ds-journey-type="{{ :: $ctrl.dsJourneyType }}"
+
+            ng-repeat="product in $ctrl.products"
+
+            pr-layout-type="{{ :: $ctrl.pricingLayoutType }}"
+
+            product="product"
+            select-text="{{ :: $ctrl.psSelectText }}"
+
+            on-select="$ctrl.select(product)"
+            on-select-image="$ctrl.selectImage"
+        ></uit-product-item>
+    </div>
+</div>

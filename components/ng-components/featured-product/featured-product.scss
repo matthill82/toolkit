@@ -1,0 +1,39 @@
+.featuredProduct {
+    padding: 20px 0 0;
+    text-align: center;
+    color: $secondary-colour-2;
+
+    .featuredProduct__header {
+        font-size: $featured-product-title-font-size;
+        display: -webkit-box;
+        overflow: hidden;
+        margin: 0;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .featuredProduct__description {
+        font-size: $featured-product-description-font-size;
+        margin: 10px 0 0;
+    }
+
+    .featuredProduct__price {
+        font-size: $featured-product-price-font-size;
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.featuredProductPage {
+    .richtext__info-box {
+        overflow: hidden;
+    }
+
+    .title-component {
+        h4 {
+            margin: 72px 0 54px;
+            color: $secondary-colour-2;
+        }
+    }
+}

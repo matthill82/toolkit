@@ -1,0 +1,198 @@
+.recommended-plan {
+    border: 1px solid $planr-container-border;
+    border-top: 4px solid $planr-container-border;
+    background-color: $planr-container-color;
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    .recommended-cost {
+        border-bottom: 1px solid $planr-container-item-border;
+        margin: 0 30px;
+        padding: 10px 0 15px;
+        color: $planr-font-color;
+
+        .cost {
+            font-size: $planr-cost-main-size;
+            display: block;
+            text-align: center;
+            word-wrap: break-word;
+            color: $planr-price-color;
+            font-family: $font-family-bold-base;
+            font-weight: $plan-cost-font-weight;
+			letter-spacing: $planr-price-letterspacing;
+        }
+
+        .cost-label {
+            display: block;
+            text-align: center;
+            word-wrap: break-word;
+            font-size: $planr-costlabel-main-size;
+            line-height: $planr-costlabel-main-lineheight;
+        }
+    }
+
+    .recommended-upfront-cost {
+        border-bottom: 1px solid $planr-container-item-border;
+        margin: 0 30px;
+        padding: 12px 0 7px;
+        color: $planr-font-color;
+        font-weight: $planr-upfront-cost-fontweight;
+        font-family: $font-family-base;
+
+        span {
+            font-size: $planr-upfrontcost-size;
+            text-align: center;
+        }
+    }
+
+    .recommended-benefits {
+        border-bottom: 1px solid $planr-container-item-border;
+        margin: 0 10px;
+        min-height: 190px;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits {
+            li {
+                color: $planr-font-color;
+                display: list-item;
+                font-size: $planr-benefit-font-size;
+				text-indent: -1.4em;
+				padding-left: 18px;
+
+                .cwsicon {
+                    font-size: $planr-icon-size;
+                    padding-right: 17px;
+                    float: left;
+                    padding-top: 3px;
+                }
+            }
+        }
+
+        .head {
+            font-family: $font-family-bold-base;
+            color: $planr-ul-head-color;
+            font-size: $planr-ul-head-size;
+            font-weight: $planr-ul-head-fontweight;
+            margin: 15px 0;
+
+            li {
+                display: list-item;
+            }
+        }
+    }
+
+    .recommended-upsell {
+        padding: 0 5px;
+        color: $planr-upsell-text-color;
+        margin-top: 10px;
+        font-weight: $planr-upsell-text-weight;
+
+        p {
+            text-align: center;
+            padding: 5px 0 0;
+            margin: 0;
+            font-size: $planr-upsell-text-size;
+        }
+    }
+}
+
+.recommended-details {
+    hr {
+        margin: 0 30px;
+    }
+
+    .container-fluid {
+        margin: 10px 0;
+
+		.col-sm-6 {
+			padding: 0;
+		}
+
+        .network-logo {
+            width: 100%;
+            height: 70px;
+            background-position: 50% 85%;
+        }
+
+        .detail {
+            .canvas-wrap {
+                text-align: center;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+
+            .dlabel {
+                font-size: $planr-detail-label-size;
+                line-height: $planr-detail-label-text-line-height;
+                color: $planr-detail-text-color;
+            }
+
+            .value {
+                font-family: $font-family-bold-base;
+                font-size: $planr-detail-value-size;
+                font-weight: $planr-detail-value-fontweight;
+                color: $planr-detail-text-color;
+                line-height: $planr-detail-text-height;
+				white-space: nowrap;
+            }
+        }
+    }
+}
+
+
+.recommend-better-summary {
+    position: absolute;
+    background: $planr-arrow-color;
+    top: 35px;
+    width: 40px;
+    height: 100px;
+    right: -16px;
+    z-index: 3;
+    color: $planr-arrow-text-color;
+
+    p {
+        z-index: 30;
+        position: absolute;
+        width: 77px;
+        padding: 8px;
+        font-size: $planr-arrow-text-size;
+        line-height: $planr-arrow-text-lineheight;
+
+        .pullout {
+            font-family: $font-family-bold-base;
+            font-weight: $planr-pullout-fontweight;
+        }
+    }
+
+    &::after {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-left-color: $planr-arrow-color;
+        border-width: 70px;
+        margin-top: -70px;
+    }
+}
+
+.recommended-no-results {
+    margin-top: 10px;
+
+    p {
+        font-size: $planr-no-results-size;
+        color: $planr-no-results-color;
+    }
+}
+
+

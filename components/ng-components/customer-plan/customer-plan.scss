@@ -1,0 +1,70 @@
+customer-plan {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.customerPlan {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    border-bottom: 1px solid $prime-colour-4;
+    h3 {
+        margin-top: 0;
+    }
+}
+
+.customerPlan__allowances {
+    flex: 1;
+    background-color: $prime-colour-4;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid $secondary-colour-5;
+}
+
+.customerPlan__allowances-list {
+    padding: 0;
+    list-style: none;
+}
+
+.customerPlan__details {
+    flex: 2;
+    background-color: $prime-colour-4;
+    display: flex;
+}
+
+.customerPlan__details-inner {
+    flex: 1;
+    padding: $grid-gutter-width;
+}
+
+.customerPlan__data {
+    flex: 1;
+    border-bottom: solid 1px $secondary-colour-5;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.customerPlan__data-label {
+    @extend %caption-2;
+    color: $secondary-colour-3;
+}
+
+.customerPlan__data-amount {
+    margin: 0;
+    line-height: .7em;
+}
+
+.customerPlan__units {
+    flex: 1;
+    list-style: none;
+    display: flex;
+}
+
+.customerPlan__costs {
+    list-style: none;
+    padding: 0;
+}

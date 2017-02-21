@@ -1,0 +1,11 @@
+.uitProductSelect {
+    display: flex;
+    width: 100%;
+}
+
+.uitProductSelect__button {
+    display: block;
+    width: 100%;
+    color: $uitProductSelect-colour;
+    background-color: $uitProductSelect-background-colour;
+}

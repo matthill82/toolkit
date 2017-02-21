@@ -1,0 +1,13 @@
+<div id="technical-specifications" class="technical-specifications dr-device-specs component">
+    <div class="box media-icon-{{ iconPosition }}">
+
+        <div class="spec-icon {{ iconClass }}"></div>
+        <dl>
+            <dt>{{specCategory}}</dt>
+            <dd ng-repeat="feature in dd.device.features | filter: {'category': specCategory}" ng-if="specCategoryItemsArray.indexOf(feature.name) !== -1">
+                <strong>{{feature.name}}:</strong> {{feature.value}}{{feature.unit}}
+            </dd>
+        </dl>
+
+    </div>
+</div>

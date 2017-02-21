@@ -1,0 +1,13 @@
+<div class="dr-device-results-category component" >
+	<div class="summarybox summarybox-specs " >
+		<div class="details">
+			<div class="text-icon">
+				<div class="icon {{icon}}"></div>
+				<h3>{{categoryName}}</h3>
+			</div>
+			<div class="spec-items" ng-repeat="(key, value) in device.features |  filter:{'category':  categoryName}:true | orderBy: 'name'">
+				<p class="item" ng-hide="hideSpecificationItem(value.name, categoryItems)"><span>{{value.name}}:</span> {{value.value}}{{value.unit}}</p>
+			</div>
+		</div>
+	</div>
+</div>

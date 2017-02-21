@@ -1,0 +1,31 @@
+<div class="customerDevice">
+    <uit-title-block title="{{ :: $ctrl.title}}"></uit-title-block>
+    <div class="customerDevice__image">
+        <div class="customerDevice__image-inner">
+            <product-image device-id="{{ :: $ctrl.proposition.device.internationalIdentifier}}"></product-image>
+        </div>
+    </div>
+    <div class="customerDevice__details">
+        <div class="customerDevice__details-inner">
+            <h3>{{ :: $ctrl.proposition.device.model }}</h3>
+            <ul class="customerDevice__spec">
+                <li>
+                    <span ng-if="$ctrl.proposition.device.capacity">
+                        {{ :: $ctrl.proposition.device.capacity.amount}}
+                        {{ :: $ctrl.proposition.device.capacity.unit}} </span>
+                    <span ng-if="$ctrl.proposition.device.colour">{{ :: $ctrl.proposition.device.colour}}</span>
+                </li>
+                <li ng-if="$ctrl.offering.termLength">{{ :: $ctrl.offering.termLength}} {{ ::
+                    $ctrl.offering.termLengthUnits}} {{ :: $ctrl.offeringTypeMapping }}
+                </li>
+                <li ng-if="$ctrl.offering.regularInstallmentAmount.net.value">
+                    <uit-price-format number=":: $ctrl.offering.regularInstallmentAmount.net.value"></uit-price-format>
+                    /{{ ::$ctrl.offering.termLengthUnits}}
+                </li>
+            </ul>
+            <uit-icon-list
+                list="[{ icon: $ctrl.upgradeIcon, text: $ctrl.upgradeMessage }]">
+            </uit-icon-list>
+        </div>
+    </div>
+</div>

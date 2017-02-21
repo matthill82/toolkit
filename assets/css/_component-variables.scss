@@ -1,0 +1,912 @@
+// ---- Main ---- //
+$summarybox-border-colour  : $secondary-colour-3 !default;
+$summarybox-colour         : $secondary-colour-3 !default;
+$summarybox-bgcolour       : #fff !default;
+$summarybox-h2-size        : 22px !default;
+$summarybox-h2-lh          : 24px !default;
+$summarybox-h2-color       : $secondary-colour-2 !default;
+$summarybox-h2-font-family : $h2-family !default;
+$summarybox-h3-size        : 16px !default;
+$summarybox-noborder-color : $secondary-colour-2 !default;
+$spec-item-font-color      : $secondary-colour-3 !important !default;
+$spec-item-font-size       : 12px !default;
+$spec-item-font-weight     : $font-family-base-weight !default;
+$sticky-box-bg-color       : #fff !default;
+$sticky-font-size          : 18px !default;
+$sticky-font-weight        : 500 !default;
+
+
+// ---- Header -- //
+$header-bg                    : $primary-colour-1 !default;
+$header-title-colour          : #fff !default;
+$header-link-colour: #fff !default;
+$header-name-colour           : $header-title-colour !default;
+$header-jira-modal-text-color : $primary-colour-1 !default;
+$header-jira-modal-bgcolor    : #fff !default;
+$header-burger-icon-size      : 15px !default;
+$header-border-bottom-bg	  : transparent !default;
+$header-updates-icon-color    : #ff0000;
+$header-burgermenu-click-right-offset: 0 !default;
+$header-height                : 50px;
+$header-font-weight           : $bold-font-weight !default;
+
+// ----- Navigation --- //
+$nm-head-background                      : $primary-colour-1 !default;
+$nm-head-text-colour                     : #fff !default;
+$nm-head-text-size                       : 24px !default;
+$nm-bgcolor                              : $secondary-colour-5 !default;
+$nm-active-color                         : $primary-colour-2 !default; //colour of .active link
+$nm-primary-border-color                 : $secondary-colour-4 !default;
+$nm-border-color                         : $secondary-colour-4 !default;
+$nm-bg-color                             : $secondary-colour-5 !default; //dropdown menu item inside nav
+$nm-text-color                           : $secondary-colour-2 !default;
+$nm-link                                 : $secondary-colour-2 !default; //dropdown text colour
+$nm-list-bgcolor                         : #fff !default; //dropdown background colour
+$nm-sidemenu-bgcolor                     : #fff !default; //panel bg colour
+$nm-overlay-bgcolor                      : #000 !default;
+$nm-cwsicon-size                         : 20px !default;
+$nm-primary-item-link-disabled-bg-colour : $secondary-colour-4 !default;
+$nm-primary-item-link-disabled-colour    : $secondary-colour-3 !default;
+$nm-selected-border-color                : transparent !default;
+
+//inpage version of the navigation
+$nm-inpage-menu-bgcolor: $secondary-colour-5 !default;
+$nm-inpage-panel-border-color: $secondary-colour-3 !default;
+$nm-inpage-panel-bottom-border-color: $prime-colour-4 !default;
+$nm-inpage-menulist-active-bgcolor: $prime-colour-1 !default;
+$nm-inpage-menulist-active-text-color: $prime-colour-4 !default;
+$nm-inpage-menulist-item-active-bgcolor: $prime-colour-4 !default;
+$nm-inpage-menulist-item-text-active-color: $prime-colour-1 !default;
+$nm-inpage-menulist-item-item-active-text-color: $prime-colour-1 !default;
+$nm-inpage-link-selected-background-color: $prime-colour-1 !default;
+$nm-inpage-link-selected-text-color: $prime-colour-4 !default;
+$nm-inpage-menulist-item-selected-text-color: $prime-colour-4 !default;
+
+
+// ---- Login -- //
+$loginbox-border         : $primary-colour-3 !default;
+$loginbox-height         : 480px !default;
+$loginbox-width          : 500px !default;
+$login-input-border      : $primary-colour-3 !default;
+$login-input-color       : #fff !default;
+$login-button-color      : $primary-colour-3 !default;
+$login-button-text-color : #fff !default;
+$login-error-color       : #fff !default;
+$login-h1                : $secondary-colour-3 !default;
+$login-h1-size           : 28px !default;
+$login-h1-weight         : $font-family-base-lightweight !default;
+$login-form-text-size    : 18px !default;
+
+
+// --- Device Details --- //
+$dd-selection-list-border    : $prime-colour-1 !default; //selection item
+$dd-selection-list-box       : $secondary-colour-3 !default; //selection item shadow
+$dd-selection-list-a-border  : $secondary-colour-3 !default; //colour item border
+$dd-selection-list-a-color   : #000 !default; // item
+$dd-selection-list-a-bgcolor : #fff !default; //item link bg
+$dd-selection-list-size      : 16px !default;
+$dd-intro-size               : 19px !default;
+$dd-intro-fw                 : $font-family-base-lightweight !default;
+$dd-intro-color              : $secondary-colour-3 !default;
+$dd-h2-size                  : 23px !default;
+$dd-circle-border            : $secondary-colour-3 !default; //colour item circle
+//$dd-btn-border               : 1px solid $secondary-colour-3 !default;
+$dd-h1-fw: 500 !default;
+$dd-h1-size: 20px !default;
+$dd-h1-colour: $secondary-colour-2 !default;
+$dd-h1-font-family           : $font-family-bold-base !default;
+$dd-h1-font-weight           : $font-family-base-weight !default;
+$dd-h2-font-family           : $h2-family !default;
+$dd-h2-font-weight           : $font-family-base-weight !default;
+$dd-imagery-border           : $secondary-colour-3 !default;
+$dd-imagery-dropshadow       : $secondary-colour-3 !default;
+$dd-spec-heading-fs          : 19px !default;
+$dd-spec-box-text-color      : $secondary-colour-3 !default;
+$dd-spec-box-bg              : #fff !default;
+$dd-spec-box-border-color    : $secondary-colour-3 !default;
+$dd-spec-box-heading-fw      : $font-family-base-lightweight !default;
+$dd-spec-box-heading-lh      : 1 !default;
+$dd-spec-box-heading-colour  : $secondary-colour-2 !default;
+$dd-spec-box-label-fw        : 600 !default;
+$dd-spec-box-text-fs         : 12px !default;
+$dd-spec-box-text-lh         : 1.4em !default;
+$dd-spec-box-text-fw         : $font-family-base-lightweight !default;
+$dd-spec-box-text-colour     : $secondary-colour-3 !default;
+$dd-spec-box-icon-colour     : $prime-colour-1 !default;
+$dd-spec-box-category-size   : 14px !default;
+$dd-spec-box-category-weight : 600 !default;
+$dd-spec-box-category-color  : $secondary-colour-2 !default;
+
+
+// ---- Device Results ----  //
+$dr-btn-text-color            : $prime-colour-1 !default;
+$dr-btn-fw                    : $font-family-base-weight !default;
+$dr-btn-colour                : #fff !default;
+$dr-btn-size                  : 18px !default;
+$dr-btn-border                : $primary-colour-4 !default;
+$dr-no-results-font-size      : 18px !default;
+$dr-no-results-font-color     : $secondary-colour-3 !default;
+$dr-arrow-icon-size           : 80px !default;
+$dr-category-icon-color       : $prime-colour-1 !default;
+
+
+// ---------- Sliders ------------ //
+$slider-bg-color      : $primary-colour-1 !default;
+$slider-primary-color : $primary-colour-1 !default;
+$slider-default-color : $secondary-colour-3 !default;
+$slider-bubble-color  : $primary-colour-3 !default; //slider selected value
+$slider-active-after  : $secondary-colour-1 !default; //pointer colour
+$slider-light-color   : #fff !default; //pointer inner circle
+$pds-bubble-bgcolor   : $primary-colour-4 !default;
+$pds-bubble-text      : 24px !default;
+$pds-bubble-unit-text : 10px !default;
+
+
+// ---- Questions Container --- //
+$qc-title-colour-light        : #fff !default;
+$qc-title-colour-dark         : #000 !default;
+$qc-title-size                : 36px !default;
+$qc-icon-background           : $primary-colour-5 !default;
+$qc-icon-size                 : 30px !default;
+$qc-icon-border               : $secondary-colour-3 !default;
+$qc-icon-colour               : $secondary-colour-3 !default;
+$qc-icon-active-colour        : #000 !default;
+$qc-question-text             : $font-family-base !default;
+$qc-questions-size            : 13px !default;
+$qc-questions-fw              : $font-family-base-lightweight !default;
+$qc-questions-text-lineheight : 15px !default;
+
+
+// ---------- Questions Advanced ------ //
+$question-adv-h2-size: 22px !default;
+$question-adv-text-color: $primary-colour-1 !default;
+$question-adv-margin-bottom: 0 !default;
+$answer-icon-background: $prime-colour-4 !default;
+$answer-border: $primary-colour-1 !default;
+$answer-icon-colour: $primary-colour-1 !default;
+$answer-icon-active-colour: $prime-colour-4 !default;
+$answer-icon-active-bg: $primary-colour-1 !default;
+$answer-size: 14px !default;
+$answer-font-family: $font-family-bold-base !default;
+$answer-text-lineheight: 17px !default;
+$answer-icon-size: 32px !default;
+$answer-icon-lh: 38px !default;
+$question-adv-h3-size: 15px !default;
+
+
+// ------- Data Calculator / Plans --- //
+$dc-calculator-color                  : #fff !default;
+$dc-calculator-border                 : $secondary-colour-3 !default;
+$dc-data-graph-h2-size                : 20px !default;
+$dc-data-graph-h2-weight              : $font-family-base-weight !default;
+$dc-data-graph-intro-weight           : $font-family-base-lightweight !default;
+$dc-data-graph-axis-text-color        : $secondary-colour-2 !default;
+$dc-graph-bar                         : $secondary-colour-3 !default;
+$dc-graph-bar-future                  : $prime-colour-2 !default;
+$dc-graph-bar-current                 : $prime-colour-1 !default;
+$dc-button-futureproof-colour         : $prime-colour-2 !default;
+$dc-button-futureproof-divider-colour : #fff !default;
+$dc-button-suggested-colour           : $prime-colour-1 !default;
+$dc-future-proof-details-background   : $dc-button-futureproof-colour !default;
+$dc-future-proof-details-font-colour  : $btn-sec-font-color !default;
+$dc-graph-shadow                      : inset 0 0 5px $secondary-colour-3 !default;
+$data-calc-h2-size                    : 24px !default;
+$dc-graph-label                       : #fff !default;
+
+
+// ------- Tabbed Carriers Panel --- //
+$tcp-tab-bg-color      : $btn-sec-font-color !default;
+$tcp-tab-font-colour   : $primary-colour-1 !default;
+$tcp-tab-border-colour : $primary-colour-1 !default;
+$tcp-tab-box-shadow    : rgba(0, 0, 0, .75) !default;
+
+
+// --------- Plan Results ------ //
+
+
+
+//Plan Recommendations
+$planr-container-color               : #fff !default;
+$planr-container-border              : $secondary-colour-3 !default;
+$planr-container-item-border         : $secondary-colour-5 !default;
+$planr-price-color                   : $secondary-colour-2 !default;
+$planr-price-letterspacing           : -2px !default;
+$planr-font-color                    : $secondary-colour-3 !default;
+$planr-cost-main-size                : 38px !default;
+$planr-costlabel-main-size           : 18px !default;
+$planr-upfrontcost-size              : 16px !default;
+$planr-ul-head-color                 : $prime-colour-1 !default;
+$planr-ul-head-size                  : 16px !default;
+$planr-icon-size                     : 10px !default;
+$planr-benefit-font-size             : 12px !default;
+$planr-upsell-text-color             : #fff !default;
+$planr-upsell-text-size              : 19px !default;
+$planr-upsell-text-weight            : 600 !default;
+$planr-arrow-color                   : $primary-colour-1 !default;
+$planr-arrow-text-color              : #fff !default;
+$planr-arrow-text-size               : 15px !default;
+$planr-arrow-text-lineheight         : 1.2em !default;
+$planr-detail-label-size             : 13px !default;
+$planr-detail-value-size             : 11px !default;
+$planr-detail-value-fontweight       : 800 !default;
+$planr-detail-label-text-line-height : 1em !default;
+$planr-detail-text-color             : $secondary-colour-2 !default;
+$planr-no-results-size               : 24px !default;
+$planr-no-results-color              : $secondary-colour-3 !default;
+$planr-detail-text-height            : 1.1em !default;
+$plan-cost-font-weight               : 700 !default;
+$planr-costlabel-main-lineheight     : .1em !default;
+$planr-upfront-cost-fontweight       : 600 !default;
+$planr-pullout-fontweight            : 700 !default;
+$planr-ul-head-fontweight            : 700 !default;
+
+
+// ---------- Basket ------------ //
+$basket-container-border         : $secondary-colour-4 !default;
+$basket-text-color               : $secondary-colour-2 !default;
+$basket-payment-font-family      : $font-family-bold-base !default;
+$basket-head-color               : $secondary-colour-2 !default;
+$basket-device-text-color        : $secondary-colour-3 !default;
+$basket-device-data-label-weight : 600 !default;
+$basket-inclusions-background    : $secondary-colour-4 !default;
+$basket-container-bgcolor        : #fff !default;
+$basket-total-pay-size           : 14px !default;
+$basket-total-pay-weight         : 600 !default;
+$basket-payment-size             : 40px !default;
+$basket-total-value-color        : $secondary-colour-2 !default;
+$basket-price-value-weight       : 700 !default;
+
+//--------- Proposition Item Panel (on basket and plan results) ------
+$b-inclusions-container-background: #fff !default;
+$b-inclusions-background          : $secondary-colour-4 !default;
+$b-inclusions-value-color         : $secondary-colour-2 !default;
+$b-inclusions-value-size          : 18px !default;
+$b-inclusions-value-weight        : 600 !default;
+$b-inclusions-value-font-family   : $font-family-base !default;
+$b-inclusions-unit-color          : $secondary-colour-2 !default;
+$b-inclusions-unit-size           : 12px !default;
+$b-inclusions-unit-weight         : 500 !default;
+$b-inclusions-unit-font-family    : $font-family-base !default;
+$b-inclusions-value-fontheight    : 1.6em !default;
+$b-price-value-color              : $secondary-colour-2 !default;
+$b-price-value-size               : 40px !default;
+$b-price-value-weight             : 700 !default;
+$b-price-value-font-family        : $font-family-bold-base !default;
+$b-price-unit-color               : $secondary-colour-2 !default;
+$b-price-unit-size                : 12px !default;
+$b-price-unit-weight              : 500 !default;
+$b-price-unit-font-family         : $font-family-bold-base !default;
+$b-price-value-fontheight         : 1em !default;
+$b-upfront-price-value-fontheight : 1.6em !default;
+$b-upprice-value-size             : 24px !default;
+$b-icon-size                      : 45px !default;
+$b-tick-icon-size                 : 2rem !default;
+$b-inclusions-icon-color          : $prime-colour-2 !default;
+$b-tariffmonth-icon-color         : $prime-colour-3 !default;
+$b-featurebox-size                : 13px !default;
+$b-featurebox-weight              : 600 !default;
+$b-feature-icon-color             : $prime-colour-1 !default;
+
+
+// ----- Eligibility ------ //
+$ea-step-color              : #fff !default;
+$ea-step-bgcolor            : $primary-colour-1 !default;
+$ea-step-shadow-color       : $primary-colour-4 !default;
+$ea-step-fontsize           : 14px !default;
+$ea-panel-bgcolor           : $secondary-colour-5 !default;
+$ea-panel-alternate-bgcolor : #fff !default;
+$ea-form-mandatory-color    : $danger-color !default;
+$ea-pull-color              : $primary-colour-1 !default;
+
+
+//-----  QR CODE ------- //
+$qrcode-border-color: $secondary-colour-5 !default;
+
+
+//-------- TOAST -------------//
+$toast-label-colour           : #fff !default;
+$toast-label-colour-hover     : #fff !default;
+$toast-button-color           : #fff !default;
+$toast-button-color-hover     : #000 !default;
+$toast-bg-color               : #000 !default;
+$toast-progress-bgcolor       : #000 !default;
+$toast-container-shadow       : $secondary-colour-3 !default;
+$toast-container-color        : #fff !default;
+$toast-container-hover-shadow : #000 !default;
+$toast-button-shadow          : #000 !default;
+
+
+//-------- PLANS RESULTS SUMMARY --------//
+$prs-text-fw          : 600 !default;
+$prs-text-fs          : 18px !default;
+$prs-text-color       : $secondary-colour-3 !default;
+
+$prs-text-count-fw    : 500 !default;
+$prs-text-count-fs    : 28px !default;
+$prs-text-count-color : #000 !default;
+
+
+//----- PLANS RESULTS SIDEBAR ITEM -----//
+$prs-bg                    : $secondary-colour-4 !default;
+$prs-title-fs              : 24px !default;
+$prs-reset-fs              : 14px !default;
+$prs-reset-fw              : 500 !default;
+$prsi-title-fw             : 600 !default;
+$prsi-title-fs             : 15px !default;
+$prsi-button-fs            : 15px !default;
+$prsi-button-color         : #000 !default;
+$prsi-button-border        : $secondary-colour-3 !default;
+$prsi-button-bg            : transparent !default;
+$prsi-button-active-color  : $prime-colour-1 !default;
+$prsi-button-active-border : $prime-colour-1 !default;
+$prsi-button-active-bg     : #fff !default;
+$prsi-show-hide-fs         : 15px !default;
+$prsi-show-hide-lh         : 30px !default;
+$prsi-show-hide-color      : $prime-colour-1 !default;
+$prsi-dd-bg                : $secondary-colour-4 !default;
+$prsi-dd-arrow-bg          : $prime-colour-1 !default;
+$prsi-dd-arrow-color       : #fff !default;
+$prl-border-color          : $secondary-colour-3 !default;
+
+
+//------------ PROPOSITIONS ------------//
+$propl-border-color : $secondary-colour-3 !default;
+$propl-icon-color   : $prime-colour-1 !default;
+
+
+//------------- PAGINATION -------------//
+$pagination-dd-border        : $secondary-colour-3 !default;
+$pagination-current-page-fw  : 600 !default;
+$pagination-toggle-all-color : $prime-colour-1 !default;
+$pagination-toggle-all-fs    : 15px !default;
+$pagination-toggle-all-fw    : 600 !default;
+$pagination-toggle-all-ff    : $font-family-bold-base !default;
+$pagination-stats-color      : $secondary-colour-3 !default;
+$pagination-stats-fs         : 15px !default;
+
+
+//------------- SWIPER -------------//
+$swiper-background-colour : $prime-colour-1 !default;
+$swiper-text-colour  : #fff !default;
+$swiper-saving-colour  : $prime-colour-3 !default;
+$swiper-header-text-size: 18px !default;
+$swiper-header-font-family: $font-family-bold-base !default;
+$swiper-price-font-size: 25px !default;
+$swiper-price-font-family: $font-family-bold-base !default;
+$swiper-price-text-font-size: 13px !default;
+$swiper-list-text-size: 11px !default;
+$swiper-text-size: 18px !default;
+$swiper-icon-hover-colour: $prime-colour-1 !default;
+$swiper-border-colour: $prime-colour-1 !default;
+
+//-------------- LEFT NAV -------------//
+$left-nav-bg           : #fff;
+$left-nav-color        : $secondary-colour-2 !default;
+$left-nav-active-bg    : $primary-colour-1 !default;
+$left-nav-border-bg    : $primary-colour-1 !default;
+$left-nav-active-color : #fff;
+$left-nav-font-size    : 12px;
+$left-nav-font-family   : $font-family-bold-base !default;
+
+//------------ HERO BANNER -----------//
+$hero-font-color    : #fff;
+$hero-bg-color: $primary-colour-1 !default;
+$hero-heading-size: 42px;
+$hero-heading-weight: 100;
+$hero-text-size: 16px;
+
+//------------- BREADCRUMB -------------//
+$breadcrumb-fs                  : 15px !default;
+$breadcrumb-active-bg           : $primary-colour-1 !default;
+$breadcrumb-active-color        : $prime-colour-4 !default;
+$breadcrumb-complete-color : $primary-colour-1 !default;
+$breadcrumb-font-color			: $primary-colour-1 !default;
+$breadcrumb-bgcolor			: $secondary-colour-3 !default;
+$breadcrumb-li-border-color: $primary-colour-3 !default;
+$breadcrumb-list-bg: $prime-colour-4 !default;
+$breadcrumb-active-text-font-family: $font-family-bold-base !default;
+
+$breadcrumb-font-color-complete : $secondary-colour-3 !default;
+$breadcrumb-icon-complete : $secondary-colour-1 !default;
+$breadcrumb-font-color-disabled : #cccccc !default;
+$breadcrumb-font-color-active : $secondary-colour-1 !default;
+$breadcrumb-font-family: $font-family-base !default;
+$breadcrumb-border: $secondary-colour-4 !default;
+
+//------------CTA ---------------//
+$btn-cta-cws-navbar-text-color : $secondary-colour-2 !default;
+$btn-cta-border-color : $secondary-colour-3 !default;
+$btn-cta-font-size: 16px !default;
+$btn-cta-font-family: $font-family-bold-base !default;
+
+// ------ 2ND/3RD NAV ------------- //
+$navigation-bar-bg: #fff !default;
+$navigation-bar-border-color: $secondary-colour-3 !default;
+$navigation-bar-bottom-depth: 200 !default;
+
+
+//------------Info Panel Item ---------------//
+$infopanel-theme1-bgcolor: #fff !default;
+$infopanel-theme2-bgcolor: $secondary-colour-4 !default;
+$infopanel-theme3-bgcolor: #fff !default;
+$infopanel-theme4-bgcolor: #fff !default;
+$infopanel-theme1-color: $primary-colour-1 !default;
+$infopanel-theme2-color: $primary-colour-1 !default;
+$infopanel-theme3-color: $primary-colour-1 !default;
+$infopanel-theme4-color: $primary-colour-1 !default;
+$info-panel-heading-text-size: 20px !default;
+$info-panel-heading-text-weight: normal !default;
+$info-panel-text-size: 16px !default;
+$info-panel-heading-text-family: $font-family-bold-base !default;
+$info-panel-text-line-height: 22px !default;
+
+
+// --------- Specs slider ----------- //
+$ss-mask-bg                 : #fff !default;
+$ss-mask-alpha              : .7 !default;
+$ss-panel-bg                : #fff !default;
+$ss-toggle-icon-size        : 32px !default;
+$ss-panel-border-left-color : $secondary-colour-2 !default;
+$ss-title-bar-bg            : $prime-colour-1 !default;
+$ss-title-bar-color         : #fff !default;
+$ss-title-bar-btn-border    : #fff !default;
+$ss-title-bar-fs            : 18px !default;
+$ss-title-bar-buttons-fs    : 23px !default;
+$ss-stats-color             : $secondary-colour-2 !default;
+$ss-stats-price-color       : $prime-colour-1 !default;
+$ss-stats-border-bottom     : $prime-colour-1 !default;
+$ss-stats-heading-fs        : 17px !default;
+$ss-stats-heading-fw        : 700 !default;
+$ss-stats-heading-price-text-size: 20px !default;
+$ss-stats-subtext-fs        : 14px !default;
+$ss-stats-heading-font-family: $font-family-bold-base !default;
+$ss-footer-bg               : $secondary-colour-4 !default;
+$ss-footer-border-top       : $secondary-colour-2 !default;
+$ss-footer-button-bg        : $prime-colour-1 !default;
+$ss-footer-button-color     : #fff !default;
+$ss-facet-alertnate-background-color: $secondary-colour-4 !default;
+
+
+// --------- Device Recommendations ----------- //
+$device-recommendations-mask-bg: #000 !default;
+$drwa-loading-text-fs: 40px !default;
+$drwa-loading-text-color: $secondary-colour-2 !default;
+
+
+// ----- BELOW LINE IS NOT IN DESIGN GENERATOR  ------- //
+
+// ------------- stock toggle ---------------- //
+$toggleoff: $primary-colour-1 !default;
+$toggleon: $prime-colour-1 !default;
+$toggle-text-font-family: $font-family-bold-base !default;
+$switch-selected-color: $prime-colour-1 !default;
+$switch-bg-colour: $secondary-colour-3 !default;
+$switch-button-color: $secondary-colour-2 !default;
+
+// --------------- STOCK COUNT -----------------------//
+$stock-count-font-size: 12px !default;;
+$stock-count-text-color: $secondary-colour-2 !default;
+$stock-count-border-color: $secondary-colour-2 !default;
+$stock-count-font-family: $font-family-bold-base !default;
+
+//------------- PRODUCT GRID -------------//
+$product-slide-background-colour   	: $prime-colour-1 !default;
+$product-grid-bgcolour              : $prime-colour-1 !default;
+$product-slide-text-colour-inverse 	: #fff !default;
+$product-slide-benefits-text-weight : 700 !default;
+$product-slide-benefits-text-size	: 14px !default;
+$product-slide-head-text-size		: 18px !default;
+$product-slide-cta-text-size		: 16px !default;
+$product-grid-border-colour			: $secondary-colour-3 !default;
+$product-slide-head-font-family     : $font-family-bold-base !default;
+
+//------------- PRICING -------------//
+$pricing-theme-colour         : $prime-colour-1 !default;
+$pricing-discount-colour      : $prime-colour-5 !default;
+$pricing-saving-colour        : $prime-colour-3 !default;
+$pricing-cashback-colour      : $secondary-colour-2 !default;
+$pricing-text-colour          : $prime-colour-3 !default;
+$pricing-text-secondary-colour: $secondary-colour-3 !default;
+$pricing-border-top-colour    : $secondary-colour-2 !default;
+$pricing-border-bottom-colour : $secondary-colour-2 !default;
+$pricing-product-price-font-size	: 26px !default;
+$pricing-product-saving-font-size: 16px;
+$pricing-cashback-font-family: $font-family-bold-base !default;
+$pricing-cashback-text-size: 14px !default;
+$pricing-cashback-font-weight: 700 !default;
+$pricing-saving-font-family: $font-family-bold-base !default;
+$pricing-saving-font-weight: 700 !default;
+$pricing-instore-font-family: $font-family-bold-base !default;
+$pricing-instore-text-size: 12px !default;
+$pricing-discount-font-family: $font-family-bold-base !default;
+$pricing-discount-text-size: 10px !default;
+$pricing-discount-b-text-size: 11px !default;
+$pricing-product-saving-font-size: 16px !default;
+$pricing-discount-details-font-size: 10px !default;
+$pricing-cashback-text-size: 11px !default;
+$pricing-price-font-family: $font-family-bold-base !default;
+$pricing-price-font-weight: 700 !default;
+$pricing-saving-text-size: 14px !default;
+$pricing-price-text-size: 28px !default;
+
+
+// ----------- Stickers ------------- //
+$sticker-depth         : 99 !default;
+$temp-text-color       : #fff !default;
+$temp-background-color : $prime-colour-1 !default;
+
+// ----------- Device Tags ------------- //
+$device-tag-font-size: 12px !default;
+$device-tag-text-color: $prime-colour-5 !default;
+$device-tag-border-top-color: $secondary-colour-2 !default
+
+// ----------- Device Tags ------------- //
+$bundle-main-price-color       :#000 !default;
+$bundle-you-save-color         :$prime-colour-3 !default;
+$bundle-border-color           :$prime-colour-1 !default;
+$bundle-more-text-color         :$prime-colour-1 !default;
+$bundle-more-text-size:         20px !default;
+$bundle-more-text-line-height:  25px !default;
+$bundle-save-text-font-weight: 700;
+$bundle-main-price-text-font-weight: 700;
+$bundle-main-price-text-size: 17px;
+$bundle-pullout-text-size: 27px;
+$bundle-small-text-size: 13px;
+
+
+
+$spacing-small  : .5rem !default;
+$spacing-medium : 1rem !default;
+$spacing-large  : 1.5rem !default;
+
+$spacing: (
+        small  : $spacing-small,
+        medium : $spacing-medium,
+        large  : $spacing-large
+);
+
+
+// ------ Dixons Specs Slider ------- //
+$ssbg-border-bottom : transparent !default;
+$ssbg-title-fs    : 16px !default;
+$ssbg-title-ff    : $font-family-bold-base;
+$ssbg-title-color : $prime-colour-1 !default;
+$ssbg-button-fs     : 13px !default;
+$ssbg-button-lh     : 1.2;
+$ssbg-button-bg     : #fff !default;
+$ssbg-button-border : $prime-colour-1 !default;
+$ssbg-button-color  : $prime-colour-1 !default;
+$ssbg-button-active-bg     : $prime-colour-1 !default;
+$ssbg-button-active-border : $prime-colour-1 !default;
+$ssbg-button-active-color  : #fff !default;
+$ssbg-hint-icon-size: 23px !default;
+$ssbg-hint-icon-colour: $secondary-colour-2 !default;
+
+// -------------- Protection tiles ------------ //
+$protection-tile-hint-icon-size: 26px !default;
+$protection-tile-header-info-text-size: 12px !default;
+$protection-tile-header-info-font-weight: 600 !default;
+$protection-tile-border-colour: $primary-colour-1 !default;
+$protection-tile-header-text-size: 18px !default;
+$protection-tile-header-font-family: $font-family-bold-base !default;
+$protection-tile-header-color: $primary-colour-1 !default;
+$protection-tile-price-header-text-size: 18px !default;
+$protection-tile-price-header-font-family: $font-family-bold-base !default;
+$protection-tile-cta-background-color: $primary-colour-1 !default;
+$protection-tile-cta-text-color: $prime-colour-4 !default;
+$protection-tile-cta-text-size: 18px !default;
+
+
+// ------ Basket Advanced ------- //
+$ba-item-border-bottom: $primary-colour-1 !default;
+$ba-monthly-font-size: 16px !default;
+$ba-monthly-text-colour: $secondary-colour-2 !default;
+$ba-price-font-size: 20px !default;
+$ba-price-text-colour: $secondary-colour-2 !default;
+$ba-product-code-font-size: 16px !default;
+$ba-price-font-family: $font-family-bold-base !default;
+$ba-product-code-text-colour: $secondary-colour-2 !default;
+$ba-remove-icon-colour: $primary-colour-1 !default;
+$ba-text-colour: $secondary-colour-2 !default;
+$ba-title-font-size: 20px !default;
+$ba-title-text-colour: $secondary-colour-2 !default;
+$ba-title-font-family: $font-family-bold-base !default;
+$bs-modal-text-colour: $secondary-colour-2 !default;
+$bs-modal-header-text-colour: $secondary-colour-2 !default;
+$bs-border-color: $primary-colour-1 !default;
+$bs-font-family: $font-family-bold-base !default;
+
+// ------ Basket Summary ------- //
+$bs-border-left: $primary-colour-1 !default;
+$bs-checkout-button-background-colour: $primary-colour-1 !default;
+$bs-checkout-button-font-size: 24px !default;
+$bs-checkout-button-line-height: 42px !default;
+$bs-checkout-button-text-colour: $primary-colour-3 !default;
+$bs-savings-border-bottom: $secondary-colour-2 !default;
+$bs-savings-font-size: 20px !default;
+$bs-savings-line-height: 42px !default;
+$bs-savings-text-colour: $prime-colour-3 !default;
+$bs-title-background-colour: $primary-colour-1 !default;
+$bs-title-font-size: 24px !default;
+$bs-title-line-height: 46px !default;
+$bs-title-text-colour: $primary-colour-3 !default;
+$bs-total-border-bottom: $secondary-colour-2 !default;
+$bs-total-font-size: 20px !default;
+$bs-total-line-height: 42px !default;
+$bs-total-text-colour: $secondary-colour-2 !default;
+
+// ------ Basket Total ------- //
+$bt-border-left-colour: $secondary-colour-3 !default;
+$bt-font-size: 16px !default;
+$bt-text-colour: $secondary-colour-2 !default;
+$bt-font-family: $font-family-bold-base !default;
+
+//-------- promo / accessory item ----------//
+$promo-item-header-text-size: 18px !default;
+$promo-item-header-font-family: $font-family-bold-base !default;
+$promo-offer-border-color: $primary-colour-1 !default;
+$promo-offer-text-color: $primary-colour-1 !default;
+$promo-offer-head-font-family: $font-family-bold-base !default;
+$promo-offer-text-size: 12px !default;
+$promo-item-header-text-color: $secondary-colour-2 !default;
+
+
+//-------- US Ref App - Ways To Buy ----------//
+$option-box-header-text-size: 20px !default;
+$option-box-header-font-weight: 400 !default;
+$option-box-text-size: 16px !default;
+$option-box-sub-text-size: 14px !default;
+$option-box-conditions-text-size: 12px !default;
+$option-box-fixed-border-color: $primary-colour-1 !default;
+$option-box-fixed-background-color: $primary-colour-4 !default;
+$option-box-selected-border-color: $primary-colour-1 !default;
+$option-box-selected-background-color: $primary-colour-4 !default;
+$option-box-selection-border-color: $secondary-colour-3 !default;
+$option-box-selection-background-color: $prime-colour-4 !default;
+
+// ------ Search Grid ------- //
+$srg-icon-colour: $secondary-colour-1 !default;
+$srg-input-border-colour: $secondary-colour-3 !default;
+$srg-input-border-width: 2px !default;
+$srg-input-font-size: 20px !default;
+$srg-input-line-height: 30px !default;
+$srg-input-text-colour: $secondary-colour-2 !default;
+$srg-title-colour: $secondary-colour-3 !default;
+$srg-title-font-size: 20px !default;
+$srg-title-line-height: 60px !default;
+$srg-no-results-title-font-size: 20px !default;
+$srg-no-results-message-font-size: 14px !default;
+$srg-title-font-family: $font-family-bold-base !default;
+
+// ----- feature icons ---------- //
+$featureicon-icon-size: 44px !default;
+$featureicon-border-color: $secondary-colour-2 !default;
+$featureicon-icon-color: $secondary-colour-2 !default;
+$featureicon-text-color: $secondary-colour-2 !default;
+$featureicon-results-icon-size: 32px !default;
+$featureicon-results-icon-color: $secondary-colour-2 !default;
+$featureicon-results-text-color: $secondary-colour-2 !default;
+$featureicon-results-text-size: 12px !default;
+$featureicon-text-font-family: $font-family-bold-base !default;
+
+// ------ Product Compare ------- //
+$pc-arrow-colour: $prime-colour-1 !default;
+$uitProductItem-compare-icon-font-size: 35px !default;
+$uitProductItem-compare-icon-font-weight: 700 !default;
+$uitProductItem-tag-font-family: $font-family-bold-base !default;
+
+// ------------- Vertical slider ----------------//
+$vs-compare-icon-color: $prime-colour-1 !default;
+$vs-background-25-invis: rgba(0, 0, 0, .25);
+$vs-progress-bar-background-color: $prime-colour-1 !default;
+$vs-background-100-white: rgba(255, 255, 255, 1);
+$vs-title-text-size: 16px !default;
+$vs-title-font-family: $font-family-bold-base !default;
+$vs-panel-border-colour: $prime-colour-1 !default;
+$vs-panel-background-colour: $prime-colour-1 !default;
+$vs-compare-icon-font-weight: 600 !default;
+$vs-compare-icon-size: 30px !default;
+
+//--------- basic table ---------------------//
+$table-header-text-colour: $prime-colour-4 !default;
+$table-header-background-colour: $prime-colour-1 !default;
+$table-border-colour: $secondary-colour-2 !default;
+$table-header-font-weight: 700 !default;
+$table-header-font-size: 14px !default;
+$table-font-size: 12px !default;
+
+// ------ Upsell Messages ------- //
+$upsell-arrow-bg             : $prime-colour-1 !default;
+$upsell-arrow-text-color     : #fff !default;
+$upsell-arrow-fs             : 12px !default;
+$upsell-arrow-price-delta-fs : 16px !default;
+$upsell-arrow-price-delta-fw : 700 !default;
+
+// ------ Health Check ------- //
+$health-checks-btn-background: $btn-background-color !default;
+$health-checks-btn-color: $btn-font-color !default;
+$health-checks-btn-disabled-background: $secondary-colour-2 !default;
+$health-checks-btn-font-size: $btn-font-size !default;
+$health-checks-divider-color: $secondary-colour-3 !default;
+
+$health-check-alternate-background: $secondary-colour-4 !default;
+$health-check-indicator-danger: #f00 !default;
+$health-check-indicator-warn: #fa0 !default;
+$health-check-indicator-fine: #080 !default;
+
+// -------- Multi Line --------- //
+$ml-dots-size       : 18px !default;
+$ml-dots-main-color : $prime-colour-2 !default;
+$ml-dots-separator  : 1px solid $secondary-colour-3 !default;
+
+$ml-tile-payment-border : 1px solid $secondary-colour-3 !default;
+
+$ml-theme-lighten  : 30% !default;
+$ml-theme-0        : $prime-colour-2 !default;
+$ml-theme-1        : $prime-colour-1 !default;
+$ml-theme-2        : $prime-colour-3 !default;
+$ml-theme-3        : $success-color !default;
+
+$ml-remove-icon-fs : 20px !default;
+
+$ml-customer-name-fs                 : 17px !default;
+$ml-customer-tel-number-fs           : 12px !default;
+$ml-customer-device-name-fs          : 14px !default;
+$ml-customer-payment-options-fs      : 14px !default;
+$ml-customer-payment-options-icon-fs : 20px !default;
+
+// -------- Simple HB --------- //
+$simple-hb-submit-background-color: $btn-background-color !default;
+$simple-hb-submit-color: $btn-font-color !default;
+$simple-hb-submit-font-size: $btn-font-size !default;
+$simple-hb-submit-line-height: $btn-font-size !default;
+$simple-hb-require-asterix: inline !default;
+
+
+// - Fast Track Device Buttons - //
+$ftdb-bg: $secondary-colour-5 !default;
+$ftdb-border-color: $secondary-colour-3 !default;
+$ftdb-border-radius: 7px !default;
+
+$ftdb-message-color: $prime-colour-2 !default;
+$ftdb-message-fs: 11px !default;
+
+$ftdb-title-color: $secondary-colour-2 !default;
+$ftdb-title-fs: 18px !default;
+$ftdb-title-fw: 600 !default;
+
+$ftdb-hr-color: $secondary-colour-3 !default;
+
+$ftdb-price-fs: 15px !default;
+$ftdb-price-fw: 600 !default;
+
+$ftdb-price-prefix-color: $prime-colour-2 !default;
+
+$ftdb-price-color: $secondary-colour-2 !default;
+
+$carousel-small-height: 400px !default;
+$carousel-medium-height: 500px !default;
+$carousel-large-height: 600px !default;
+$carousel-full-height: 768px - $header-height !default; // height of the iPad in landscape - height of the header
+$carousel-full-width: 1024px !default;
+
+$carousel-indicator-background-colour: $prime-colour-1 !default;
+$carousel-indicator-background-light: $prime-colour-4 !default;
+$carousel-indicator-background-dark: $prime-colour-5 !default;
+
+$carousel-go-to-colour: $prime-colour-1 !default;
+$carousel-go-to-icon-font-size: 80px !default;
+
+// --------- TRACKED BUTTON Component ----- //
+$tracked-button-checkbox-colour: $secondary-colour-3 !default;
+$tracked-button-checkbox-colour-active: $success-color !default;
+
+// -------- Title Component --------- //
+$title-component-margin-top: 20px !default;
+$title-component-margin-bottom: 10px !default;
+
+// -------- Customer Info Bar --------- //
+$customer-info-bar-bg: #fff !default;
+$customer-info-bar-height: 70px;
+$customer-info-bar-detail-color: $secondary-colour-3 !default;
+$customer-info-bar-title-color: $secondary-colour-2 !default;
+
+// -------- Customer Identification --------- //
+$customer-identification-background-color: $prime-colour-4 !default;
+$customer-identification-label-color: $secondary-colour-3 !default;
+
+// -------- Flex Layout Component --------- //
+$fl-full-height-adjustment: $header-height + ($row-plan-wrapper-margin-top * 2) + $customer-info-bar-height;
+
+// ---- Selected Device Thumbnail ---- //
+$selectedDeviceThumbnail-font-size: 17px !default;
+$selectedDeviceThumbnail-font-weight: 600 !default;
+$selectedDeviceThumbnail-color: $secondary-colour-2 !default;
+
+
+// -------- Billing Details --------- //
+$billingDetails-background-color: $secondary-colour-3 !default;
+
+
+// -------- Product Select --------- //
+$uitProductSelect-colour: $btn-font-color !default;
+$uitProductSelect-background-colour: $btn-background-color !default;
+
+// ------- Featured Products -------- //
+$featured-product-title-font-size: 24px !default;
+$featured-product-description-font-size: 12px !default;
+$featured-product-price-font-size: 24px !default;
+
+// ------ Rich Text ------- //
+$rich-text-track-bar-color: $primary-colour-3 !default;
+$rich-text-track-bar-color-outline: $primary-colour-2 !default;
+
+// ----- Accessories Cross Sell ------ //
+$accessoriesCrossSellItem-background: #fff !default;
+
+$accessoriesCrossSellItem__category-font-size: 18px !default;
+$accessoriesCrossSellItem__category-font-weight: $font-family-base-weight !default;
+$accessoriesCrossSellItem__category-line-height: 35px !default;
+$accessoriesCrossSellItem__category-color: $prime-colour-1 !default;
+$accessoriesCrossSellItem__category-border-bottom-color: $secondary-colour-2 !default;
+
+$accessoriesCrossSellItem__title-font-size: 24px !default;
+$accessoriesCrossSellItem__title-font-weight: $font-family-base-weight !default;
+$accessoriesCrossSellItem__title-color: $secondary-colour-2 !default;
+
+$accessoriesCrossSellItem__price-font-size: 24px !default;
+$accessoriesCrossSellItem__price-font-weight: $font-family-base-weight !default;
+$accessoriesCrossSellItem__price-color: $secondary-colour-2 !default;
+
+// ------- Contract Review -------- //
+$contractReview-background-color: $secondary-colour-3 !default;
+
+// ------- Contract Actions -------- //
+$contractActions-button-border-color: $prime-colour-5 !default;
+$contractActions-button-background-color: #fff !default;
+
+// ------- CTA Customer Checkout -------- //
+$customerCheckoutCta-button-border-color: $secondary-colour-3 !default;
+$customerCheckoutCta-button-disabled-color: $secondary-colour-2 !default;
+
+// -------- UIT WaysToBuy --------- //
+$uitWaysToBuy-button-background-color: $btn-background-color !default;
+$uitWaysToBuy-button-color: $btn-font-color;
+$uitWaysToBuy-header-font-size: 16px !default;
+$uitWaysToBuy-panel-background-color: $secondary-colour-5 !default;
+$uitWaysToBuy-panel-border-color: $prime-colour-4 !default;
+
+// -------- Basket Builder Device --------- //
+$basket-builder-device-title-color: $prime-colour-1 !default;
+$basket-builder-device-image-border-color: $secondary-colour-5 !default;
+$basket-builder-device-details-list-color: #a9a9a9 !default;
+$basket-builder-device-link-color: $prime-colour-1 !default;
+
+// ------- Basket Builder Plan --------- //
+$basketBuilderPlan-panel-border-color: $secondary-colour-5 !default;
+$basketBuilderPlan-panel-background-color: $prime-colour-4 !default;
+$basketBuilderPlan-titles-color: $secondary-colour-2 !default;
+$basketBuilderPlan-title-background-color: $primary-colour-1 !default;
+$basketBuilderPlan-text-color: $secondary-colour-3 !default;
+$basketBuilderPlan-icons-color: $prime-colour-1 !default;
+
+// ---- Basket Builder State Manager ----//
+$basketBuilderStateManager-background-color: $prime-colour-1 !default;
+$basketBuilderStateManager-background-color-transparent: rgba($prime-colour-1, .2) !default;
+$basketBuilderStateManager-description-color: $prime-colour-4 !default;
+$basketBuilderStateManager-description-disabled-color: $prime-colour-1 !default;
+$basketBuilderStateManager-in-progress-color: $primary-colour-1 !default;
+
+// -------- UIT Modal --------- //
+$uit-modal-bg-color: #fff !default;
+$uit-modal-veil: $primary-colour-1 !default;
+$uit-modal-title-color: $prime-colour-1 !default;
+
+// ------- Basket Summary -------- //
+$basketSummary-background: $vs-background-100-white;
+$basketSummary-checkout-button: $prime-colour-1;
+$basketSummary-checkout-button-border: $customerCheckoutCta-button-disabled-color;
+$basketSummary-checkout-button-disabled: $customerCheckoutCta-button-disabled-color;
+$basketSummary-text-color: $secondary-colour-2;
+$basketSummary-extras-text-color: $secondary-colour-3;
+$basketSummary-list-border-color: $secondary-colour-4;

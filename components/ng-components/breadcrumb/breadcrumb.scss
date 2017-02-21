@@ -1,0 +1,83 @@
+.breadcrumb {
+    text-align: center;
+    border-right: 0;
+    border-left: 0;
+
+    .breadcrumb__list {
+        background-color: $breadcrumb-bgcolor;
+        display: flex;
+        margin: 0;
+        overflow: hidden;
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            border-right: 1px solid $breadcrumb-li-border-color;
+            box-sizing: border-box;
+            color: $breadcrumb-font-color;
+            flex: 1;
+            font-size: $breadcrumb-fs;
+            height: 40px;
+            line-height: 40px;
+
+            &:first-child {
+                border-left: 0;
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+
+            &.breadcrumb__list-item--active {
+                color: $breadcrumb-active-color;
+            }
+        }
+    }
+
+    .breadcrumb__list-item--active {
+        position: relative;
+        background: $breadcrumb-active-bg;
+        cursor: pointer;
+        font-family: $breadcrumb-active-text-font-family;
+    }
+
+    .breadcrumb__list-item--complete {
+        color: $breadcrumb-complete-color;
+        background: lighten($breadcrumb-active-bg, 50);
+        cursor: pointer;
+    }
+
+    &.breadcrumb--icons-theme {
+        .breadcrumb__list {
+            background: $breadcrumb-list-bg;
+            border-bottom: $breadcrumb-border solid 1px;
+
+            li {
+                border: 0;
+                color: $breadcrumb-font-color-disabled;
+                background: transparent;
+                &.breadcrumb__list-item--complete {
+                        color: $breadcrumb-font-color-complete;
+                    .breadcrumb__icon {
+                        top: 0;
+                        color: $breadcrumb-icon-complete;
+                        margin-right: .4rem;
+                    }
+                }
+                &.breadcrumb__list-item--active {
+                    font-family: $breadcrumb-font-family;
+                    border-bottom: solid 3px $breadcrumb-font-color-active;
+                    color: $breadcrumb-font-color-active;
+                }
+            }
+        }
+
+        .breadcrumb__icon {
+            font-size: 20px;
+            margin-right: .8rem;
+            top: -.1rem;
+        }
+    }
+
+}
+

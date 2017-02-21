@@ -1,0 +1,11 @@
+<div class="layoutDeviceUsage layoutDeviceUsage--{{$ctrl.orientation}}">
+    <ul class="layoutDeviceUsage__list">
+        <li ng-repeat="dataType in $ctrl.data">
+            <span class="layoutDeviceUsage__icon cwsicon cwsicon-{{dataType.icon}}"></span>
+            <div class="layoutDeviceUsage__data">
+                <span class="layoutDeviceUsage__amount">{{dataType.amount}}</span>
+                <span class="layoutDeviceUsage__label">{{dataType.label}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

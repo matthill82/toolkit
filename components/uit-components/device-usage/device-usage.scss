@@ -1,0 +1,79 @@
+uit-device-usage {
+    display: flex;
+    flex: 1;
+}
+
+.uitDeviceUsage {
+    display: flex;
+    flex: 1;
+}
+
+.uitDeviceUsage__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    color: $secondary-colour-2;
+    padding: 0;
+    margin: 0;
+    > li {
+        display: flex;
+    }
+}
+
+.uitDeviceUsage--horizontal {
+    .uitDeviceUsage__list {
+        flex-direction: row;
+        flex: 1;
+        .uitDeviceUsage__icon {
+            color: $prime-colour-1;
+            font-size: 2.8rem;
+            margin-top: .5rem;
+            margin-right: .5rem;
+        }
+        .uitDeviceUsage__label {
+            @extend %caption-1;
+            color: $secondary-colour-3;
+        }
+        .uitDeviceUsage__amount {
+            font-weight: 500;
+            font-size: 2.8rem;
+            height: 1em;
+            margin-bottom: .2rem;
+            font-family: $font-family-base;
+        }
+        .uitDeviceUsage__data {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.uitDeviceUsage--vertical {
+    justify-content: center;
+    .uitDeviceUsage__list {
+        flex-direction: column;
+        align-self: center;
+        margin: 0;
+        > li {
+            align-items: baseline;
+        }
+        span {
+            &.uitDeviceUsage__icon {
+                color: $secondary-colour-3;
+                font-size: 2rem;
+                margin-right: .7rem;
+            }
+        }
+        .uitDeviceUsage__label {
+            @extend %caption-2;
+        }
+        .uitDeviceUsage__amount {
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.uitDeviceUsage__icon {
+    font-size: 2.8rem;
+}

@@ -1,0 +1,13 @@
+<div class="protection-teaser" ng-class="{'not-visible': !$ctrl.price}">
+    <div class="col-sm-8">
+        <h5 class="protection-title">{{:: $ctrl.title}}</h5>
+        <p ng-if="$ctrl.price">
+            <span ng-bind-html=":: $ctrl.textParts.before"></span>
+            <uit-price-format number=":: $ctrl.price"></uit-price-format>
+            <span ng-bind-html=":: $ctrl.textParts.after"></span>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        <img ng-src="{{:: $ctrl.logoUrl}}" alt="">
+    </div>
+</div>

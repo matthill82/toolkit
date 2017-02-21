@@ -1,0 +1,11 @@
+<div ng-if="$ctrl.showComponent" class="selectedDeviceThumbnail">
+    <img
+        ng-if="$ctrl.imgSrc"
+        ng-src="{{ :: $ctrl.imgSrc }}"
+        class="selectedDeviceThumbnail__img"
+        height="85"
+        alt="{{ :: $ctrl.manufacturer }} {{ :: $ctrl.name }}"
+    >
+    {{ :: $ctrl.manufacturer }}<br />
+    {{ :: $ctrl.name }}
+</div>

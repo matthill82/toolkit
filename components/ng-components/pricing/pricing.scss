@@ -1,0 +1,96 @@
+.summary-price {
+  p {
+    display: none;
+  }
+  .price-discount {
+    display: none;
+  }
+}
+
+.no-discount {
+
+  .product-saving {
+    visibility: hidden;
+    color: $pricing-saving-colour;
+  }
+}
+
+.product-price {
+  margin-bottom: 2px;
+  color: $pricing-discount-colour;
+  font-family: $pricing-price-font-family;
+  font-weight: $pricing-price-font-weight;
+  font-size: $pricing-price-text-size;
+}
+
+.price-discount {
+  font-size: $pricing-discount-text-size;
+  margin: 5px 0;
+  padding: 5px 0;
+  margin-bottom: 0;
+  border-top: 1px solid $pricing-border-top-colour;
+  border-bottom: 1px solid $pricing-border-bottom-colour;
+  b {
+    font-family: $pricing-discount-font-family;
+    font-size: $pricing-discount-b-text-size;
+  }
+}
+
+.cashback-title {
+  margin-bottom: -10px;
+  font-size: $pricing-cashback-text-size;
+  height: 18px;
+  margin-top: 5px;
+  text-align: left;
+  font-family: $pricing-cashback-font-family;
+}
+
+.cashback-amount {
+  text-align: right;
+  color: $pricing-cashback-colour;
+  height: 17px;
+  margin-bottom: 2px;
+  margin-top: -3px;
+  font-weight: $pricing-cashback-font-weight;
+  font-size: $pricing-cashback-text-size;
+  font-family: $pricing-cashback-font-family;
+}
+
+.product-saving {
+  color: $pricing-text-colour;
+  font-weight: $pricing-saving-font-weight;
+  margin-top: -20px;
+  text-align: right;
+  margin-bottom: 0;
+  font-family: $pricing-saving-font-family;
+  font-size: $pricing-saving-text-size;
+}
+
+.instore-price {
+  margin-bottom: 0;
+  font-family: $pricing-instore-font-family;
+  font-size: $pricing-instore-text-size;
+}
+
+.not-visible {
+  visibility: hidden;
+}
+
+.details-container {
+	.product-price {
+		font-size: $pricing-product-price-font-size;
+	}
+	.product-saving {
+		font-size: $pricing-product-saving-font-size;
+	}
+}
+
+.pricing {
+    .pricing-previous {
+        font-size: $pricing-discount-details-font-size;
+        letter-spacing: -.05em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

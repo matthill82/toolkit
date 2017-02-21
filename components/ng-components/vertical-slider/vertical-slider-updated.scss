@@ -1,0 +1,103 @@
+
+.product-title {
+    height: 60px;
+    padding: 10px;
+    h6 {
+        text-align: left;
+        font-size: $vs-title-text-size;
+        font-family: $vs-title-font-family;
+        margin: 0;
+        float: left;
+        width: 85%;
+    }
+}
+
+.product-image {
+    max-height: 250px;
+    .sticker {
+        top: 60px;
+        left: 0;
+        .sticker--image {
+            height: 60px;
+        }
+    }
+    img {
+        max-width: 70%;
+    }
+}
+
+
+
+
+.product-features {
+    margin-bottom: 5px;
+    .list-group {
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 0;
+        li {
+            list-style-type: none;
+            &.feature-block {
+                display: block;
+                text-align: center;
+                float: left;
+                background: $vs-background-100-white;
+                padding: 5px;
+                margin: 5px;
+                width: 44%;
+
+                img {
+                    &.img-thumbnail {
+                        width: 35px;
+                        height: 35px;
+                        margin-bottom: 4px;
+                        padding: 0;
+                    }
+                }
+                span {
+                    padding: 0;
+                    line-height: 11px;
+                    font-size: 11px;
+                    margin-top: 3px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.product-advertisement {
+    span {
+        font-size: 13px;
+        text-align: center;
+        &.on-tv {
+            width: 50%;
+            float: left;
+            left: 16px;
+        }
+        &.expert-love {
+            width: 50%;
+            float: right;
+            right: 16px;
+        }
+    }
+}
+
+.product-button-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+
+    button {
+        color: $vs-background-100-white;
+        border-radius: 0;
+        background-color: $vs-panel-background-colour;
+        border-color: $vs-panel-border-colour;
+        padding: 9px;
+        font-size: 20px;
+    }
+}
+
+
+

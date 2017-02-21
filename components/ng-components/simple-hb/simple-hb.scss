@@ -1,0 +1,49 @@
+.simpleHb {
+  position: relative;
+
+  input {
+    &[type='text'],
+    &[type='submit'] {
+      width: 100%;
+    }
+  }
+
+  &__testMode {
+    background: $secondary-colour-2;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__testMode__label {
+    color: $primary-colour-5;
+    display: block;
+  }
+
+  &__testMode__btn {
+    display: block;
+    margin-top: 10px;
+  }
+
+  &__imageCapture_field {
+    display: none;
+  }
+
+  .hb {
+    &.form-control {
+      display: inline-block;
+      margin-bottom: 2rem;
+
+      &.error {
+        background-color: $error-bg-color;
+        border: 1px solid $error-color;
+      }
+    }
+  }
+
+  &__asterix {
+    display: $simple-hb-require-asterix;
+  }
+
+}

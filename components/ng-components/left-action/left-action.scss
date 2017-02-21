@@ -1,0 +1,28 @@
+
+.leftAction__details {
+    padding: 0 4rem;
+    margin: .5rem 0 0;
+    display: flex;
+    flex: 0 0 50%;
+    flex-shrink: 1;
+    list-style: none;
+    color: $customer-info-bar-detail-color;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    > li {
+        margin-left: 1rem;
+    }
+    
+    .leftAction__icon {
+        top: -.1rem;
+        font-size: 2rem;
+    }
+    
+    .leftAction__text {
+        font-weight: 500;
+    }
+}
+    
+
+

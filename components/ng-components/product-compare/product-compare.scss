@@ -1,0 +1,35 @@
+.product-compare {
+    .pc-scroll-left {
+        display: block;
+    }
+
+    .pc-scroll-right {
+        display: block;
+    }
+
+    .slick-slider {
+        margin: 25px 0 0;
+    }
+
+    .slick-carousel {
+        padding: 0;
+    }
+
+    .slick-arrow {
+        top: 50% !important;
+        transform: translateY(-50%);
+        color: $pc-arrow-colour;
+    }
+
+    .slick-next {
+        right: -60px !important;
+    }
+
+    .slick-prev {
+        left: -60px !important;
+    }
+
+    .uitProductItem {
+        margin: 0 15px;
+    }
+}

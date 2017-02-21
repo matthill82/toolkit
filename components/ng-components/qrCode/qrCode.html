@@ -1,0 +1,21 @@
+<div class="qr-code row dr-qrCode component">
+	<div class="col-sm-8 col-md-8 col-lg-8 col-sm-offset-2">
+		<h1 class="">{{header}}</h1>
+		<div class="light-border">
+			<img class="qr-image" title="qrCode"
+				 src="/assets/dam/qr-code.png"
+				 alt="qrCode">
+			<div class="qr-text">
+				<h2 class="uppercase">{{thankYouMsg}}</h2>
+				<h3>{{upgradeMsg}}</h3>
+			</div>
+		</div>
+		<div class="row">
+			<br><br>
+			<a class="btn btn-cws pull-right" role="button"
+			   ng-click="qrCodeController.qrModal()">
+				{{buttonLabel}}
+			</a>
+		</div>
+	</div>
+</div>

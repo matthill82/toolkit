@@ -1,0 +1,26 @@
+.promotion-item {
+    .promotion-item-header {
+        text-align: center;
+        h3 {
+            font-size: $promo-item-header-text-size;
+            font-family: $promo-item-header-font-family;
+            color: $promo-item-header-text-color;
+        }
+    }
+
+    .offer {
+        margin: 3px 2px 0;
+        border: 2px solid $promo-offer-border-color;
+        padding: 2px;
+        color: $promo-offer-text-color;
+        text-align: center;
+        .offer-head {
+            font-family: $promo-offer-head-font-family;
+        }
+        .offer-text {
+            font-size: $promo-offer-text-size;
+        }
+    }
+}
+
+

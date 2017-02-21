@@ -1,0 +1,16 @@
+<div class="container" ng-if="model.obj"> <!-- ng-if="model.customer" -->
+    <!-- Using the Profile data and properties -->
+    <div class="col-sm-12 col-md-12">
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <current-device device="model.obj.subscriber"></current-device>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <account-summary account="model.obj"></account-summary>
+            </div>
+        </div>
+        <div>
+           <eligibility eligibility="model.obj"></eligibility>
+        </div>
+    </div>
+</div>

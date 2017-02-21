@@ -1,0 +1,67 @@
+// Text styles
+
+%caption-1 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+%caption-2 {
+    font-size: 1.1rem;
+}
+
+// Button Styles
+
+%button {
+    width: 100%;
+    display: block;
+    font-size: 1.4rem;
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+%button-primary {
+    @extend %button;
+    color: $prime-colour-4;
+    background-color: $prime-colour-1;
+}
+
+%button-secondary {
+    @extend %button;
+    border: solid 1px $prime-colour-1;
+    color: $prime-colour-1;
+    background-color: $prime-colour-4;
+}
+
+%button-plain {
+    background: transparent;
+    border: none;
+}
+
+%button-primary:hover {
+    text-decoration: none;
+}
+
+%button-primary:disabled {
+    background-color: $prime-colour-4;
+    color: $prime-colour-1;
+    border: 2px solid;
+    border-color: $prime-colour-1;
+}
+
+// Helpers
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+element {
+    @include background-opacity(#333, 0.5);
+}

@@ -1,0 +1,32 @@
+.stock-ctoggle {
+    height: 35px;
+    top: 12px;
+    left: 27px;
+    position: relative;
+	padding-left: 10px;
+	display: block;
+	width: 170px;
+    .switch {
+        .cwsicon {
+            top: 0;
+			float: right;
+        }
+    }
+    .instore-text {
+        font-weight: 700;
+        position: relative;
+        left: -9px;
+		bottom: -3px;
+		float: left;
+		width: 75px;
+        &.on {
+            color: $toggleon;
+          font-family: $toggle-text-font-family;
+        }
+
+        &.off {
+            color: $toggleoff;
+          font-family: $toggle-text-font-family;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+customer-device {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.customerDevice {
+    display: flex;
+    flex: 1;
+
+    h3 {
+        margin-top: 0;
+    }
+}
+
+.customerDevice__image-inner,
+.customerDevice__details-inner {
+    padding: $grid-gutter-width;
+}
+
+.customerDevice__image {
+    flex: 1;
+    background-color: $prime-colour-4;
+    display: flex;
+}
+
+.customerDevice__image-inner {
+    flex: 1;
+    border-right: 1px solid $secondary-colour-5;
+}
+
+.customerDevice__details {
+    flex: 2;
+    background-color: $prime-colour-4;
+}
+
+.customerDevice__spec {
+    list-style: none;
+    padding: 0;
+    color: $secondary-colour-2;
+}
+
