@@ -1,0 +1,6 @@
+<div class="row device-tags">
+    <div ng-repeat="tag in $ctrl.tagsData" class="tag col-xs-6">
+        <img class="tag-{{$index}}" ng-if="tag.tagImage != '-'" ng-src="{{tag.tagImage}}" alt="{{tag.tagText}}" />
+        <span class="tag-{{$index}}" ng-hide="tag.tagImage != '-'">{{tag.tagText}}</span>
+    </div>
+</div>

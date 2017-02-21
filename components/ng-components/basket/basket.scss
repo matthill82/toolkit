@@ -1,0 +1,79 @@
+.basket-container {
+    width: 100%;
+    min-height: 300px;
+    border-collapse: collapse;
+    border: 1px solid $basket-container-border;
+    border-radius: 8px;
+    background-color: $basket-container-bgcolor;
+
+    .plan-container {
+        background-color: none;
+    }
+
+    .plan-box-inclusion {
+        border: 2px solid $basket-inclusions-background;
+        border-radius: 6px;
+    }
+}
+
+.basket-table-top {
+    margin-top: 10px;
+    border-top: 1px solid $basket-container-border;
+}
+
+.basket-results {
+    font-size: 16px;
+    margin-top: 20px;
+    color: $basket-text-color;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        margin-top: 10px;
+        color: $basket-head-color;
+    }
+
+    .device-details {
+        color: $basket-device-text-color;
+
+        .data {
+            font-weight: $basket-device-data-label-weight;
+            padding-right: 5px;
+        }
+    }
+}
+
+.basket-plan-container {
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+.plan-payment {
+    text-align: right;
+
+    .totals {
+        .total-pay {
+            float: right;
+            padding-right: 20px;
+        }
+
+        .price {
+            float: right;
+        }
+    }
+
+    .total-pay {
+        font-size: $basket-total-pay-size;
+        font-weight: $basket-total-pay-weight;
+        margin-top: 25px;
+    }
+
+    .formatted-price {
+        font-family: $basket-payment-font-family;
+        font-size: $basket-payment-size;
+        font-weight: $basket-price-value-weight;
+        color: $basket-total-value-color;
+    }
+}

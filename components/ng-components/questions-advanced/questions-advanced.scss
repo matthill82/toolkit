@@ -1,0 +1,110 @@
+.question-advanced-container {
+	img {
+		margin-bottom: 0;
+		margin-left: 30px;
+	}
+}
+
+.question-advanced {
+    position: relative;
+    float: left;
+    clear: left;
+    margin: 0 45px;
+
+    &:last-child {
+        margin-bottom: $question-adv-margin-bottom;
+    }
+
+    > h2 {
+        font-size: $question-adv-h2-size;
+        margin-bottom: 0;
+        padding-top: 40px;
+        color: $question-adv-text-color;
+
+        .cwsicon {
+            margin-bottom: -10px;
+            padding-left: 25px;
+            top: -3px;
+            float: right;
+        }
+    }
+
+	h3 {
+		font-size: $question-adv-h3-size;
+		margin-top: 6px;
+	}
+
+	img {
+		margin: 8px 0;
+	}
+
+    .answer-list {
+        margin: 0 -12px;
+        text-align: center;
+
+        .dr-answer {
+            position: relative;
+            float: left;
+            margin: 24px 12px 0;
+            cursor: pointer;
+            border: 3px solid $answer-border;
+
+            .dr-questions-icons {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 80px;
+                height: 80px;
+                padding: 3px;
+                color: $answer-icon-colour;
+                background-color: $answer-icon-background;
+
+                &.active {
+                    color: $answer-icon-active-colour;
+                    background: $answer-icon-active-bg;
+                }
+            }
+        }
+
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+
+        .cwsicon {
+            font-size: $answer-icon-size;
+            line-height: $answer-icon-lh;
+            width: 100%;
+        }
+
+        .answer-text {
+            font-size: $answer-size;
+            line-height: $answer-text-lineheight;
+            font-family: $answer-font-family;
+            display: block;
+            word-wrap: break-word;
+        }
+
+        .answer-push-text {
+            margin-top: 3px;
+        }
+    }
+}
+
+.questions-modal {
+    .modal-dialog {
+        top: 300px;
+      z-index: 2000;
+    }
+
+	.close {
+		span {
+			display: none;
+		}
+	}
+
+    .modal-body {
+        max-height: 300px;
+        overflow: auto;
+    }
+}

@@ -1,0 +1,72 @@
+
+
+.login-box-container {
+    text-align: center;
+    margin-top: 40px;
+    height: $loginbox-height + 120px;
+
+    h1 {
+        color: $login-h1;
+        margin: 15% 0 8%;
+        font-size: $login-h1-size;
+        font-weight: $login-h1-weight;
+
+        &.compressed {
+            margin: 0 0 4%;
+        }
+    }
+
+    .login-box {
+        border: 1px solid $loginbox-border;
+        display: inline-block;
+        width: $loginbox-width;
+        height: $loginbox-height;
+        margin-top: 4%;
+        vertical-align: middle;
+        padding: 40px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: auto 95%;
+
+        input {
+            height: 40px;
+            width: 70%;
+            font-size: $login-form-text-size;
+            border: 2px solid $login-input-border;
+            border-radius: 20px;
+            background: transparent;
+            padding: 2px 15px;
+            margin-bottom: 10px;
+            outline: none;
+            display: inline-block;
+            color: $login-input-color;
+        }
+
+        button {
+            color: $login-button-text-color;
+            background-color: $login-button-color;
+            display: block;
+            float: right;
+            margin-right: 50px;
+            border-color: transparent;
+            border-radius: 20px;
+            font-size: $login-form-text-size;
+            padding: 1.5% 25px 1%;
+
+            &:hover {
+                color: $login-button-text-color;
+                background-color: $login-button-color;
+                border-color: transparent;
+                border-radius: 20px;
+                font-size: $login-form-text-size;
+            }
+        }
+
+        .help-inline {
+            &.ng-active {
+                width: 70%;
+                margin-left: 15%;
+            }
+        }
+    }
+}

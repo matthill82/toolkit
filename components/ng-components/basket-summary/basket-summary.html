@@ -1,0 +1,53 @@
+<div class="basket-summary-container hide-in-edit-design-aemmode">
+    <div class="basket-summary-panel">
+        <div class="basket-summary">
+            <div class="title">{{ :: $ctrl.titleText }}</div>
+            <div class="basket-summary-content">
+                <div class="savings">
+                    <div class="label">{{ :: $ctrl.savingsText }}</div>
+                    <div class="amount">
+                        <uit-price-format
+                            class="item-price"
+                            number="$ctrl.basket.saving"
+                        ></uit-price-format>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="label">{{ :: $ctrl.totalText }}</div>
+                    <div class="amount">
+                        <uit-price-format
+                            class="item-price"
+                            number="$ctrl.basket.total"
+                        ></uit-price-format>
+                    </div>
+                </div>
+                <a class="checkout" ng-click="$ctrl.checkout()">{{ :: $ctrl.checkoutButtonText }}</a>
+            </div>
+        </div>
+
+        <div class="modal-backdrop fade in" ng-class="{active: $ctrl.modalOpen}"></div>
+        <div
+            class="modal bootstrap-dialog fade in"
+            ng-class="{active: $ctrl.modalOpen}"
+            ng-click="$ctrl.modalOpen = false"
+            role="dialog"
+        >
+            <div class="modal-dialog {{ :: $ctrl.modalSize }} type-normal">
+                <div class="modal-content">
+                    <div class="modal-header no-warning">
+                        <button
+                            class="close {{ :: $ctrl.modalCloseIcon }} pull-right"
+                            data-dismiss="modal"
+                            ng-click="$ctrl.modalOpen = false"
+                            type="button"
+                        ></button>
+                        <h4 class="modal-title">{{ :: $ctrl.modalTitleText }}</h4>
+                    </div>
+                    <div class="modal-body modal-basket">
+                        <ng-include ng-if="$ctrl.modalOpen" src="$ctrl.modalContentUrl"></ng-include>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

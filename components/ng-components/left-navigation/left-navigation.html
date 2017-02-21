@@ -1,0 +1,15 @@
+<div class="left-navigation" ng-if="$root.showLeftNav">
+    <!--ng-if="$root.showLeftNavigation && !LeftNavigationController.isNavHidden"-->
+    <table>
+        <tr
+                ng-repeat="navigationItem in navigationItems"
+                ng-class="{'active-state': LeftNavigationController.isIconActive(navigationItem.routes)}"
+                ng-click="LeftNavigationController.goToIconState(navigationItem.default)"
+            >
+            <td>
+                <div class="{{navigationItem.icon}}" aria-hidden="true"></div>
+                <div class="title glyphicon-text ng-binding">{{navigationItem.title}}</div>
+            </td>
+        </tr>
+    </table>
+</div>

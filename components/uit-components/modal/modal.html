@@ -1,0 +1,22 @@
+<div class="uitModal" ng-click="$ctrl.params.dismiss()">
+    <div ng-click="$event.stopPropagation();" class="uitModal__content uitModal__content--{{ :: $ctrl.size}}">
+        <div ng-switch=" :: $ctrl.type">
+            <div ng-switch-when="confirm">
+                <h4 class="uitModal__title">
+                    <span ng-if=":: $ctrl.params.titleIcon" class="uitModal__title-icon {{ :: $ctrl.params.titleIcon}}"></span>
+                    {{ :: $ctrl.params.title}}
+                </h4>
+                <p class="uitModal__body">{{ :: $ctrl.params.message}}</p>
+                <div class="uitModal__footer">
+                    <button class="uitModal__button uitModal__button--secondary" type="button" ng-click="$ctrl.params.dismiss()">
+                        {{ :: $ctrl.params.cancelLabel}}
+                    </button>
+                    <button class="uitModal__button" type="button" ng-click="$ctrl.params.submit()">
+                        {{ :: $ctrl.params.submitLabel}}
+                    </button>
+                </div>
+            </div>
+            <div ng-switch-when="custom" ng-transclude=""></div>
+        </div>
+    </div>
+</div>

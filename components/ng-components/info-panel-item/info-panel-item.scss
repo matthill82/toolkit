@@ -1,0 +1,83 @@
+.info-panel-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .info-panel-item--flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    height: 45vh;
+    width: 100vw;
+
+    padding: {
+      left: $spacing-medium;
+      right: $spacing-medium;
+    }
+	  .info-panel-item--title {
+		  font-size: $info-panel-heading-text-size;
+		  font-weight: $info-panel-heading-text-weight;
+          font-family: $info-panel-heading-text-family;
+	  }
+
+	  p {
+		 font-size: $info-panel-text-size;
+        line-height: $info-panel-text-line-height;
+	  }
+  }
+
+  .info-panel-item--icon {
+    padding: {
+      top: $spacing-small;
+      bottom: $spacing-small;
+    }
+  }
+
+  .info-panel-item--body {
+    padding: $spacing-medium;
+    color: $secondary-colour-2;
+    line-height: $planr-arrow-text-lineheight;
+  }
+}
+
+.info-panel-item--spacing-small {
+  margin: {
+    top: $spacing-small;
+    bottom: $spacing-small;
+  };
+}
+.info-panel-item--spacing-medium {
+  margin: {
+    top: $spacing-medium;
+    bottom: $spacing-medium;
+  };
+}
+.info-panel-item--spacing-large {
+  margin: {
+    top: $spacing-large;
+    bottom: $spacing-large;
+  };
+}
+
+.info-panel-item--theme1 {
+  color: $infopanel-theme1-color;
+	background-color: $infopanel-theme1-bgcolor;
+}
+
+.info-panel-item--theme2 {
+  color: $infopanel-theme2-color;
+	background-color: $infopanel-theme2-bgcolor;
+}
+
+.info-panel-item--theme3 {
+  color: $infopanel-theme3-color;
+	background-color: $infopanel-theme3-bgcolor;
+}
+
+.info-panel-item--theme4 {
+  color: $infopanel-theme4-color;
+	background-color: $infopanel-theme4-bgcolor;
+}

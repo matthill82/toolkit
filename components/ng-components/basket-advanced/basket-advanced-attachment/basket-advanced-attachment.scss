@@ -1,0 +1,106 @@
+@mixin basket-advanced-item {
+    border-bottom: 1px solid $ba-item-border-bottom;
+    color: $ba-text-colour;
+    height: 135px;
+    // This is bad it should be the job of the parent to decide layout like this.
+    margin: 0 30px;
+    overflow: hidden;
+    position: relative;
+
+    .image {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .details {
+        left: 150px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .monthly {
+            color: $ba-monthly-text-colour;
+            font-size: $ba-monthly-font-size;
+
+            .monthly-price {
+                display: inline;
+                padding: 0 0 0 5px;
+            }
+        }
+
+        .name {
+            color: $ba-title-text-colour;
+            display: block;
+            font-size: $ba-title-font-size;
+            font-family: $ba-title-font-family;
+        }
+
+        .product-code {
+            color: $ba-product-code-text-colour;
+            display: block;
+            font-size: $ba-product-code-font-size;
+        }
+
+        .item-price {
+            bottom: 0;
+            color: $ba-price-text-colour;
+            font-size: $ba-price-font-size;
+            position: absolute;
+            right: 30px;
+            font-family: $ba-price-font-family;
+
+        }
+    }
+}
+
+// Apply to directive for ngAnimate support.
+.basket-advanced-item-slide-up {
+    display: block;
+    overflow: hidden;
+
+    &.ng-leave {
+        height: 130px;
+        transition: .5s linear all;
+    }
+
+    &.ng-leave-active {
+        height: 0;
+    }
+}
+
+.basket-advanced-attachment {
+    @include basket-advanced-item;
+
+    .image {
+        width: 60px;
+        margin: 0 35px 0 25px;
+    }
+
+    .details {
+        .name {
+            padding-right: 50px;
+        }
+    }
+
+    .remove {
+        color: $ba-remove-icon-colour;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// Apply to directive to disable last dividing border.
+.basket-advanced-attachment--last {
+    .basket-advanced-attachment {
+        border-bottom: 0;
+    }
+}

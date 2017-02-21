@@ -1,0 +1,54 @@
+<ng-switch on="$ctrl.selectedOfferingType || 'SELECT_OFFERING_TYPE'">
+    <div
+        class="uitWaysToBuy"
+        ng-switch-when="SELECT_OFFERING_TYPE"
+    >
+        <div
+            class="uitWaysToBuy__offeringType"
+            ng-repeat="offering in $ctrl.offering | unique : 'offeringType'"
+        >
+            <div class="uitWaysToBuy__header">{{ :: $ctrl.offeringTypes[offering.offeringType] }}</div>
+            <ng-switch on="$ctrl.showOffering === 'true' ? 'SELECT_OFFERING' : 'SELECT_TYPE_ONLY'">
+                <div ng-switch-when="SELECT_OFFERING">
+                    <div class="uitWaysToBuy__content">
+                        {{ :: offering.termInMonths }} {{ :: $ctrl.termText }}
+                    </div>
+                    <a
+                        class="uitWaysToBuy__select"
+                        ng-click="$ctrl.onSelect({offering: offering})"
+                    >{{ :: $ctrl.selectText }}</a>
+                    <a
+                        class="uitWaysToBuy__viewMore"
+                        ng-click="$ctrl.selectOfferingType(offering)"
+                    >{{ :: $ctrl.moreText }}</a>
+                </div>
+                <a
+                    class="uitWaysToBuy__select"
+                    ng-switch-when="SELECT_TYPE_ONLY"
+                    ng-click="$ctrl.selectOfferingType(offering)"
+                >{{ :: $ctrl.selectText }}</a>
+            </ng-switch>
+        </div>
+    </div>
+    <div class="uitWaysToBuy"
+         ng-switch-default
+    >
+        <div class="uitWaysToBuy__header uitWaysToBuy__header--full">{{ :: $ctrl.offeringTypes[$ctrl.selectedOfferingType.offeringType] }}</div>
+        <div
+            class="uitWaysToBuy__term"
+            ng-repeat="offering in $ctrl.offering | filter : {offeringType: $ctrl.selectedOfferingType.offeringType}"
+        >
+            <div class="uitWaysToBuy__content">
+                {{ :: offering.termInMonths }} {{ :: $ctrl.termText }}
+            </div>
+            <a
+                class="uitWaysToBuy__select"
+                ng-click="$ctrl.onSelect({offering: offering})"
+            >{{ :: $ctrl.selectText }}</a>
+        </div>
+        <a
+            class="uitWaysToBuy__viewOther"
+            ng-click="$ctrl.selectOfferingType()"
+        >{{ :: $ctrl.otherWaysText }}</a>
+    </div>
+</ng-switch>

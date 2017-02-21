@@ -1,0 +1,11 @@
+<div class="uitDeviceUsage uitDeviceUsage--{{$ctrl.orientation}}">
+    <ul class="uitDeviceUsage__list">
+        <li ng-repeat="dataType in $ctrl.data">
+            <span class="uitDeviceUsage__icon {{dataType.icon}}"></span>
+            <div class="uitDeviceUsage__data">
+                <span class="uitDeviceUsage__amount">{{dataType.amount}}<span class="uitDeviceUsage__unit">{{dataType.unit}}</span></span>
+                <span class="uitDeviceUsage__label">{{dataType.label}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,68 @@
+.uitProductItem {
+    position: relative;
+
+    .pricing {
+        margin: 0 15px;
+    }
+
+    .device-tags {
+        margin-left: 15px;
+        margin-right: 15px;
+        height: 21px;
+        margin-bottom: 0;
+        font-family: $uitProductItem-tag-font-family;
+    }
+}
+
+.uitProductItem__features,
+.uitProductItem__stockCount,
+.uitProductItem__title {
+    margin: 0 15px;
+}
+
+.uitProductItem__title {
+    height: 60px;
+    padding: 0;
+
+    h6 {
+        display: -webkit-box;
+        float: left;
+        font-family: $vs-title-font-family;
+        font-size: $vs-title-text-size;
+        margin: 0;
+        overflow: hidden;
+        text-align: left;
+        width: 85%;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.uitProductItem__title--hasCompare {
+    .cwsicon {
+        font-size: $uitProductItem-compare-icon-font-size;
+        font-weight: $uitProductItem-compare-icon-font-weight;
+    }
+}
+
+.uitProductItem__image {
+    height: 165px;
+    text-align: center;
+
+    .sticker {
+        top: 60px;
+        left: 0;
+
+        .sticker--image {
+            height: 60px;
+        }
+    }
+
+    img {
+        max-width: 70%;
+    }
+}
+
+.uitProductItem__stockCount {
+    text-align: right;
+}

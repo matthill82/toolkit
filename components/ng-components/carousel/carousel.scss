@@ -1,0 +1,142 @@
+carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    overflow-x: auto;
+    // sass-lint:disable no-duplicate-properties
+    overflow-x: -moz-hidden-unscrollable;
+    overflow-y: hidden;
+    width: 100%;
+
+    -ms-overflow-style: none;
+    -webkit-scroll-snap-type: mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+
+    > * {
+        display: flex;
+        position: relative;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &[slides-shown='1'] > * {
+        flex: 0 0 100%;
+    }
+
+    &[slides-shown='2'] > * {
+        flex: 0 0 50%;
+    }
+
+    // todo may need to remove this as the fractional widths cause problems.
+    // or round element width down to nearest divisible by 3?
+    &[slides-shown='3'] > * {
+        flex: 0 0 33.333%;
+    }
+
+    &[slides-shown='4'] > * {
+        flex: 0 0 25%;
+    }
+
+    &[slides-shown='5'] > * {
+        flex: 0 0 20%;
+    }
+
+    &[slides-shown='6'] > * {
+        flex: 0 0 calc(100% / 6);
+    }
+
+    &[slides-shown='7'] > * {
+        flex: 0 0 calc(100% / 7);
+    }
+
+    &[slides-shown='8'] > * {
+        flex: 0 0 calc(100% / 8);
+    }
+
+    &[slides-shown='9'] > * {
+        flex: 0 0 calc(100% / 9);
+    }
+
+    &[slides-shown='10'] > * {
+        flex: 0 0 calc(100% / 10);
+    }
+
+    &[slides-shown='11'] > * {
+        flex: 0 0 calc(100% / 11);
+    }
+
+    // scroll one, snap one
+    &[slides-shown='1'] {
+        -webkit-scroll-snap-points-x: repeat(100%);
+        scroll-snap-points-x: repeat(100%);
+    }
+
+    &[slides-shown='2']  {
+        -webkit-scroll-snap-points-x: repeat(50%);
+        scroll-snap-points-x: repeat(50%);
+    }
+
+    &[slides-shown='3']  {
+        -webkit-scroll-snap-points-x: repeat(33.333%);
+        scroll-snap-points-x: repeat(33.333%);
+    }
+
+    &[slides-shown='4']  {
+        -webkit-scroll-snap-points-x: repeat(25%);
+        scroll-snap-points-x: repeat(25%);
+    }
+
+    &[slides-shown='5']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 5));
+        scroll-snap-points-x: repeat(calc(100% / 5));
+    }
+
+    &[slides-shown='6']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 6));
+        scroll-snap-points-x: repeat(calc(100% / 6));
+    }
+
+    &[slides-shown='7']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 7));
+        scroll-snap-points-x: repeat(calc(100% / 7));
+    }
+
+    &[slides-shown='8']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 8));
+        scroll-snap-points-x: repeat(calc(100% / 8));
+    }
+
+    &[slides-shown='9']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 9));
+        scroll-snap-points-x: repeat(calc(100% / 9));
+    }
+
+    &[slides-shown='10']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 10));
+        scroll-snap-points-x: repeat(calc(100% / 10));
+    }
+
+    &[slides-shown='11']  {
+        -webkit-scroll-snap-points-x: repeat(calc(100% / 11));
+        scroll-snap-points-x: repeat(calc(100% / 11));
+    }
+
+    &[fixed-height='small'] {
+        height: $carousel-small-height;
+    }
+
+    &[fixed-height='medium'] {
+        height: $carousel-medium-height;
+    }
+
+    &[fixed-height='large'] {
+        height: $carousel-large-height;
+    }
+
+    &[fixed-height='full'] {
+        height: $carousel-full-height;
+    }
+}

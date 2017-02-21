@@ -1,0 +1,34 @@
+ <div>
+    <div class="drctv-specs-sider-buttons-group">
+        <strong class="ssbg-title" ng-bind="::title"> {{hintModalContentUrl}}</strong>
+        <span ng-if="hintModalEnabled" class="hint {{:: hintModalIcon}}" ng-click="openModal()"></span>
+        <ul class="list-unstyled">
+            <li
+                ng-class="{'active': isActive(item)}"
+                ng-click="toggleActive(item, isMultiSelect)"
+                ng-repeat="item in mappings | filter : { featureCategory: featurePointMapping[0], groupName: featurePointMapping[1] } : true | unique: 'groupValue' | orderBy: 'index'"
+                >
+                {{item.groupValue}}
+            </li>
+        </ul>
+    </div>
+    <div class="modal-backdrop fade in" ng-class="{active: modalOpen}" style=""></div>
+    <div class="modal bootstrap-dialog modal-protection fade in" id="clearModal" role="dialog"
+         ng-class="{active: modalOpen}"
+         ng-click="closeModal($event)">
+        <div class="modal-dialog {{hintModalSize}} type-normal">
+            <div class="modal-content">
+                <div class="modal-header no-warning">
+                    <button type="button" ng-click="modalOpen = false"
+                            class="close {{hintModalCloseIcon}} pull-right"
+                            data-dismiss="modal"></button>
+                    <h4 class="modal-title" id="myModalLabel">{{hintModalTitle}}</h4>
+                </div>
+                <div class="modal-body">
+                    <ng-include ng-if="modalOpen" src="hintModalContentUrl"></ng-include>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

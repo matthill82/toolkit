@@ -1,0 +1,19 @@
+<div class="basket-advanced-container">
+    <div class="basket-advanced">
+        <basket-advanced-proposition
+            basket-item=":: proposition"
+            code-text="{{ :: $ctrl.codeText }}"
+            ng-repeat="proposition in $ctrl.basket.propositions"
+        ></basket-advanced-proposition>
+        <basket-advanced-attachment
+            basket-item=":: attachment"
+            class="basket-advanced-item-slide-up"
+            code-text="{{ :: $ctrl.codeText }}"
+            monthly-payment-text="{{ :: $ctrl.monthlyPaymentText }}"
+            ng-class="{'basket-advanced-attachment--last': $last}"
+            ng-repeat="attachment in $ctrl.basket.attachments | orderBy : $ctrl.orderFunc"
+            remove="$ctrl.removeAttachment(attachment)"
+            remove-icon="{{ :: $ctrl.removeIcon }}"
+        ></basket-advanced-attachment>
+    </div>
+</div>

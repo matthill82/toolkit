@@ -1,0 +1,59 @@
+.uitWaysToBuy {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uitWaysToBuy__header {
+    text-align: center;
+    padding: 10px;
+    font-size: $uitWaysToBuy-header-font-size;
+}
+
+.uitWaysToBuy__header--full {
+    flex: 1 100%;
+}
+
+.uitWaysToBuy__offeringType {
+    background: $uitWaysToBuy-panel-background-color;
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.uitWaysToBuy__term {
+    background: $uitWaysToBuy-panel-background-color;
+    border-right: 1px solid $uitWaysToBuy-panel-border-color;
+    flex: 1;
+    text-align: center;
+
+    &:last-of-type {
+        border-right: 0;
+    }
+}
+
+.uitWaysToBuy__content {
+    padding: 10px;
+}
+
+.uitWaysToBuy__select {
+    background: $uitWaysToBuy-button-background-color;
+    color: $uitWaysToBuy-button-color;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.uitWaysToBuy__viewMore,
+.uitWaysToBuy__viewOther {
+    display: block;
+    padding: 15px 0 0;
+    text-align: center;
+}
+
+.uitWaysToBuy__viewOther {
+    flex: 1 100%;
+}

@@ -1,0 +1,45 @@
+<div class="product-compare row">
+    <div ng-if="(!$ctrl.pending && !$ctrl.products.length) || $ctrl.numberProducts === 0">
+        <h2 class="text-center">{{ :: $ctrl.noCompareResultsMsg }}</h2>
+    </div>
+    <div ng-if="$ctrl.products.length">
+        <div class="col-xs-1"></div>
+        <slick
+            class="slick-carousel col col-xs-10"
+            current-index="1"
+            style="visibility: hidden"
+            infinite="false"
+            touch-move="true"
+            draggable="true"
+            touch-threshold="100"
+            css-ease="none"
+            prev-arrow-class="{{$ctrl.buttonLeftIcon}}"
+            next-arrow-class="{{$ctrl.buttonRightIcon}}"
+            slide="uit-product-item"
+            slides-to-show="{{slidesToShow || 3}}"
+            slides-to-scroll="{{slidesToScroll || 1}}"
+            data="$ctrl.products"
+            init-onload="true"
+        >
+            <uit-product-item
+                dif-display="{{ :: $ctrl.difDisplay }}"
+                dif-features="{{ :: $ctrl.difFeatures }}"
+                dif-journey-type="{{ :: $ctrl.getCategoryJourneyType(product) }}"
+
+                ng-repeat="product in $ctrl.products"
+
+                remove-compare-icon="{{ :: $ctrl.removeCompareIcon }}"
+                product="product"
+                select-text="{{ :: $ctrl.selectText }}"
+                show-tags="true"
+
+                on-compare-remove="$ctrl.removeCompare(product)"
+                on-select="$ctrl.select(product)"
+                on-select-image="$ctrl.selectImage"
+
+                pr-layout-type="{{ :: $ctrl.prLayoutType }}"
+            ></uit-product-item>
+        </slick>
+        <div class="col-xs-1"></div>
+    </div>
+</div>

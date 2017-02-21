@@ -1,0 +1,351 @@
+.sidemenu {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: -300px;
+    overflow: hidden;
+    width: 300px;
+    height: 100%;
+    padding-top: 50px;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+    background: $nm-sidemenu-bgcolor;
+
+    &.left {
+        left: -300px;
+
+        .menu-head &.fixed {
+            left: 0;
+        }
+    }
+
+    &.right {
+        right: 0;
+
+        .menu-head &.fixed {
+            right: 0;
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    &.cwsicon {
+        top: -6px;
+    }
+
+    .slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+        -webkit-transition: .4s;
+        transition: .4s;
+        background-color: $switch-bg-colour;
+
+        &::before {
+            position: absolute;
+            bottom: 4px;
+            left: 4px;
+            width: 26px;
+            height: 26px;
+            content: '';
+            -webkit-transition: .4s;
+            transition: .4s;
+            background-color: $switch-button-color;
+        }
+
+        &.round {
+            border-radius: 34px;
+
+            &::before {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + .slider {
+            background-color: $switch-selected-color;
+
+            &::before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+        }
+
+        &:focus + .slider {
+            box-shadow: 0 0 1px $prime-colour-1;
+        }
+    }
+}
+
+.menu-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    //height: 50px;
+    padding: 8px 15px;
+    background: $nm-head-background;
+
+    h2 {
+        font-size: $nm-head-text-size;
+        margin: 0;
+        margin-top: 4px;
+        color: $nm-head-text-colour;
+    }
+
+    .close-menu {
+        font-size: $nm-head-text-size;
+        margin: 5px 10px 5px 5px;
+        cursor: pointer;
+        color: $nm-head-text-colour;
+    }
+}
+
+.mobile-menu {
+    a {
+        text-decoration: none;
+    }
+
+    .menu-content {
+        overflow: auto;
+        max-height: 100%;
+        padding: 0;
+        background: $nm-bgcolor;
+
+        -webkit-overflow-scrolling: touch;
+
+        .primary-menu {
+            padding: 0;
+
+            &.menu-wrap {
+                &.menu-bottom-items {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                }
+            }
+
+            a {
+                font-size: 18px;
+                position: relative;
+                display: block;
+                padding: 13px 10px 12px 18px;
+                cursor: pointer;
+                color: $nm-text-color;
+                border-bottom: 2px solid $nm-primary-border-color;
+
+                .cwsicon {
+                    font-size: $nm-cwsicon-size;
+                    float: right;
+                    margin-top: 2px;
+                    margin-right: 7px;
+                }
+            }
+
+            li {
+                a {
+                    border-bottom: transparent solid 1px;
+                }
+                &.active {
+                    a {
+                        text-decoration: none;
+                        color: $nm-active-color;
+                    }
+
+                    .cwsicon {
+                        width: 26px;
+                        height: 32px;
+                        margin-top: 2px;
+                        text-align: center;
+                        vertical-align: middle;
+
+                        &:before {
+                            display: block;
+                            width: 26px;
+                        }
+                    }
+                }
+                &:hover,
+                &.selected {
+                    a {
+                        border-bottom-color: $nm-selected-border-color;
+                    }
+                }
+            }
+
+            .dr-navigation-item-updates {
+                &.updates {
+                    &.found {
+                        a {
+                            color: $header-updates-icon-color;
+                        }
+                        span {
+                            &.cwsicon {
+                                &::before {
+                                    content: 'q';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .dr-navigation-item-media {
+                .media-icon {
+                    float: none;
+                }
+            }
+
+            .dr-navigation-link-compare-disabled {
+                color: $nm-primary-item-link-disabled-colour;
+                opacity: .7;
+                background: $nm-primary-item-link-disabled-bg-colour;
+            }
+
+            .first-lmenu > li {
+                background: $nm-bg-color;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 13px 10px 14px 26px;
+                    color: $nm-link;
+                    border-bottom: 1px solid $nm-border-color;
+
+                    .media-icon {
+                        float: left;
+                        height: 20px;
+                        top: 0;
+                    }
+                }
+            }
+            .first-lmenu > li
+            &.active {
+                a {
+                    cursor: pointer;
+                    color: $nm-active-color;
+                }
+            }
+        }
+        ul,
+        ol {
+            margin-bottom: 0;
+            padding: 0;
+            list-style: none;
+            background-color: $nm-list-bgcolor;
+        }
+    }
+}
+
+//makes sure all the menus are closed
+
+.first-lmenu {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    opacity: 0;
+    background: $nm-overlay-bgcolor;
+}
+
+.show-overlay {
+    visibility: visible;
+    opacity: .5;
+}
+
+// when used in page as side nav
+.inpage {
+    .sidemenu {
+        left: 0;
+        padding-top: 0;
+        top: 50px;
+        border-right: 2px solid $nm-inpage-panel-border-color;
+
+        &.left {
+            left: 0;
+            z-index: 800;
+            //position: fixed;
+        }
+
+        .menu-content {
+            .primary-menu {
+                background-color: $nm-inpage-menu-bgcolor;
+
+                li {
+                    &.selected {
+                        background-color: $nm-inpage-link-selected-background-color;
+                        a {
+                            color: $nm-inpage-link-selected-text-color;
+                        }
+                    }
+                }
+
+                a {
+                    border-bottom: 2px solid $nm-inpage-panel-bottom-border-color;
+                }
+
+                .dr-navigation-list {
+                    &.active {
+                        background-color: $nm-inpage-menulist-active-bgcolor;
+                        a {
+                            color: $nm-inpage-menulist-active-text-color;
+                        }
+
+                        .first-lmenu > li {
+                            background: $nm-inpage-menulist-item-active-bgcolor;
+                            color: $nm-inpage-menulist-item-text-active-color;
+                            &.selected {
+                                background-color: lighten($nm-inpage-menulist-active-bgcolor, 19%);
+                                a {
+                                    color: $nm-inpage-menulist-item-selected-text-color;
+                                }
+                            }
+                            a {
+                                color: $nm-inpage-menulist-item-item-active-text-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.inpage-nav-open {
+    .page-content {
+        padding-left: 315px;
+    }
+}
+

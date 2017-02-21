@@ -1,0 +1,20 @@
+<div class="basket-total">
+    <div class="savings">
+        <span class="label">{{ :: $ctrl.savingsText }}</span>
+        <span class="amount">
+            <uit-price-format
+                class="item-price"
+                number="$ctrl.basket.saving"
+            ></uit-price-format>
+        </span>
+    </div>
+    <div class="total">
+        <span class="label">{{ :: $ctrl.totalText }}</span>
+        <span class="amount">
+            <uit-price-format
+                class="item-price"
+                number="$ctrl.basket.total"
+            ></uit-price-format>
+        </span>
+    </div>
+</div>

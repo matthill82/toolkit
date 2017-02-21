@@ -1,0 +1,42 @@
+customer-average-usage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.customerAverageUsage {
+    display: flex;
+    flex: 1;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .customerAverageUsage__info-link {
+        align-self: flex-start;
+        padding: $grid-gutter-width / 2;
+    }
+
+    span {
+        &.customerAverageUsage__info-icon {
+            color: $secondary-colour-3;
+            font-size: 1.4rem;
+        }
+    }
+
+    .customerAverageUsage__details {
+        flex: 4;
+        background-color: $prime-colour-4;
+        display: flex;
+        align-items: center;
+    }
+
+    .customerAverageUsage__details-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+}

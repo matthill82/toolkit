@@ -1,0 +1,12 @@
+<div class="trackedButton clearfix">
+
+    <div class="trackedButton__checkbox trackedButton__checkbox--{{ :: $ctrl.alignment }} clearfix">
+        <input class="trackedButton__checkbox-input" type="checkbox" name="status" ng-model="$ctrl.status" id="{{ :: $ctrl.trackingId }}" ng-true-value="'checked'" ng-false-value="'not-checked'">
+        <label class="trackedButton__checkbox-label" for="{{ :: $ctrl.trackingId }}">{{ :: $ctrl.labelText }}</label>
+    </div>
+
+    <div class="trackedButton__button trackedButton__button--{{ :: $ctrl.alignment }}" ng-if="$ctrl.status === 'checked'">
+        <button class="btn btn-cws trackedButton__button-button" ng-click="$ctrl.setTrackingData()">{{ :: $ctrl.buttonText }}</button>
+    </div>
+
+</div>

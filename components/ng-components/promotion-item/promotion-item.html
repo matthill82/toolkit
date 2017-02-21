@@ -1,0 +1,12 @@
+<div class="promotion-item">
+    <div class="promotion-item-header">
+        <h3>{{:: PromotionItemController.promotionTitle}}</h3>
+    </div>
+    <div class="promotion-item-image text-center">
+        <img ng-src="{{:: PromotionItemController.promotionImagePath}}">
+    </div>
+    <div ng-if="PromotionItemController.promotionOfferTitle !== undefined" class="offer">
+        <div class="offer-head">{{:: PromotionItemController.promotionOfferTitle}}</div>
+        <div class="offer-text">{{:: PromotionItemController.primotionOfferText}}</div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="basketBuilderStateManager" ng-class="{'basketBuilderStateManager--disabledState': $ctrl.disabledState}" ng-click="$ctrl.handleClick($event)">
+    <div class="basketBuilderStateManager__state-description">
+        {{:: $ctrl.notStartedLabel }}
+        <div class="basketBuilderStateManager__in-progress-state">
+            {{ $ctrl.inProgress }}
+        </div>
+    </div>
+</div>

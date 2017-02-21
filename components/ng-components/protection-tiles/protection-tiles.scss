@@ -1,0 +1,52 @@
+.protection-tiles {
+    padding-top: 34px;
+
+    .protection-tiles-header {
+        padding-bottom: 10px;
+
+        a {
+            font-weight: $protection-tile-header-info-font-weight;
+            font-size: $protection-tile-header-info-text-size;
+            padding-left: 14px;
+            cursor: pointer;
+        }
+        .cwsicon {
+            font-size: $protection-tile-hint-icon-size;
+            float: right;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .tile {
+        border: 2px solid $protection-tile-border-colour;
+
+        .title {
+            font-size: $protection-tile-header-text-size;
+            font-family: $protection-tile-header-font-family;
+            color: $protection-tile-header-color;
+        }
+        .price {
+            font-size: $protection-tile-price-header-text-size;
+            font-family: $protection-tile-price-header-font-family;
+          margin-bottom: 2px;
+        }
+        .cta {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            background-color: $protection-tile-cta-background-color;
+            color: $protection-tile-cta-text-color;
+            font-size: $protection-tile-cta-text-size;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 150px;
+        padding-top: 3px;
+        float: right;
+        padding-right: 12px;
+        padding-bottom: 30px;
+    }
+}
+

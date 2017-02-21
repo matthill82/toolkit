@@ -1,0 +1,23 @@
+uit-icon-list {
+    display: flex;
+}
+
+.uitIconList {
+    list-style: none;
+    padding: 0;
+    color: $secondary-colour-3;
+
+    > li {
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        &.uitIconList__icon {
+            color: $prime-colour-1;
+            font-size: 2rem;
+            margin-right: .5rem;
+        }
+    }
+
+}

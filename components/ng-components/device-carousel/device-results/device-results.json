@@ -1,0 +1,941 @@
+{
+    "data":[  
+        {  
+            "name": "Apple iPhone 6s",
+            "description": "With 3D Touch, Live Photos, 7000 series aluminium, A9 chip, advanced cameras, 4.7-inch Retina HD display and so much more, you'll see how with our amazing phone, the only thing that's changed is everything.",
+            "manufacturer": "Apple",
+            "model" : "iPhone 6s",
+            "capacity" : {
+                "amount " : "16",
+                "unit " : "GB"
+            },
+            "available_colours": [
+                {
+                    "name":"Space Grey",
+                    "hex":"#222222",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/APPLE-IPHONE-6S-16GB_SPACEGRAY_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"Silver",
+                    "hex":"#ccc",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/APPLE-IPHONE-6S-16GB_SILVER_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"Gold",
+                    "hex":"#D4AF37",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/APPLE-IPHONE-6S-16GB_GOLD_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"Rose Gold",
+                    "hex":"#E99779",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/APPLE-IPHONE-6S-16GB_ROSEGOLD_1?wid=232&hei=348"
+                        }
+                    ]
+                }
+            ],
+            "rating": 4.3,
+            "colour": "Space Grey",
+            "operating_system": "iOS",
+            "sim_type": "Nano",
+            "created_date": "September 2015",
+            "features": [
+                {
+                    "category":"Display",
+                    "name":"Type",
+                    "value":"LED-backlit Multi-Touch, IPS LCD"
+                },
+                {
+                    "category":"Display",
+                    "name":"Screen Size",
+                    "value":"4.7"
+                },
+                {
+                    "category":"Display",
+                    "name":"Resolution",
+                    "value":"750 x 1334 pixels"
+                },
+                {
+                    "category":"Display",
+                    "name":"Sharpness",
+                    "value":"326ppi"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Standby time (up to)",
+                    "value":"10 days"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Talk time (up to)",
+                    "value":"14 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Battery size (in mAh)",
+                    "value":"1,715"
+                },
+                {
+                    "category":"Camera",
+                    "name":"Camera quality",
+                    "value":"12MP"
+                },  
+                 {
+                    "category":"Camera",
+                    "name":"Flash type",
+                    "value":"Dual LED (dual tone)"
+                },                
+                {
+                    "category":"Camera",
+                    "name":"Front facing camera",
+                    "value":"5MP"
+                },                 
+                {
+                    "category":"Camera",
+                    "name":"Video quality",
+                    "value":"4K video recording"
+                },  
+                {
+                    "category":"Call",
+                    "name":"Speakerphone",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Works in USA",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice dialling",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice recognition",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Frequency band",
+                    "value":"Quad Band, LTE"
+                },
+                {
+                    "category":"Test",
+                    "name":"Frequency band",
+                    "value":"Quad Band, LTE"
+                },
+				{
+                    "category":"Input and Output",
+                    "name":"Input/Output",
+                    "value":"Lightning connector, 3.5-mm stereo headphone minijack, built-in speaker, microphones"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"ID",
+                    "value":"Apple ID (required for some features)"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Internet",
+                    "value":"Internet access"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Synch",
+                    "value":"Syncing with iTunes on a Mac or PC requires Mac: OS X v10.7.5 or later, PC: Windows 7 or Windows 8, iTunes 12.3 or later (free download from www.itunes.com/download)"
+                },
+				{
+                    "category":"In the box",
+                    "name":"box",
+                    "value":"iPhone 6s, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Specs",
+                    "value":"GSM/EDGE; UMTS/HSPA+/DC-HSDPA; CDMA EV-DO Rev. A; 4G LTE "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Mbps",
+                    "value":"Advanced up to 150Mbps "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Wifi",
+                    "value":"Wi-Fi with MINO (802.11 a/b/g/n/ac)"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Bluetooth",
+                    "value":"4.2"
+                }                
+                
+            ],
+            "imagery": [
+                {
+                    "type":"image/png",
+                    "description":"Front",
+                    "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/APPLE-IPHONE-6S-16GB_SPACEGRAY_1?wid=232&hei=348"
+                }
+            ]
+
+        },
+        {  
+            "name": "Samsung Galaxy S6",
+            "description": "With a revolutionary double-curved screen making the sleek metal and glass body look even better, the Samsung Galaxy S6 edge is one of the best-looking phones around and the best you can see from hre on out.",
+            "manufacturer": "Samsung",
+            "model" : "Galaxy S6",
+            "capacity" : {
+                "amount " : "32",
+                "unit " : "GB"
+            },
+            "available_colours": [
+                {
+                    "name":"Blue",
+                    "hex":"#009DBC",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/medium/SAMSUNG-GALAXY-S6-32GB_BLUE_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+				{
+                    "name":"Black",
+                    "hex":"#000",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/medium/SAMSUNG-GALAXY-S6-32GB_BLACK_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"White",
+                    "hex":"#fff",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/medium/SAMSUNG-GALAXY-S6-32GB_WHITE_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"Gold",
+                    "hex":"#D4AF37",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/medium/SAMSUNG-GALAXY-S6-32GB_GOLD_1?wid=232&hei=348"
+                        }
+                    ]
+                }
+            ],           
+            "rating": 4.5,            
+            "colour": "White",
+            "operating_system": "Android",
+            "sim_type": "Nano",
+            "created_date": "July 2015",            
+             "features": [
+                {
+                    "category":"Display",
+                    "name":"Type",
+                    "value":"Super AMOLED"
+                },
+                {
+                    "category":"Display",
+                    "name":"Screen Size",
+                    "value":"5.1"
+                },
+                {
+                    "category":"Display",
+                    "name":"Resolution",
+                    "value":"2560 x 1440 pixels"
+                },
+                {
+                    "category":"Display",
+                    "name":"Sharpness",
+                    "value":"577ppi"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Standby time (up to)",
+                    "value":"12 days"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Talk time (up to)",
+                    "value":"17 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Battery size (in mAh)",
+                    "value":"2,550"
+                },
+                {
+                    "category":"Camera",
+                    "name":"Camera quality",
+                    "value":"16MP camera"
+                },  
+                 {
+                    "category":"Camera",
+                    "name":"Flash type",
+                    "value":"Dual LED (dual tone)"
+                },                
+                {
+                    "category":"Camera",
+                    "name":"Front facing camera",
+                    "value":"5MP"
+                },                 
+                {
+                    "category":"Camera",
+                    "name":"Video quality",
+                    "value":"4K video recording"
+                },  
+                {
+                    "category":"Call",
+                    "name":"Speakerphone",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Works in USA",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice dialling",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice recognition",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Frequency band",
+                    "value":"Quad Band, LTE"
+                },
+				{
+                    "category":"Input and Output",
+                    "name":"Input/Output",
+                    "value":"Lightning connector, 3.5-mm stereo headphone minijack, built-in speaker, microphones"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"ID",
+                    "value":"Apple ID (required for some features)"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Internet",
+                    "value":"Internet access"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Synch",
+                    "value":"Syncing with iTunes on a Mac or PC requires Mac: OS X v10.7.5 or later, PC: Windows 7 or Windows 8, iTunes 12.3 or later (free download from www.itunes.com/download)"
+                },
+				{
+                    "category":"In the box",
+                    "name":"box",
+                    "value":"iPhone 6s, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Specs",
+                    "value":"GSM/EDGE; UMTS/HSPA+/DC-HSDPA; CDMA EV-DO Rev. A; 4G LTE "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Mbps",
+                    "value":"Advanced up to 150Mbps "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Wifi",
+                    "value":"Wi-Fi with MINO (802.11 a/b/g/n/ac)"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Bluetooth",
+                    "value":"4.2"
+                }                 
+                
+            ],
+            "imagery": [
+                {
+                    "type":"image/png",
+                    "description":"Front",
+                    "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/medium/SAMSUNG-GALAXY-S6-32GB_BLUE_1?wid=232&hei=348"
+                }
+            ]
+        },
+        {  
+            "name": "Sony Xperia Z5",
+            "description": "With 3D Touch, Live Photos, 7000 series aluminium, A9 chip, advanced cameras, 4.7-inch Retina HD display and so much more, you'll see how with our amazing phone, the only thing that's changed is everything.",
+            "manufacturer": "Sony",
+            "model" : "Experia Z5",
+            "capacity" : {
+                "amount " : "32",
+                "unit " : "GB"
+            },
+            "available_colours": [
+                {
+                    "name":"Black",
+                    "hex":"#000",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/SONY-XPERIA-Z5_BLACK_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"Gold",
+                    "hex":"#D4AF37",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/SONY-XPERIA-Z5_GOLD_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                                {
+                    "name":"Green",
+                    "hex":"#b3e5b3",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/SONY-XPERIA-Z5_GREEN_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"White",
+                    "hex":"#fff",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/SONY-XPERIA-Z5_WHITE_1?wid=232&hei=348"
+                        }
+                    ]
+                }
+            ],            
+            "rating": 4.2,            
+            "colour": "Black",
+            "operating_system": "Android",
+            "sim_type": "Nano",
+            "created_date": "October 2015",            
+             "features": [
+                {
+                    "category":"Display",
+                    "name":"Type",
+                    "value":"LCD with Sony's TRILUMINOS technology"
+                },
+                {
+                    "category":"Display",
+                    "name":"Screen Size",
+                    "value":"5.2"
+                },
+                {
+                    "category":"Display",
+                    "name":"Resolution",
+                    "value":"1080 x 1920 pixels"
+                },
+                {
+                    "category":"Display",
+                    "name":"Sharpness",
+                    "value":"424ppi"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Standby time (up to)",
+                    "value":"540 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Talk time (up to)",
+                    "value":"17 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Battery size (in mAh)",
+                    "value":"2,900"
+                },
+                {
+                    "category":"Camera",
+                    "name":"Camera quality",
+                    "value":"23MP"
+                },  
+                 {
+                    "category":"Camera",
+                    "name":"Flash type",
+                    "value":"Dual LED"
+                },                
+                {
+                    "category":"Camera",
+                    "name":"Front facing camera",
+                    "value":"5MP"
+                },                 
+                {
+                    "category":"Camera",
+                    "name":"Video quality",
+                    "value":"4K video recording"
+                },  
+                {
+                    "category":"Call",
+                    "name":"Speakerphone",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Works in USA",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice dialling",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice recognition",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Frequency band",
+                    "value":"Quad Band"
+                },
+				{
+                    "category":"Input and Output",
+                    "name":"Input/Output",
+                    "value":"Lightning connector, 3.5-mm stereo headphone minijack, built-in speaker, microphones"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"ID",
+                    "value":"Apple ID (required for some features)"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Internet",
+                    "value":"Internet access"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Synch",
+                    "value":"Syncing with iTunes on a Mac or PC requires Mac: OS X v10.7.5 or later, PC: Windows 7 or Windows 8, iTunes 12.3 or later (free download from www.itunes.com/download)"
+                },
+				{
+                    "category":"In the box",
+                    "name":"box",
+                    "value":"iPhone 6s, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Specs",
+                    "value":"GSM/EDGE; UMTS/HSPA+/DC-HSDPA; CDMA EV-DO Rev. A; 4G LTE "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Mbps",
+                    "value":"Advanced up to 150Mbps "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Wifi",
+                    "value":"Wi-Fi with MINO (802.11 a/b/g/n/ac)"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Bluetooth",
+                    "value":"4.2"
+                }                 
+                
+            ],
+            "imagery": [
+                {
+                    "type":"image/png",
+                    "description":"Front",
+                    "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/SONY-XPERIA-Z5_BLACK_1?wid=232&hei=348"
+                }
+            ]
+        },
+        {  
+            "name": "Microsoft Lumia 640",
+            "description": "With 3D Touch, Live Photos, 7000 series aluminium, A9 chip, advanced cameras, 4.7-inch Retina HD display and so much more, you'll see how with our amazing phone, the only thing that's changed is everything.",
+            "manufacturer": "Microsoft",
+            "model" : "Lumia 640",
+            "capacity" : {
+                "amount " : "8",
+                "unit " : "GB"
+            },
+            "available_colours": [
+                {
+                    "name":"Black",
+                    "hex":"#000",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/MICROSOFT-LUMIA-950_BLACK_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"White",
+                    "hex":"#ccc",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/MICROSOFT-LUMIA-950_WHITE_1?wid=232&hei=348"
+                        }
+                    ]
+                }
+            ],          
+            "rating": 4.2,            
+            "colour": "Black",
+            "operating_system": "Windows 8.1",
+            "sim_type": "Nano",
+            "created_date": "May 2015",            
+             "features": [
+                {
+                    "category":"Display",
+                    "name":"Type",
+                    "value":"IPS LCD"
+                },
+                {
+                    "category":"Display",
+                    "name":"Screen Size",
+                    "value":"5"
+                },
+                {
+                    "category":"Display",
+                    "name":"Resolution",
+                    "value":"720 x 1280 pixels"
+                },
+                {
+                    "category":"Display",
+                    "name":"Sharpness",
+                    "value":"294ppi"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Standby time (up to)",
+                    "value":"684 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Talk time (up to)",
+                    "value":"26 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Battery size (in mAh)",
+                    "value":"2,500"
+                }, 
+                {
+                    "category":"Camera",
+                    "name":"Camera quality",
+                    "value":"8MP"
+                },  
+                 {
+                    "category":"Camera",
+                    "name":"Flash type",
+                    "value":"LED"
+                },                
+                {
+                    "category":"Camera",
+                    "name":"Front facing camera",
+                    "value":"1MP"
+                },                 
+                {
+                    "category":"Camera",
+                    "name":"Video quality",
+                    "value":"1080p"
+                },  
+                {
+                    "category":"Call",
+                    "name":"Speakerphone",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Works in USA",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice dialling",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice recognition",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Frequency band",
+                    "value":"Quad Band"
+                },
+				{
+                    "category":"Input and Output",
+                    "name":"Input/Output",
+                    "value":"Lightning connector, 3.5-mm stereo headphone minijack, built-in speaker, microphones"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"ID",
+                    "value":"Apple ID (required for some features)"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Internet",
+                    "value":"Internet access"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Synch",
+                    "value":"Syncing with iTunes on a Mac or PC requires Mac: OS X v10.7.5 or later, PC: Windows 7 or Windows 8, iTunes 12.3 or later (free download from www.itunes.com/download)"
+                },
+				{
+                    "category":"In the box",
+                    "name":"box",
+                    "value":"iPhone 6s, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Specs",
+                    "value":"GSM/EDGE; UMTS/HSPA+/DC-HSDPA; CDMA EV-DO Rev. A; 4G LTE "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Mbps",
+                    "value":"Advanced up to 150Mbps "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Wifi",
+                    "value":"Wi-Fi with MINO (802.11 a/b/g/n/ac)"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Bluetooth",
+                    "value":"4.2"
+                }
+            ],
+            "imagery": [
+                {
+                    "type":"image/png",
+                    "description":"Front",
+                    "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/MICROSOFT-LUMIA-640_ORANGE_1?wid=232&hei=348"
+                }
+            ]
+        },
+        {  
+            "name": "Google Nexus 5X",
+            "description": "The Nexus 5X from LG brings with it the pure Android experience in a lightweight and beautifully designed package. With 3D Touch, Live Photos, 7000 series aluminium, A9 chip, advanced cameras, and nice and is everything.",
+            "manufacturer": "Google",
+            "model" : "Nexus 5X",
+            "capacity" : {
+                "amount " : "16",
+                "unit " : "GB"
+            },
+            "available_colours": [
+                {
+                    "name":"Black",
+                    "hex":"#000",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/LG-NEXUS-5X-16GB_BLACK_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"Ice",
+                    "hex":"#b3ffff",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/LG-NEXUS-5X-16GB_ICE_1?wid=232&hei=348"
+                        }
+                    ]
+                },
+                {
+                    "name":"White",
+                    "hex":"#fff",
+                    "imagery": [
+                        {
+                            "type":"image/png",
+                            "description":"Front",                   "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/LG-NEXUS-5X-16GB_WHITE_1?wid=232&hei=348"
+                        }
+                    ]
+                }
+            ],            
+            "rating": 4.0,            
+            "colour": "Black",
+            "operating_system": "Android",
+            "sim_type": "Nano",
+            "created_date": "June 2015",            
+             "features": [
+                {
+                    "category":"Display",
+                    "name":"Type",
+                    "value":"IPS LCD"
+                },
+                {
+                    "category":"Display",
+                    "name":"Screen Size",
+                    "value":"5.2"
+                },
+                {
+                    "category":"Display",
+                    "name":"Resolution",
+                    "value":"1920 x 1080 pixels"
+                },
+                {
+                    "category":"Display",
+                    "name":"Sharpness",
+                    "value":"424ppi"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Standby time (up to)",
+                    "value":"710 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Talk time (up to)",
+                    "value":"19 hours"
+                },
+                {
+                    "category":"Battery",
+                    "name":"Battery size (in mAh)",
+                    "value":"2,700"
+                }, 
+                {
+                    "category":"Camera",
+                    "name":"Camera quality",
+                    "value":"12.3MP"
+                },  
+                 {
+                    "category":"Camera",
+                    "name":"Flash type",
+                    "value":"Dual LED"
+                },                
+                {
+                    "category":"Camera",
+                    "name":"Front facing camera",
+                    "value":"5MP"
+                },                 
+                {
+                    "category":"Camera",
+                    "name":"Video quality",
+                    "value":"4K video recording"
+                },  
+                {
+                    "category":"Call",
+                    "name":"Speakerphone",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Works in USA",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice dialling",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Voice recognition",
+                    "value":"true"
+                },
+                {
+                    "category":"Call",
+                    "name":"Frequency band",
+                    "value":"Quad Band"
+                },
+				{
+                    "category":"Input and Output",
+                    "name":"Input/Output",
+                    "value":"Lightning connector, 3.5-mm stereo headphone minijack, built-in speaker, microphones"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"ID",
+                    "value":"Apple ID (required for some features)"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Internet",
+                    "value":"Internet access"
+                },
+				{
+                    "category":"System Requirements",
+                    "name":"Synch",
+                    "value":"Syncing with iTunes on a Mac or PC requires Mac: OS X v10.7.5 or later, PC: Windows 7 or Windows 8, iTunes 12.3 or later (free download from www.itunes.com/download)"
+                },
+				{
+                    "category":"In the box",
+                    "name":"box",
+                    "value":"iPhone 6s, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Specs",
+                    "value":"GSM/EDGE; UMTS/HSPA+/DC-HSDPA; CDMA EV-DO Rev. A; 4G LTE "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Mbps",
+                    "value":"Advanced up to 150Mbps "
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Wifi",
+                    "value":"Wi-Fi with MINO (802.11 a/b/g/n/ac)"
+                },
+				{
+                    "category":"Mobile and Wireless",
+                    "name":"Bluetooth",
+                    "value":"4.2"
+                }
+            ],
+            "imagery": [
+                {
+                    "type":"image/png",
+                    "description":"Front",
+                    "url":"http://images.carphonewarehouse.com/is/image/cpw/mobiles/large/LG-NEXUS-5X-16GB_ICE_1?wid=232&hei=348"
+                }
+            ]
+        }
+        
+         
+   
+    ]
+}

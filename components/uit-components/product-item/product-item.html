@@ -1,0 +1,50 @@
+<div class="uitProductItem">
+    <div class="uitProductItem__title" ng-class=":: {'uitProductItem__title--hasCompare': $ctrl.onCompareRemove}">
+        <h6>
+            {{ :: $ctrl.product.device.manufacturer | htmlToPlaintext }}
+            {{ :: $ctrl.product.device.name | htmlToPlaintext }}
+        </h6>
+        <a
+            class="{{ :: $ctrl.removeCompareIcon }}"
+            ng-click="$ctrl.onCompareRemove({$event:$event})"
+            ng-if="$ctrl.onCompareRemove"
+        ></a>
+    </div>
+    <div class="uitProductItem__image" ng-click="$ctrl.onSelectImage()">
+        <device-stickers
+            ds-journey-type="{{ :: $ctrl.dsJourneyType }}"
+            ds-order-priority="2"
+        ></device-stickers>
+        <img ng-src="{{ :: $ctrl.product.device.available_colours[0].imagery[0].url }}">
+    </div>
+    <pricing
+        pr-device="$ctrl.product.device"
+        pr-layout-type="{{ :: $ctrl.prLayoutType }}"
+        pr-offering="$ctrl.product.offering[0]"
+    ></pricing>
+    <device-benefits
+        features-array="$ctrl.featuresArray"
+        product="$ctrl.product"
+    ></device-benefits>
+    <div class="uitProductItem__stockCount clearfix">
+        <span class="instock">
+            <stock-count method="eventApi"></stock-count>
+        </span>
+    </div>
+    <div class="uitProductItem__features" ng-if=":: $ctrl.difFeatures">
+        <device-icon-features
+            dif-display="{{ :: $ctrl.difDisplay }}"
+            dif-features="{{ :: $ctrl.difFeatures }}"
+            dif-journey-type="{{ :: $ctrl.difJourneyType }}"
+        ></device-icon-features>
+    </div>
+    <div ng-show="$ctrl.showTags">
+        <device-tags pt-journey-type="{{ :: $ctrl.difJourneyType }}"></device-tags>
+    </div>
+    <uit-product-select
+        on-select="$ctrl.onSelect()"
+        on-is-selected="$ctrl.onIsSelected()"
+        select-text="{{ :: $ctrl.selectText }}"
+        selected-text="{{ :: $ctrl.selectedText }}"
+    ></uit-product-select>
+</div>

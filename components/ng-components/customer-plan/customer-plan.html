@@ -1,0 +1,31 @@
+<div class="customerPlan">
+    <uit-title-block title="{{ :: $ctrl.title}}"></uit-title-block>
+    <div class="customerPlan__allowances">
+        <div class="customerPlan__data">
+            <h2 class="customerPlan__data-amount">{{ :: $ctrl.tariff.dataAllowance.number}}{{ :: $ctrl.tariff.dataAllowance.units}}</h2>
+            <span class="customerPlan__data-label">{{ :: $ctrl.dataPerMonthLabel}}</span>
+        </div>
+        <div class="customerPlan__units">
+            <uit-device-usage
+                orientation="vertical"
+                data="$ctrl.deviceDataList">
+            </uit-device-usage>
+        </div>
+    </div>
+    <div class="customerPlan__details">
+        <div class="customerPlan__details-inner">
+            <h3>{{ :: $ctrl.tariff.name}}</h3>
+            <ul class="customerPlan__costs">
+                <li ng-if="$ctrl.offering.termLength">{{ :: $ctrl.offering.termLength}}
+                    {{ :: $ctrl.offering.termLengthUnits}} {{ :: $ctrl.offeringTypeMapping }}
+                </li>
+                <li ng-if="$ctrl.offering.regularInstallmentAmount.net.value">
+                    <uit-price-format number=":: $ctrl.offering.regularInstallmentAmount.net.value"></uit-price-format>/{{ :: $ctrl.offering.termLengthUnits}}
+                </li>
+            </ul>
+            <uit-icon-list
+                list="$ctrl.featureList">
+            </uit-icon-list>
+        </div>
+    </div>
+</div>

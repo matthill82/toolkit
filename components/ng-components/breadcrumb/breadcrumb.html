@@ -1,0 +1,19 @@
+<div class="breadcrumb"
+     ng-class="{'breadcrumb--icons-theme' : $ctrl.themeIcons }">
+    <ul class="breadcrumb__list">
+        <li
+            ng-class="{
+                'breadcrumb__list-item--active': $index === $ctrl.activeItemIndex,
+                'breadcrumb__list-item--complete': $index < $ctrl.activeItemIndex
+            }"
+            ng-click="$ctrl.goTo($index)"
+            ng-repeat="item in $ctrl.breadcrumb">
+            <span ng-if="$ctrl.themeIcons"
+                  class="breadcrumb__icon"
+                  ng-class="{
+            '{{$ctrl.completeIcon}}' : $index < $ctrl.activeItemIndex,
+            '{{item.icon}}' : $index >= $ctrl.activeItemIndex
+             }"></span>{{ :: item.label}}
+        </li>
+    </ul>
+</div>

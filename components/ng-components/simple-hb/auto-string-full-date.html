@@ -1,0 +1,41 @@
+<script type="text/ng-template" id="hb/field-templates/auto-string-full-date.html">
+    <div class="hb data string full-date">
+        <label class="hb control-label">
+            <span ng-if="node.required" class="simpleHb__asterix">*</span>
+            {{node.title | translate | emptyTranslate}}
+        </label>
+        <div class="hb row" hb-field="node" hb-date-fields="node.value">
+
+            <div class="col-sm-3">
+                <input id="{{node.fullName}}.year" type="number" ng-model="dateFields.year" min="1899" max="2999"
+                       ng-class="{error: node.error || !dateFields.valid}" placeholder="YYYY" class="hb form-control"/>
+            </div>
+            <div class="col-sm-3">
+                <input id="{{node.fullName}}.day" type="number" ng-model="dateFields.day" min="1" max="31"
+                       class="hb form-control" ng-class="{error: node.error || !dateFields.valid}"
+                       placeholder="DD"/>
+            </div>
+            <div class="col-sm-6">
+                <select id="{{node.fullName}}.month" ng-model="dateFields.month"
+                        ng-class="{error: node.error || !dateFields.valid}"
+                        class="hb form-control">
+                    <option value="" disabled selected hidden>Month</option>
+                    <option value="0">Jan</option>
+                    <option value="1">Feb</option>
+                    <option value="2">Mar</option>
+                    <option value="3">Apr</option>
+                    <option value="4">May</option>
+                    <option value="5">Jun</option>
+                    <option value="6">Jul</option>
+                    <option value="7">Aug</option>
+                    <option value="8">Sep</option>
+                    <option value="9">Oct</option>
+                    <option value="10">Nov</option>
+                    <option value="11">Dec</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="hb description">{{node.description}}</div>
+    </div>
+</script>

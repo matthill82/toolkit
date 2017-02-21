@@ -1,0 +1,48 @@
+<div class="product-slide">
+    <div class="product-body" ng-init="$ctrl.broadcastProduct(product)">
+        <h6 same-height="product-header">
+            {{product.device.manufacturer}} {{product.device.name}}
+        </h6>
+
+        <img ng-src="{{product.device.imagery[0].url}}" alt="" >
+        <div same-height="pricing" class="slide-pricing">
+            <pricing
+                pr-device="product.device"
+                pr-offering="product.offering[0]"
+                pr-currency-config="{{currencyConfig}}"
+                pr-layout-type="{{layoutType}}"
+            ></pricing>
+        </div>
+
+        <device-stickers ds-journey-type="{{journeyType}}">
+        </device-stickers>
+
+        <ul class="benefits" same-height="products-benefits">
+            <li ng-repeat="feature in featuresArray">
+                <span ng-repeat="featureObj in product.device.features | filter:{name: feature.value} | filter:{category: feature.category}">
+                    {{featureObj.value}}&nbsp;
+                </span>
+
+            </li>
+        </ul>
+
+        <!--<device-tags pt-journey-type="WINDOWS LAPTOPS & CONVERTIBLES">-->
+        <!--</device-tags>-->
+
+        <p class="text-center">{{priceText}}</p>
+		<div class="product-stock-counter">
+			<stock-count></stock-count>
+		</div>
+		
+        <div class="product-select" ng-class="{active: ProductSlideController.isProductSelected(product.device.id)}" ng-click="ProductSlideController.selectProduct(product, pageType, redirectUrl)">
+            <span>{{ProductSlideController.isProductSelected(product.device.id) ? selectedText : selectText}}</span>
+        </div>
+		
+		<!--<div class="product-select" ng-click="ProductSlideController.selectProduct(product.id, pageType, redirectUrl)">
+			<span>{{selectText}}</span>
+        </div>
+-->
+    </div>
+
+</div>
+

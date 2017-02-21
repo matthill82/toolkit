@@ -1,0 +1,7 @@
+<span
+    class="major-units"
+>{{ $ctrl.number | absNumber : $ctrl.groupSeparator }}</span><span
+    class="decimal"
+>{{ :: $ctrl.decimalSeparator }}</span><span
+    class="minor-units"
+>{{ $ctrl.number | decNumber : $ctrl.decimalPlaces }}</span>

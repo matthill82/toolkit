@@ -1,0 +1,12 @@
+<div class="dr-plans-results-list" ng-show="results !== undefined">
+    <ul class="list-unstyled" ng-if="results.length">
+        <li ng-repeat="planItem in results" class="proposition-item">
+            <plan></plan>
+        </li>
+    </ul>
+
+    <div ng-if="!results.length">
+        <h2>{{noResultsTitle}}</h2>
+        <p>{{noResultsMessage}}</p>
+    </div>
+</div>

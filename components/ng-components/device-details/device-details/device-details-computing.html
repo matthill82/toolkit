@@ -1,0 +1,15 @@
+<div class="component row  device-details demo-details">
+    <div class="col-xs-7">
+        <a ng-click="dd.saveDevice(dd.device.id, buyLink)">
+            <img id="featureImg" class="feature-img" title="{{dd.fullName}}" ng-src="{{dd.device.imagery[0].url}}"
+                 alt="{{dd.fullName}}">
+        </a>
+        <device-compare dc-compare-inactive="cwsicon-circle-heart" dc-compare-active="cwsicon-circle-heart-sel" dc-compare-ishidden="false"></device-compare>
+    </div>
+    <div class="col-xs-4">
+        <h1 class="device-details--title">{{dd.device.manufacturer | htmlToPlaintext}} {{dd.device.name | htmlToPlaintext}}</h1>
+        <div class="btn-cws">
+            <a class="btn btn-buy--block" role="button" ng-click="dd.saveDevice(dd.device.id, buyLink)">{{buyLabel}}</a>
+        </div>
+    </div>
+</div>

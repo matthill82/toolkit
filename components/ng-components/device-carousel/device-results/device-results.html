@@ -1,0 +1,117 @@
+<div class="results dr-device-results component"
+	 ng-init="device = deviceObj.item.hits.hits[0]._source.device"
+	 ng-class="{'not-visible-details': !showDetails}"
+	 ng-repeat="deviceObj in searchResults"
+>
+	<div class="content-slider">
+		<device-compare
+			device="device"
+			dc-compare-inactive="{{compareIcon}}"
+			dc-compare-active="{{compareActive}}"
+			dc-is-compare="{{isCompare}}"
+			dc-remove-icon="{{removeFromCompareIcon}}"
+		></device-compare>
+		<a class="phone">
+			<img ng-src="{{device.available_colours[0].imagery[0].url}}"
+				 ng-click="goToNextPage(device.id,  deviceLink)"/>
+		</a>
+
+		<div class="summarybox main-summary">
+			<div class="sticky-anchor"></div>
+			<div class="details">
+				<h2 class="compare-device-name">{{device.manufacturer}} {{device.name | htmlToPlaintext}}</h2>
+
+				<h3 ng-hide="hideColorOptions">{{availableColoursText}}</h3>
+				<ul class="color-boxes" ng-hide="hideColorOptions">
+					<li ng-repeat="color in device.available_colours" style="background-color:{{color.hex}}">
+						<p class="sr-only">{{color.name}}</p> <!-- best practice for screen readers -->
+					</li>
+				</ul>
+			</div>
+			<button class="btn btn-default large addThisPhone btn-details"
+					ng-hide="showDetails"
+					ng-click="goToSpecifications()">{{ctaText}}
+			</button>
+		</div>
+		<div class="device-summary" >
+
+			<div same-height="camera">
+				<device-results-category
+						drc-same-height-hook="camera"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-photos"
+						drc-category-name="Camera"
+						drc-category-items="Camera quality||Front facing camera||Video camera quality">
+				</device-results-category>
+			</div>
+
+			<div same-height="screen">
+				<device-results-category
+						drc-same-height-hook="screen"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-dimensions"
+						drc-category-name="Body and screen"
+						drc-category-items="Device weight||Screen sharpness||Touchscreen">
+				</device-results-category>
+			</div>
+
+
+			<div same-height="call">
+				<device-results-category
+						drc-same-height-hook="call"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-call"
+						drc-category-name="Call"
+						drc-category-items="Voice recognition||Works in USA||Speakerphone">
+				</device-results-category>
+			</div>
+
+
+			<div same-height="battery">
+				<device-results-category
+						drc-same-height-hook="battery"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-battery-larger"
+						drc-category-name="Battery life and operating system"
+						drc-category-items="Operating system">
+				</device-results-category>
+			</div>
+
+
+			<div same-height="processor">
+				<device-results-category
+						drc-same-height-hook="processor"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-processor"
+						drc-category-name="Processor and memory"
+						drc-category-items="RAM||Memory card type||Internal phone memory||Processor name and model||Processor speed">
+				</device-results-category>
+			</div>
+
+
+			<div same-height="included">
+				<device-results-category
+						drc-same-height-hook="included"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-open-box"
+						drc-category-name="In the box"
+						drc-category-items="USB cable||Charger">
+				</device-results-category>
+			</div>
+
+
+			<div same-height="connectivity">
+				<device-results-category
+						drc-same-height-hook="connectivity"
+						drc-is-compare="{{isCompare}}"
+						drc-category-icon="cwsicon cwsicon-signal-strength"
+						drc-category-name="Connectivity"
+						drc-category-items="4G||3G||Wi-fi||Bluetooth">
+				</device-results-category>
+			</div>
+
+
+		</div>
+
+	</div>
+</div>

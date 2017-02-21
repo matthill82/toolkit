@@ -1,0 +1,27 @@
+.props-results-sidebar {
+    margin: 40px 0;
+    padding: 15px;
+    background: $prs-bg;
+    float: left;
+    width: 100%;
+
+    h2 {
+        font-size: $prs-title-fs;
+        line-height: 34px;
+        float: left;
+        margin: 0;
+    }
+}
+
+.prsi {
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-top: 20px;
+}
+
+.prsi-title {
+    font-size: $prsi-title-fs;
+    font-weight: $prsi-title-fw;
+    margin: 0;
+}

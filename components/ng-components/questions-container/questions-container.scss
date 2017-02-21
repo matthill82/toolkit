@@ -1,0 +1,200 @@
+.buttons-holder-div {
+    position: relative;
+    z-index: 200;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: center;
+
+    h1 {
+        font-family: $font-family-base;
+        font-size: $qc-title-size;
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: none;
+        color: $qc-title-colour-light;
+    }
+
+    &.white-background {
+        h1 {
+            color: $qc-title-colour-dark;
+        }
+    }
+
+    .standard {
+        h1 {
+            color: $qc-title-colour-dark;
+        }
+    }
+}
+
+.bs-glyphicons {
+    .bs-glyphicons-list {
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            position: relative;
+            display: inline-block;
+            float: none;
+            margin: 1%;
+            border: 3px solid transparent;
+
+            div {
+                width: 80px;
+                margin: 1%;
+                padding: 10px 15px;
+                border: 1px solid $qc-icon-border;
+                border-radius: 7px;
+                background-color: $qc-icon-background;
+                box-shadow: 1px 1px 1px $qc-icon-active-colour;
+
+                &.active {
+                    span {
+                        color: $qc-icon-active-colour;
+                    }
+                }
+            }
+
+            &.hint-active {
+                div {
+                    padding: 10px 13px;
+                    border: 3px solid $prime-colour-1;
+
+                    span {
+                        width: auto;
+                    }
+
+                    .glyphicon-text {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .cwsicon {
+            font-size: $qc-icon-size;
+            width: 100%;
+        }
+
+        .glyphicon-text {
+            font-family: $qc-question-text;
+            font-size: $qc-questions-size;
+            font-weight: $qc-questions-fw;
+            line-height: $qc-questions-text-lineheight;
+            display: block;
+            margin-top: 5px;
+            padding-bottom: 3px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        a {
+            text-decoration: none;
+            word-break: break-word;
+            color: $qc-icon-colour;
+
+            &.active {
+                color: $qc-icon-active-colour;
+
+                .title {
+                    color: $qc-icon-background;
+                }
+            }
+        }
+
+        &.readonly {
+            li {
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+
+        &.small {
+            li {
+                margin: 0 6px;
+
+                div {
+                    font-size: smaller;
+                    width: 55px;
+                    height: 55px;
+                    padding: 1px;
+                    word-wrap: break-word;
+
+                    .cwsicon {
+                        font-size: 22px;
+                        width: 100%;
+                        padding-top: 7px;
+                        padding-bottom: 2px;
+                    }
+
+                    .title {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.maximum-selected {
+        .dr-questions-icons,
+        .dr-fasttrack-icons {
+            &:not(.active) {
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &.modal-open {
+        position: absolute;
+        z-index: 9999;
+        width: 100%;
+    }
+}
+
+.dr-questions-icons,
+.dr-fasttrack-icons {
+    img {
+        width: 100%;
+    }
+}
+
+&.modal-open {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+}
+
+.home {
+    .dr-questions-container {
+        margin-top: 80px;
+    }
+}
+
+.dr-questions-container {
+    .modal-dialog {
+        margin-top: 80px;
+    }
+
+    .modal-body {
+        overflow-y: scroll;
+        height: 350px;
+    }
+
+    .questions-hint-icon {
+        position: absolute;
+        top: 230px;
+        right: 30px;
+        display: block;
+        color: $primary-colour-5;
+
+        &.active {
+            color: $prime-colour-1;
+        }
+
+        &.disabled {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+uit-basket-builder-state-manager {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.basketBuilderStateManager {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $basketBuilderStateManager-background-color;
+}
+
+.basketBuilderStateManager--disabledState {
+    background-color: $basketBuilderStateManager-background-color-transparent;
+    .basketBuilderStateManager__state-description {
+        color: $basketBuilderStateManager-description-disabled-color;
+        opacity: 1;
+    }
+}
+
+.basketBuilderStateManager__in-progress-state {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    color: $basketBuilderStateManager-in-progress-color;
+    opacity: .4;
+}
+
+.basketBuilderStateManager__state-description {
+    margin: 0;
+    font-size: 20px;
+    opacity: 1;
+    color: $basketBuilderStateManager-description-color;
+}
+

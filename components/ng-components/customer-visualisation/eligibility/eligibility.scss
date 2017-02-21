@@ -1,0 +1,27 @@
+.eligibility {
+  margin: {
+    top: 2em;
+  };
+  .left-column,
+  .right-column {
+    width: 50%;
+    float: left;
+    padding: {
+      left: 15px;
+      right: 15px;
+    }
+    min-height: 1px;
+    display: block;
+  }
+  .left-column {
+    padding: {
+      left: 0;
+    }
+  }
+}
+
+
+
+
+
+

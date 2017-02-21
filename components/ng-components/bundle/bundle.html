@@ -1,0 +1,34 @@
+<div class="bundle">
+    <div class="row" ng-if="$ctrl.bundle">
+        <div class="col-xs-4">
+            <h6 class="price-text">
+                {{ :: $ctrl.priceText }}&nbsp;
+                <uit-price-format
+                    class="bandle-main-price"
+                    number="$ctrl.bundle.price"
+                ></uit-price-format>
+            </h6>
+            <p class="separate-price">
+                {{ :: $ctrl.separateText }}&nbsp;
+                <uit-price-format
+                    number="$ctrl.bundle.productPrice"
+                ></uit-price-format>
+            </p>
+        </div>
+        <div class="col-xs-4">
+            <h6 class="save-text">
+                <span class="you-save">
+                    {{ :: $ctrl.saveText }}&nbsp;
+                    <uit-price-format
+                        number="$ctrl.bundle.saving"
+                    ></uit-price-format>
+                </span>
+            </h6>
+        </div>
+        <div class="col-xs-4 bundle-upsell-message" ng-if="$ctrl.upsellMessageSce">
+            <div class="more-text" ng-bind-html="$ctrl.upsellMessageSce"></div>
+        </div>
+    </div>
+    <div ng-if="!$ctrl.bundle" class="bundle-no-selection" ng-bind-html="$ctrl.noProductSelectedTextSce">
+    </div>
+</div>

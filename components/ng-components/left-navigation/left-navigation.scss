@@ -1,0 +1,63 @@
+.left-navigation {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    left: 0;
+    height: 100%;
+    padding-top: 50px;
+    z-index: 800;
+    background: $left-nav-bg;
+
+    -webkit-transition-timing-function: ease-out;
+       -moz-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-duration: .2s;
+       -moz-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+    text-align: center;
+    color: $left-nav-color;
+    border-right: 7px solid $left-nav-border-bg;
+
+
+    .cwsicon {
+        margin-bottom: 5px;
+    }
+
+    .inner {
+        height: 100%;
+    }
+
+    table {
+        width: 113px;
+        height: 100%;
+        border-collapse: collapse;
+
+        tr {
+            width: 100%;
+            height: 25%;
+            cursor: pointer;
+        }
+
+        .active-state {
+            color: $left-nav-active-color;
+            background-color: $left-nav-active-bg;
+        }
+
+        .active-state ~ tr {
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    .title {
+        font-size: $left-nav-font-size;
+		padding-top: 5px;
+        font-family: $left-nav-font-family;
+    }
+
+    &.navigation-open {
+        transform: translate(300px, 0);
+    }
+}

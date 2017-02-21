@@ -1,0 +1,74 @@
+.uitModal {
+    @include background-opacity($uit-modal-veil, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.uitModal__title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: $uit-modal-title-color;
+}
+
+span {
+    &.uitModal__title-icon {
+        margin-right: .5rem;
+        font-size: 2.2rem;
+        vertical-align: top;
+    }
+}
+
+.uitModal__body {
+    margin-bottom: 4rem;
+}
+
+.uitModal__footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.uitModal__button {
+    @extend %button-primary;
+    margin-left: .5rem;
+}
+
+.uitModal__button--secondary {
+    @extend %button-secondary;
+    margin-right: .5rem;
+    margin-left: 0;
+}
+
+.uitModal__content {
+    background: $uit-modal-bg-color;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    padding: $grid-gutter-width;
+}
+
+.uitModal__content--sm {
+    max-height: inherit;
+    height: auto;
+    max-width: 40rem;
+    .uitModal__button {
+        max-width: 20rem;
+    }
+}
+
+.uitModal__content--md {
+    max-height: 80%;
+    max-width: 50%;
+}
+
+.uitModal__content--lg {
+    width: calc(100vh - #{$grid-gutter-width});
+    height: calc(100vh - #{$grid-gutter-width});
+}

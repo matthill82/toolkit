@@ -1,0 +1,15 @@
+.recommended-plan {
+
+    &recommended-plan__message--top {
+        margin-top: 0;
+    }
+
+    &__choose-plan {
+        width: 100%;
+        background-color: $planr-ul-head-color;
+        color: $planr-container-color;
+        font-size: $planr-ul-head-size;
+        padding: .5em 0;
+        text-align: center;
+    }
+}

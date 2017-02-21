@@ -1,0 +1,40 @@
+<div class="col-md-12 col-lg-12 dr-questions-container component" >
+    <div class="buttons-holder-div {{ :: $ctrl.theme }}">
+        <h1>{{ :: $ctrl.title }}</h1>
+        <div class="bs-glyphicons"
+             ng-class="{ 'maximum-selected': $ctrl.isMaximumSelected() && !$root.hintMode, 'modal-open': $ctrl.modalOpen }">
+            <ul class="bs-glyphicons-list {{ :: $ctrl.smallSize }}" ng-class="{'readonly': $ctrl.readOnly}">
+                <li ng-repeat="qItem in $ctrl.itemJson"
+                    ng-class="{'hint-active': $ctrl.isHintAnswer(qItem.title)}">
+                    <div class="dr-questions-icons component"
+                         ng-class="{ 'active': $ctrl.isAnswerActive(qItem)}"
+                         ng-click="$ctrl.updateQuestionContainer(qItem)">
+                        <a>
+							<span ng-if="qItem.iconClass !== ''" class="{{ qItem.iconClass | htmlEntities}}" aria-hidden="true"></span>
+							<img ng-if="qItem.image !== ''" ng-src="{{ qItem.image | htmlEntities}}"/>
+                            <span class="title glyphicon-text">{{ qItem.title | htmlEntities}}</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="modal bootstrap-dialog fade in" id="clearModal" role="dialog"
+             ng-class="{active: $ctrl.modalOpen}"
+             ng-click="$ctrl.closeModal($event)">
+            <div class="modal-dialog modal-lg type-normal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" ng-click="$ctrl.modalOpen = false"
+                                class="close {{ $ctrl.closeModalIcon}} pull-right"
+                                data-dismiss="modal"></button>
+                        <ng-include ng-if="$ctrl.modalOpen" src="$ctrl.hintContent"></ng-include>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="{{ $ctrl.hintIcon}} questions-hint-icon"
+              ng-class="{'active': $root.hintMode, 'disabled': $ctrl.hintEnabled !== 'true'}"
+              ng-click="$ctrl.changeHintMode()"
+              aria-hidden="true"></span>
+    </div>
+</div>

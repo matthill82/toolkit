@@ -1,0 +1,13 @@
+<div class="isite-video">
+  <!--To allow full screen pass the attribute without a value, to disable full screen remove the attribute-->
+  <iframe
+    border="{{:: $ctrl.border}}"
+    scrolling="{{:: $ctrl.scrolling}}"
+    seamless="{{:: $ctrl.seamless}}"
+    width="{{:: $ctrl.width}}"
+    height="{{:: $ctrl.height}}"
+    src="{{$ctrl.givenUrl}}"
+    frameborder="{{:: $ctrl.frameBorder }}"
+    ng-attr-allowfullscreen="{{$ctrl.allowFullScreen}}">
+  </iframe>
+</div>

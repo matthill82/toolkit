@@ -1,0 +1,15 @@
+<div
+    class="uitProductSelect"
+    ng-switch="$ctrl.onIsSelected() ? 'SELECTED' : 'UNSELECTED'"
+>
+    <button
+        class="btn btn-cws uitProductSelect__button active"
+        ng-click="$ctrl.onSelect()"
+        ng-switch-when="SELECTED"
+    >{{ :: $ctrl.selectedText }}</button>
+    <button
+        class="btn btn-cws uitProductSelect__button"
+        ng-click="$ctrl.onSelect()"
+        ng-switch-when="UNSELECTED"
+    >{{ :: $ctrl.selectText }}</button>
+</div>

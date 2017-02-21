@@ -1,0 +1,137 @@
+<div class="row tabbed-plans-recommendations" ng-controller="TabbedPlansRecommendationsController as ctp">
+    <div ng-class="ctp.deviceTileShown ? 'col-sm-offset-3 col-sm-9' : 'col-sm-12'" class="tabbed-carriers">
+        <ul class="nav nav-pills">
+            <li role="presentation" ng-repeat="tab in ctp.tabs" ng-class="tab.active ? 'active' : ''"
+                ng-show="ctp.tabs.length > 1">
+                <a href="" ng-click="ctp.tabSelected(tab.id)">
+                    <div class="network-logo {{tab.class}}"></div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="tabbed-carriers-display">
+        <div class="col-sm-3" ng-show="ctp.deviceTileShown">
+            <device-tile></device-tile>
+        </div>
+        <div ng-class="ctp.deviceTileShown ? 'col-sm-9' : 'col-sm-12'">
+            <div class="row" ng-class="ctp.selectedTab !== '' ? 'active' : ''">
+                <div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 recommended-no-results"
+                         ng-if="ctp.areTherePropositions === false">
+                        <h1>{{noResultsTitle}}</h1>
+                        <p>{{noResultsMsg}}</p>
+                        <button ng-click="goToNoResultsButtonPath()" class="btn btn-cws">{{noResultsButtonLabel}}
+                        </button>
+                    </div>
+                    <div class="recommended-proposition-item col-xs-4"
+                         ng-repeat="item in ctp.propositions.slice( ctp.startOffset, ctp.endOffset)"
+                         ng-click="ctp.goTo(url,item.id)"
+                         ng-show="ctp.selectedTab == '' || item.serviceProvider == ctp.selectedTab"
+                         ng-class="{ 'recommended-proposition-item-first' : item.itemIsFirst, 'recommended-proposition-item-last' : item.itemIsLast }">
+                        <div ng-hide="item.itemIsLast || item.itemIndex == ctp.getShownLength() || (item.itemIndex > 2)">
+                            <div class="recommend-better-summary"
+                                 ng-class="{disabled : ctp.hideDifferenceText($index)}"
+                                 ng-bind-html="ctp.sanitize(ctp.getDifferenceText(item.offering[0].id))">
+                            </div>
+                        </div>
+                        <div class="recommended-plan">
+                            <div class="recommended-cost">
+						<span class="cost">
+							<uit-price-format
+                                number="item.offering[0].monthlyContract.regularInstallmentAmount.net.value"
+                            ></uit-price-format>
+						</span>
+                                <span class="cost-label">{{monthCostLabel}}</span>
+                            </div>
+                            <div class="recommended-upfront-cost">
+						<span>
+							<div>{{upfrontCostLabel}}
+							<span ng-if="item.upfrontPrice.net.value === 0">{{freeLabel}}</span>
+							<span ng-if="item.upfrontPrice.net.value >= 1">
+								<uit-price-format
+                                    number="item.offering[0].upfrontPrice.net.value"
+                                ></uit-price-format>
+							</span></div>
+						</span>
+                            </div>
+                            <div class="recommended-benefits">
+                                <ul class="head">
+                                    <li>{{ctp.getPlanName(item.offering[0].id)}}</li>
+                                </ul>
+                                <ul class="benefits">
+                                    <li ng-repeat="benefit in ctp.getBenefitsText(item.offering[0].id)">
+                                        <span class="{{benefitIcon}}"></span>{{benefit}}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="recommended-details">
+                                <div class="container-fluid">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="network-logo"
+                                             ng-class="ctp.getCarrierClass(item.serviceProvider)"></div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="detail">
+                                            <div class="canvas-wrap">
+                                                <graph
+                                                    canvas-color="{{talkPointsColor}}"
+                                                    canvas-id="allowance-canvas{{$index}}"
+                                                    canvas-position="{{ctp.getAllowanceGraphPosition(item.tariff.talkAllowance.number, item.tariff.talkAllowance.units, item.tariff.talkAllowance.unlimited, talkPoints)}}"
+                                                ></graph>
+                                            </div>
+                                            <span class="value">{{ctp.getAllowanceValue(item.tariff.talkAllowance.number, item.tariff.talkAllowance.units, item.tariff.talkAllowance.unlimited, unlimitedText)}}</span>
+                                            <span class="dlabel">{{talkLabel}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="container-fluid">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="detail">
+                                            <div class="canvas-wrap">
+                                                <graph
+                                                    canvas-color="{{dataPointsColor}}"
+                                                    canvas-id="allowance-canvas{{$index}}"
+                                                    canvas-position="{{ctp.getAllowanceGraphPosition(item.tariff.dataAllowance.number, item.tariff.dataAllowance.units, item.tariff.dataAllowance.unlimited, dataPoints)}}"
+                                                ></graph>
+                                            </div>
+                                            <span class="value">{{ctp.getAllowanceValue(item.tariff.dataAllowance.number, item.tariff.dataAllowance.units, item.tariff.dataAllowance.unlimited, unlimitedText)}}</span>
+                                            <span class="dlabel">{{dataLabel}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="detail">
+                                            <div class="canvas-wrap">
+                                                <graph
+                                                    canvas-color="{{textPointsColor}}"
+                                                    canvas-id="allowance-canvas{{$index}}"
+                                                    canvas-position="{{ctp.getAllowanceGraphPosition(item.tariff.textAllowance.number, item.tariff.textAllowance.units, item.tariff.textAllowance.unlimited, textPoints)}}"
+                                                ></graph>
+                                            </div>
+                                            <span class="value">{{ctp.getAllowanceValue(item.tariff.textAllowance.number, item.tariff.textAllowance.units, item.tariff.textAllowance.unlimited, unlimitedText)}}</span>
+                                            <span class="dlabel">{{textLabel}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recommended-upsell reward-tier-{{ctp.getRewardTier(item.offering[0].id)}}">
+                                <p ng-if="ctp.downsellPlan === $index">
+                                    {{sellTextDownsellText}}
+                                </p>
+                                <p ng-if="ctp.recommendedPlan === $index">
+                                    {{sellTextBestMatchText}}
+                                </p>
+                                <p ng-if="ctp.upsell1 === $index">
+                                    {{sellTextUpsell1Text}}
+                                </p>
+                                <p ng-if="ctp.upsell2 === $index">
+                                    {{sellTextUpsell2Text}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

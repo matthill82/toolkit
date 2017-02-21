@@ -1,0 +1,26 @@
+<div class="customerIdentification">
+    <div class="customerIdentification__label">Customer name</div>
+    <div class="customerIdentification__details">
+        {{$ctrl.account.identity.fullName}}
+    </div>
+    <div class="customerIdentification__label">Cell number</div>
+    <div class="customerIdentification__details">
+        {{$ctrl.mobileNumber}}
+    </div>
+    <div class="customerIdentification__label">Billing name and address</div>
+    <div class="customerIdentification__details">
+        {{$ctrl.account.identity.fullName}}
+    </div>
+    <div class="customerIdentification__details">
+        {{$ctrl.account.addresses.billing.buildingNumber}}
+        {{$ctrl.account.addresses.billing.line1}}
+    </div>
+    <div class="customerIdentification__details">
+        {{$ctrl.account.addresses.billing.line2}}
+    </div>
+    <div class="customerIdentification__details">
+        {{$ctrl.account.addresses.billing.city}}
+        {{$ctrl.account.addresses.billing.provinceCode}}
+        {{$ctrl.account.addresses.billing.postalCode}}
+    </div>
+</div>

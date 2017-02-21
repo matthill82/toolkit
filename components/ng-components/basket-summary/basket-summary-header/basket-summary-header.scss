@@ -1,0 +1,10 @@
+.basketSummaryHeader__fixed-container {
+    padding: $grid-gutter-width;
+}
+
+.basketSummaryHeader__title {
+    @extend %caption-1;
+    margin: 0 auto;
+    text-align: center;
+    color: $basketSummary-extras-text-color;
+}

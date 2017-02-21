@@ -1,0 +1,72 @@
+.search-box-container {
+    text-align: center;
+    margin-top: 40px;
+
+    h1 {
+        color: $login-h1;
+        font-size: $login-h1-size;
+        font-weight: $login-h1-weight;
+    }
+
+    .search-box {
+        form {
+            .input-group-addon {
+                display: inline-block;
+                margin-bottom: 0;
+                vertical-align: middle;
+            }
+        }
+        input {
+            margin: auto;
+            height: 40px;
+            font-size: $login-form-text-size;
+            border-radius: 5px;
+            background: transparent;
+            outline: none;
+            display: inline-block;
+        }
+
+        .clear-inline-group {
+            position: relative;
+            left: 50px;
+            display: inline-block;
+        }
+
+        button {
+            &.search-btn {
+                color:  $login-button-color;
+                display: block;
+                border-color: transparent;
+                background: transparent;
+                border-radius: 5px;
+                font-size: 18px;
+                margin-top: 2px;
+                margin-left: -45px;
+                 &:hover {
+                        border-color: transparent;
+                        background: transparent;
+                }
+            }
+            &.clear-btn {
+                color:  $login-button-color;
+                display: block;
+                border-color: transparent;
+                background: transparent;
+                border-radius: 5px;
+                font-size: 18px;
+                margin-top: 2px;
+                margin-left: -45px;
+                 &:hover {
+                        border-color: transparent;
+                        background: transparent;
+                }
+            }
+        }
+
+        .help-inline {
+            &.ng-active {
+                margin: 6px auto 12px;
+            }
+        }
+    }
+}

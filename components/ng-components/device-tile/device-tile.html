@@ -1,0 +1,22 @@
+<div class="dr-mobile-image component" ng-if="DeviceTileController.deviceObj != undefined">
+    <img class="feature-img" title="{{DeviceTileController.deviceObj.name}}"
+         data-ng-src="{{DeviceTileController.imagePath}}"
+         alt="{{DeviceTileController.deviceObj.name}}">
+    <div class="summarybox">
+        <div class="device-tile__details">
+            <h2>{{DeviceTileController.deviceObj.manufacturer | htmlToPlaintext}}
+                {{DeviceTileController.deviceObj.name | htmlToPlaintext}}
+                <div>Color: {{DeviceTileController.colourName}}</div>
+                <div>Capacity: {{DeviceTileController.capacity}}</div>
+            </h2>
+
+            <!--<h3>{{availableInText}}</h3>
+            <ul class="color-boxes">
+                <li ng-repeat="color in DeviceTileController.deviceObj.available_colours"
+                    style="background-color:{{color.hex}}">
+                    <p class="sr-only">{{color.name}}</p>
+                </li>
+            </ul>-->
+        </div>
+    </div>
+</div>

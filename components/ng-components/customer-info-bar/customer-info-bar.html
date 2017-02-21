@@ -1,0 +1,6 @@
+<div class="customerInfoBar">
+    <customer-details cd-customer-icon=":: $ctrl.customerIcon"></customer-details>
+    <left-action ng-if="$ctrl.leftActions" la-text=":: $ctrl.leftActions[0].text" la-icon=":: $ctrl.leftActions[0].icon" la-path=":: $ctrl.leftActions[0].path"></left-action>
+    <title-component tc-tag="h4" tc-title="{{:: $ctrl.title}}" tc-alignment="center"></title-component>
+    <print-icon ng-if="$ctrl.rightActions" cp-icon=":: $ctrl.rightActions[0].icon" cp-path=":: $ctrl.rightActions[0].path"></print-icon>
+</div>

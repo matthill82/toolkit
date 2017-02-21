@@ -1,0 +1,61 @@
+basket-summary {
+    &[bs-basket-advanced='true'] {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: $basketSummary-background;
+
+        > div {
+            &[ng-include] {
+                display: flex;
+                flex: 1;
+                position: relative;
+                flex-direction: column;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.basketSummaryAdvanced {
+    background-color: $basketSummary-background;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.basketSummaryAdvanced--overflow-scroll {
+    overflow-y: scroll;
+}
+
+.basketSummaryAdvanced__content {
+    padding: 0 $grid-gutter-width;
+    flex: 1;
+}
+
+.basketSummaryAdvanced__content--scroll-y {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    height: 100%;
+    overflow-y: scroll;
+    transform: translate3d(0, 0, 0);
+    user-select: none;
+    -webkit-touch-callout: none;
+    transform-origin: left top;
+}
+
+.basketSummaryAdvanced--scroll-y--padding-top {
+    padding-top: 20px;
+}
+
+.basketSummaryAdvanced--has-header {
+    top: 57px;
+}
+
+.basketSummaryAdvanced--has-footer {
+    bottom: 52px;
+}
+

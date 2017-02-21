@@ -1,0 +1,49 @@
+.customerInfoBar {
+    background-color: $customer-info-bar-bg;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: $customer-info-bar-height;
+    
+    .customerInfoBar__details {
+        padding: 0 4rem;
+        margin: .5rem 0 0;
+        display: flex;
+        flex: 0 0 50%;
+        flex-shrink: 1;
+        list-style: none;
+        color: $customer-info-bar-detail-color;
+        justify-content: flex-start;
+        align-items: stretch;
+        
+        > li {
+            margin-left: 1rem;
+        }
+    }
+    
+    span {
+        &.customerInfoBar__icon {
+            top: -.1rem;
+            font-size: 2rem;
+        }
+    }
+    
+    .customerInfoBar__name {
+        font-weight: 500;
+    }
+    
+    title-component {
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        right: 25%;
+        text-align: center;
+        margin: 0 auto;
+        color: $customer-info-bar-title-color;
+        font-size: 2rem;
+        
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+}

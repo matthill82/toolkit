@@ -1,0 +1,12 @@
+.selectedDeviceThumbnail {
+    text-align: right;
+    font-size: $selectedDeviceThumbnail-font-size;
+    font-weight: $selectedDeviceThumbnail-font-weight;
+    color: $selectedDeviceThumbnail-color;
+    margin-top: 10px;
+}
+
+.selectedDeviceThumbnail__img {
+    float: right;
+    margin-left: 20px;
+}

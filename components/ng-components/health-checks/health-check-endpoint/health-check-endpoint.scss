@@ -1,0 +1,11 @@
+.health-check-endpoint {
+    line-height: 30px;
+}
+
+health-check-endpoint {
+    &:nth-child(even) {
+        .health-check-endpoint {
+            background: $health-check-alternate-background;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<script id="hb/components/flows/templates/simple-form.html" type="text/ng-template">
+    <form ng-submit="validateAndSubmit()" hb-form="simpleFlow.node">
+        <div hb-node="node"></div>
+        <simple-hb-submit text="Save" fallback></simple-hb-submit>
+    </form>
+</script>
+
+<script id="hb/components/flows/templates/done.html" type="text/ng-template">
+    <div ng-include="$ctrl.doneUrl"></div>
+</script>
+
+<div ng-include="'/components/ng-components/simple-hb/auto-string.html'"></div>
+<div ng-include="'/components/ng-components/simple-hb/auto-number.html'"></div>
+<div ng-include="'/components/ng-components/simple-hb/auto-boolean.html'"></div>
+<div ng-include="'/components/ng-components/simple-hb/enum.html'"></div>
+<div ng-include="'/components/ng-components/simple-hb/auto-string-enum-code.html'"></div>
+<div ng-include="'/components/ng-components/simple-hb/auto-string-full-date.html'"></div>
+
+<div class="simpleHb">
+    <div
+        hb-service="$ctrl.service"
+        hb-simple-flow
+        hb-test-mode-id="$ctrl.testMode ? $ctrl.testModeId : undefined"
+        ng-controller="hbConsumer"
+        ng-if="$ctrl.show"
+    ></div>
+
+    <form
+        class="simpleHb__testMode"
+        ng-if="$root.testMode"
+        ng-submit="$ctrl.toggleTestMode()"
+    >
+        <label for="testModeId" class="simpleHb__testMode__label">Test Mode ID</label>
+        <input id="testModeId" ng-model="$ctrl.testModeId">
+        <input class="btn simpleHb__testMode__btn" type="submit" value="{{ $ctrl.testMode ? 'Disable' : 'Enable'}}">
+    </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="ts-search component">
+    <div class="search-box-container">
+        <div class="search-box" ng-style="{'background-image': 'url(' + backgroundImage + ')'}">
+
+            <h1>{{searchTitle}}</h1>
+
+            <form novalidate name="searchform" role="form" class="form-inline">
+                <div class="input-group">
+                    <label class="control-label sr-only" for="search">{{userPlaceholderText}}</label>
+
+                    <input
+                        ng-change="performSearch()"
+                        style="width: {{searchBoxWidth}}px"
+                        autocomplete="off"
+                        name="search"
+                        type="text"
+                        ng-model="search"
+                        ng-class="{'has-error' : searchform.search.$error}"
+                        class="form-control"
+                        id="search"
+                        placeholder="{{searchPlaceholderText}}"
+                        hide-status-bar
+                        required
+                        ng-model-options="{updateOn: 'default blur'}"
+                    />
+
+                    <div class="input-group-addon">
+                        <span class="input-group-btn">
+                            <button ng-if="search.length==0" class="search-btn btn btn-default" ng-click="performSearch()" type="button"><span class="{{searchIcon}}"></span></button>
+                            <button ng-if="search.length>0" class="clear-btn btn btn-default" ng-click="clearSearch()" type="button"><span class="{{clearSearchIcon}}"></span></button>
+                        </span>                           
+                    </div>
+                </div>
+            </form>
+        </div>		
+    </div>
+</div>

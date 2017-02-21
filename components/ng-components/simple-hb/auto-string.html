@@ -1,0 +1,21 @@
+<script type="text/ng-template" id="hb/field-templates/auto-string.html">
+    <div class="hb data string">
+        <label class="hb control-label">
+            <span ng-if="node.required" class="simpleHb__asterix">*</span>
+            {{node.title | translate | emptyTranslate}}
+        </label>
+        <div class="hb" ng-if="node.schema.enum" hb-enum="node"></div>
+        <div class="hb" ng-if="!node.schema.enum">
+            <span class="hb error-color string__error-message" ng-show="node.error">{{ node.validationMessage | translate | emptyTranslate}}</span>
+            <span ng-class="{'string__error-icon' : node.error}">
+            <input id="{{node.fullName}}" type="text" ng-model="node.value" class="hb form-control"
+                   ng-class="{error: node.error}"
+                   ng-change="node.validate()" hb-field="node"/>
+            </span>
+        </div>
+
+        <div class="hb description">
+            {{node.description}}
+        </div>
+    </div>
+</script>

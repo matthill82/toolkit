@@ -1,0 +1,35 @@
+//Main variables
+$theme1-color: $primary-colour-1 !default;
+$theme2-color: $primary-colour-1 !default;
+$theme3-color: $primary-colour-1 !default;
+$theme4-color: $primary-colour-1 !default;
+
+//Component variables
+$infopanel-theme1-color: $theme1-color !default;
+$infopanel-theme2-color: $theme2-color !default;
+$infopanel-theme3-color: $theme3-color !default;
+$infopanel-theme4-color: $theme4-color !default;
+$infopanel-theme1-bgcolor: #fff !default;
+$infopanel-theme2-bgcolor: $secondary-colour-4 !default;
+$infopanel-theme3-bgcolor: #fff !default;
+$infopanel-theme4-bgcolor: #fff !default;
+
+$col-separator-border-colour-theme1: $theme1-color !default;
+$col-separator-border-colour-theme2: $theme2-color !default;
+$col-separator-border-colour-theme3: $theme3-color !default;
+$col-separator-border-colour-theme4: $theme4-color !default;
+
+$modal-header-background-theme1-color: $theme1-color !default;
+$modal-header-background-theme2-color: $theme2-color !default;
+$modal-header-background-theme3-color: $theme3-color !default;
+$modal-header-background-theme4-color: $theme4-color !default;
+$modal-header-text-theme1-color: $prime-colour-4 !default;
+$modal-header-text-theme2-color: $prime-colour-4 !default;
+$modal-header-text-theme3-color: $prime-colour-4 !default;
+$modal-header-text-theme4-color: $prime-colour-4 !default;
+
+$promo-offer-border-color: $theme3-color !default;
+$promo-offer-text-color: $theme3-color !default;
+
+// -------- Richtext --------- //
+$richtext-info-box-bg-color: #fff !default;

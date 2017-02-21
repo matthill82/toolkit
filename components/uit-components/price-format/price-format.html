@@ -1,0 +1,30 @@
+<span class="formatted-price" ng-switch=":: $ctrl.config.currencyFormat">
+	<!--€1.1 -->
+	<span ng-switch-when="0"><span class="currency" ng-bind-html="$ctrl.currencySymbol"></span><uit-number-format
+		decimal-places="{{ :: $ctrl.config.digitsAfterDecimal }}"
+		decimal-separator="{{ :: $ctrl.config.decimalSymbol }}"
+		group-separator="{{ :: $ctrl.config.digitGrouping ? $ctrl.config.digitGroupingSymbol : '' }}"
+		number="$ctrl.number"
+	></uit-number-format></span>
+	<!--1.1€ -->
+	<span ng-switch-when="1"><uit-number-format
+		decimal-places="{{ :: $ctrl.config.digitsAfterDecimal }}"
+		decimal-separator="{{ :: $ctrl.config.decimalSymbol }}"
+		group-separator="{{ :: $ctrl.config.digitGrouping ? $ctrl.config.digitGroupingSymbol : '' }}"
+		number="$ctrl.number"
+	></uit-number-format><span class="currency" ng-bind-html="$ctrl.currencySymbol"></span></span>
+	<!--€ 1.1 -->
+	<span ng-switch-when="2"><span class="currency" ng-bind-html="$ctrl.currencySymbol"></span> <uit-number-format
+		decimal-places="{{ :: $ctrl.config.digitsAfterDecimal }}"
+		decimal-separator="{{ :: $ctrl.config.decimalSymbol }}"
+		group-separator="{{ :: $ctrl.config.digitGrouping ? $ctrl.config.digitGroupingSymbol : '' }}"
+		number="$ctrl.number"
+	></uit-number-format></span>
+	<!--1.1 € -->
+	<span ng-switch-when="3"><uit-number-format
+		decimal-places="{{ :: $ctrl.config.digitsAfterDecimal }}"
+		decimal-separator="{{ :: $ctrl.config.decimalSymbol }}"
+		group-separator="{{ :: $ctrl.config.digitGrouping ? $ctrl.config.digitGroupingSymbol : '' }}"
+		number="$ctrl.number"
+	></uit-number-format> <span class="currency" ng-bind-html="$ctrl.currencySymbol"></span></span>
+</span>

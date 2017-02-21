@@ -1,0 +1,10 @@
+<div class="stock-ctoggle">
+    <ng-switch on="$ctrl.toggledOn ? 'ON' : 'OFF'">
+        <span ng-switch-when="ON" class="instore-text on">{{ $ctrl.inStoreText }}</span>
+        <span ng-switch-when="OFF" class="instore-text off">{{ $ctrl.allStoreText }}</span>
+    </ng-switch>
+    <label class="switch cwsicon">
+        <input type="checkbox" ng-model="$ctrl.toggledOn" ng-click="$ctrl.switchToggle()">
+        <div class="slider round"></div>
+    </label>
+</div>

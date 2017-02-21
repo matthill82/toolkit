@@ -1,0 +1,195 @@
+// CWS icons
+.cwsicon {
+	position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'CWSiconFont';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+	font-size: 30px;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+//!!!!! DO NOT CHANGE CLASS NAMES. CHANGING CLASS NAMES WILL BREAK THE CONTENT IN AEM !!!!!!!//
+.cwsicon-circle-heart { &:before { content: "@"; } }
+.cwsicon-circle-heart-sel { &:before { content: "A"; } }
+.cwsicon-circle-close { &:before { content: "B"; } }
+.cwsicon-arrow-left { &:before { content: "C"; } }
+.cwsicon-arrow-right { &:before { content: "D"; } }
+.cwsicon-arrow-menu-down { &:before { content: "\003e"; } }
+.cwsicon-arrow-menu-up { &:before { content: "\00F3"; } }
+.cwsicon-arrow-menu-right { &:before { content: "\003f"; } }
+.cwsicon-arrow-menu-left { &:before { content: "\00F4"; } }
+.cwsicon-film { &:before { content: "E"; } }
+.cwsicon-social { &:before { content: "F"; } }
+.cwsicon-music { &:before { content: "G"; } }
+.cwsicon-symbol-at { &:before { content: "H"; } }
+.cwsicon-work { &:before { content: "I"; } }
+.cwsicon-internet { &:before { content: "J"; } }
+.cwsicon-comment { &:before { content: "K"; } }
+.cwsicon-camera { &:before { content: "L"; } }
+.cwsicon-games { &:before { content: "M"; } }
+.cwsicon-wifi { &:before { content: "N"; } }
+.cwsicon-battery-two-bars { &:before { content: "O"; } }
+.cwsicon-sim { &:before { content: "P"; } }
+.cwsicon-add { &:before { content: "Q"; } }
+.cwsicon-search { &:before { content: "R"; } }
+.cwsicon-map-pin { &:before { content: "S"; } }
+.cwsicon-screen-size { &:before { content: "T"; } }
+.cwsicon-desktop { &:before { content: "U"; } }
+.cwsicon-satellite { &:before { content: "V"; } }
+.cwsicon-link { &:before { content: "W"; } }
+.cwsicon-star { &:before { content: "X"; } }
+.cwsicon-hamburger { &:before { content: "Y"; } }
+.cwsicon-home { &:before { content: "Z"; } }
+.cwsicon-pin { &:before { content: "\005b"; } }
+.cwsicon-settings { &:before { content: "\005c"; } }
+.cwsicon-arrow-down { &:before { content: "\2122"; } }
+.cwsicon-pencil { &:before { content: "\0178"; } }
+.cwsicon-share { &:before { content: "\005d"; } }
+.cwsicon-broadcast { &:before { content: "\005e"; } }
+.cwsicon-check-selected { &:before { content: "\005f"; } }
+.cwsicon-basket-one { &:before { content: "\0060"; } }
+.cwsicon-close { &:before { content: "a"; } }
+.cwsicon-games-console-controller { &:before { content: "b"; } }
+.cwsicon-mail-light { &:before { content: "c"; } }
+.cwsicon-mail-dark { &:before { content: "d"; } }
+.cwsicon-twitter { &:before { content: "e"; } }
+.cwsicon-contacts { &:before { content: "f"; } }
+.cwsicon-device-one { &:before { content: "g"; } }
+.cwsicon-circle-mail { &:before { content: "h"; } }
+.cwsicon-group { &:before { content: "i"; } }
+.cwsicon-device-two { &:before { content: "j"; } }
+.cwsicon-device-three { &:before { content: "k"; } }
+.cwsicon-photos { &:before { content: "l"; } }
+.cwsicon-signal { &:before { content: "m"; } }
+.cwsicon-signal-two { &:before { content: "n"; } }
+.cwsicon-direction { &:before { content: "o"; } }
+.cwsicon-heart { &:before { content: "p"; } }
+.cwsicon-circle-rotate { &:before { content: "q"; } }
+.cwsicon-circle-forward { &:before { content: "r"; } }
+.cwsicon-circle-back { &:before { content: "s"; } }
+.cwsicon-circle-ellipses { &:before { content: "t"; } }
+.cwsicon-circle-close-thicker { &:before { content: "u"; } }
+.cwsicon-circle-close-thick { &:before { content: "v"; } }
+.cwsicon-circle-info { &:before { content: "w"; } }
+.cwsicon-circle-close-inverse { &:before { content: "x"; } }
+.cwsicon-circle-info-inverse { &:before { content: "y"; } }
+.cwsicon-warning { &:before { content: "z"; } }
+.cwsicon-open-box { &:before { content: "\007b"; } }
+.cwsicon-locked { &:before { content: "\007c"; } }
+.cwsicon-unlocked { &:before { content: "\007d"; } }
+.cwsicon-circle-plane { &:before { content: "\0192"; } }
+.cwsicon-signal-strength { &:before { content: "\2020"; } }
+.cwsicon-click { &:before { content: "\2021"; } }
+.cwsicon-paper-plane { &:before { content: "\0160"; } }
+.cwsicon-internet-one { &:before { content: "\0152"; } }
+.cwsicon-pin-dotted-line { &:before { content: "\2030"; } }
+.cwsicon-camera-two { &:before { content: "\2018"; } }
+.cwsicon-battery-one-bar { &:before { content: "\2019"; } }
+.cwsicon-battery-no-bars { &:before { content: "\201c"; } }
+.cwsicon-battery-larger { &:before { content: "\201d"; } }
+.cwsicon-device-four { &:before { content: "\2022"; } }
+.cwsicon-dimensions { &:before { content: "\2013"; } }
+.cwsicon-screen-size-two { &:before { content: "\2014"; } }
+.cwsicon-os { &:before { content: "\02dc"; } }
+.cwsicon-input-output { &:before { content: "\2122"; } }
+.cwsicon-processor { &:before { content: "\0161"; } }
+.cwsicon-dimensions-two { &:before { content: "\203a"; } }
+.cwsicon-call { &:before { content: "\0153"; } }
+.cwsicon-cart { &:before { content: "\00a1"; } }
+.cwsicon-tick { &:before { content: "\00a5"; } }
+.cwsicon-flip { &:before { content: "\00a7"; } }
+.cwsicon-plus { &:before { content: "\0021"; } }
+.cwsicon-minus { &:before { content: "\0022"; } }
+.cwsicon-arrow-menu-down-2 { &:before { content: "\0028"; } }
+.cwsicon-arrow-menu-right-2 { &:before { content: "\0029"; } }
+.cwsicon-messagebox { &:before { content: "\0030"; } }
+.cwsicon-user { &:before { content: "\0031"; } }
+.cwsicon-user-solid { &:before { content: "\00EA"; } }
+.cwsicon-laptop-big-screen { &:before { content: "\0032"; } }
+.cwsicon-cart2 { &:before { content: "\0033"; } }
+.cwsicon-processor2 { &:before { content: "\0034"; } }
+.cwsicon-ram { &:before { content: "\0035"; } }
+.cwsicon-disk1 { &:before { content: "\0036"; } }
+.cwsicon-disk2 { &:before { content: "\0037"; } }
+.cwsicon-touchscreen { &:before { content: "\0038"; } }
+.cwsicon-2in1 { &:before { content: "\0026"; } }
+.cwsicon-specs { &:before { content: "\0027"; } }
+.cwsicon-allin1 { &:before { content: "\002a"; } }
+.cwsicon-graphics { &:before { content: "\002b"; } }
+.cwsicon-software { &:before { content: "\002c"; } }
+.cwsicon-bundle { &:before { content: "\002d"; } }
+.cwsicon-desktop2 { &:before { content: "\002e"; } }
+.cwsicon-compacttowerpc { &:before { content: "\002f"; } }
+.cwsicon-bigbattery { &:before { content: "\0039"; } }
+.cwsicon-tickswatch { &:before { content: "\003a"; } }
+.cwsicon-playvideo { &:before { content: "\003d"; } }
+.cwsicon-sliders { &:before { content: "\003b"; } }
+.cwsicon-sliders2 { &:before { content: "\037e"; } }
+.cwsicon-circle-info3 { &:before { content: "\00b6"; } }
+.cwsicon-screen-refresh { &:before { content: "\003c"; } }
+.cwsicon-circle-info2 { &:before { content: "\00b6"; } }
+
+.cwsicon-features { &:before { content: "\0023"; } }
+.cwsicon-screen-size-three { &:before { content: "\0024"; } }
+.cwsicon-non-touchscreen { &:before { content: "\0025"; } }
+
+.cwsicon-feature-camera { &:before { content: "\00ED"; } }
+.cwsicon-feature-front-camera { &:before { content: "\00EC"; } }
+.cwsicon-feature-battery { &:before { content: "\00EF"; } }
+.cwsicon-feature-android { &:before { content: "\00F1"; } }
+.cwsicon-feature-windows { &:before { content: "\00F2"; } }
+.cwsicon-feature-apple { &:before { content: "\00F0"; } }
+
+.cwsicon-usage-data { &:before { content: "\00F7"; } }
+.cwsicon-usage-talk { &:before { content: "\00F5"; } }
+.cwsicon-usage-text { &:before { content: "\00F6"; } }
+
+.cwsicon-view-details { &:before { content: "\00E8"; } }
+.cwsicon-flag { &:before { content: "\00EE"; } }
+.cwsicon-edit { &:before { content: "\00EB"; } }
+
+
+//Brands
+.apple{background: url(/static/core/assets/img/brands/apple.png) 0 0 no-repeat;}
+.blackberry{background: url(/static/core/assets/img/brands/blackberry.png) 0 0 no-repeat;}
+.htc{background: url(/static/core/assets/img/brands/htc.png) 0 0 no-repeat;}
+.huawei{background: url(/static/core/assets/img/brands/huawei.png) 0 0 no-repeat;}
+.motorola{background: url(/static/core/assets/img/brands/motorola.png) 0 0 no-repeat;}
+.nokia{background: url(/static/core/assets/img/brands/nokia.png) 0 0 no-repeat;}
+.samsung{background: url(/static/core/assets/img/brands/samsung.png) 0 0 no-repeat;}
+.sony{background: url(/static/core/assets/img/brands/sony.png) 0 0 no-repeat;}
+
+
+//Carriers
+.ee{background: url(/static/core/assets/img/carriers/ee.png) 0 0 no-repeat;}
+.id,.id_mobile{background: url(/static/core/assets/img/carriers/id.png) 0 0 no-repeat;}
+.lebara{background: url(/static/core/assets/img/carriers/lebara.png) 0 0 no-repeat;}
+.lyca{background: url(/static/core/assets/img/carriers/lyca.png) 0 0 no-repeat;}
+.o2{background: url(/static/core/assets/img/carriers/o2.png) 0 0 no-repeat;}
+.orange{background: url(/static/core/assets/img/carriers/orange.png) 0 0 no-repeat;}
+.talkmobile{background: url(/static/core/assets/img/carriers/talkmobile.png) 0 0 no-repeat;}
+.tmobile{background: url(/static/core/assets/img/carriers/tmobile.png) 0 0 no-repeat;}
+.toggle{background: url(/static/core/assets/img/carriers/toggle.png) 0 0 no-repeat;}
+.virgin,.virgin_media{background: url(/static/core/assets/img/carriers/virgin.png) 0 0 no-repeat;}
+.vodafone{background: url(/static/core/assets/img/carriers/vodafone.png) 0 0 no-repeat;}
+
+//Operating System
+.android{background: url(/static/core/assets/img/operating-systems/android.png) 0 0 no-repeat;}
+//.blackberry{background: url(/static/core/assets/img/operating-systems/blackberry.png) 0 0 no-repeat;}
+.ios{background: url(/static/core/assets/img/operating-systems/ios.png) 0 0 no-repeat;}
+.symbian{background: url(/static/core/assets/img/operating-systems/symbian.png) 0 0 no-repeat;}
+.windows{background: url(/static/core/assets/img/operating-systems/windows.png) 0 0 no-repeat;}
+
+//----------- the following should be replaced with glyph-fonts
+.icon {
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 30px;
+    width: 40px;
+    float: left;
+}

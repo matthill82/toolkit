@@ -1,0 +1,38 @@
+<div class="vertical-slider-item">
+    <div class="vertical-slider-item-body" >
+        <div class="product-title">
+            <h6 class="" ng-click="goToPDP(product.device.id, imgCTA)">{{product.device.manufacturer | htmlToPlaintext}} {{product.device.name | htmlToPlaintext}}</h6>
+            <device-compare dc-compare-inactive="cwsicon-circle-heart"
+                            dc-compare-active="cwsicon-circle-heart-sel"
+                            dc-compare-hidden="false">
+            </device-compare>
+        </div>
+        <div class="product-image" ng-click="goToPDP(product.device.id, imgCTA)">
+            <device-stickers ds-order-priority="2"></device-stickers>
+            <img ng-src="{{product.device.available_colours[0].imagery[0].url}}"/>
+
+        </div>
+
+        <pricing
+            pr-currency-config="{{currencyRules}}"
+            pr-layout-type="{{layoutType}}"
+        ></pricing>
+        
+        <div class="product-stock-count clearfix">
+            <span class="instock">
+                <stock-count></stock-count>
+            </span>
+        </div>
+        <div class="product-features">
+            <device-icon-features dif-journey-type="{{journeyType}}" dif-features="{{featureFeatureList}}" dif-display="{{featureDisplay}}"></device-icon-features>
+        </div>
+
+
+        <device-tags pt-journey-type="{{journeyType}}">
+        </device-tags>
+        </div>
+        <div class="product-button-container">
+            <button class="btn btn-block" ng-click="addToBasket(product, selectCTA, bracket, $index)">{{buttonText}}</button>
+        </div>
+    </div>
+</div>

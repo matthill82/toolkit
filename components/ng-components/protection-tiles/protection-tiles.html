@@ -1,0 +1,39 @@
+<div class="protection-tiles">
+    <div class="protection-tiles-header">
+        <span class="">
+            <a ng-click="$ctrl.openModal($ctrl.infoModalUrl, $ctrl.infoModalCloseIcon, $ctrl.infoModalTitle, $ctrl.infoModalsize)">{{:: $ctrl.importantInfoText}}</a>
+        </span>
+        <span class="{{:: $ctrl.hintIcon}}" ng-click="$ctrl.openModal($ctrl.hintModalUrl, $ctrl.hintModalCloseIcon, $ctrl.hintModalTitle, $ctrl.hintModalsize)"></span>
+    </div>
+    <div class="col-sm-4" ng-repeat="item in $ctrl.carePlans">
+        <div class="tile text-center">
+            <h5 class="title">{{item.protectionTerm}}</h5>
+            <p class="price"><uit-price-format number="$ctrl.returnCorrectPricing(item.protectionPrice, item.monthlyPrice)"></uit-price-format></p>
+            <div class="product-select cta" ng-class="{active: $ctrl.isPlanSelected(item.thirdPartyId)}" ng-click="$ctrl.selectPlan(item, $ctrl.displayType, $ctrl.basketImage, $index, $ctrl.basketText)">
+                 <span>{{$ctrl.isPlanSelected(item.thirdPartyId) ? $ctrl.ctaSelectedText : $ctrl.ctaSelectText}}</span>
+             </div>
+        </div>
+    </div>
+    <div class="logo">
+        <img ng-src="{{:: $ctrl.logoUrl}}">
+    </div>
+    <div class="modal-backdrop fade in" ng-class="{active: $ctrl.modalOpen}" style=""></div>
+    <div class="modal bootstrap-dialog modal-protection fade in" id="clearModal" role="dialog"
+         ng-class="{active: $ctrl.modalOpen}"
+         ng-click="$ctrl.modalOpen = false">
+        <div class="modal-dialog {{$ctrl.modalsize}} type-normal">
+            <div class="modal-content">
+                <div class="modal-header no-warning">
+                    <button type="button" ng-click="$ctrl.modalOpen = false"
+                            class="close {{$ctrl.modalCloseIcon}} pull-right"
+                            data-dismiss="modal"></button>
+                    <h4 class="modal-title" id="myModalLabel">{{$ctrl.modalTitle}}</h4>
+                </div>
+                <div class="modal-body">
+                    <ng-include ng-if="$ctrl.modalOpen" src="$ctrl.modalContentUrl"></ng-include>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

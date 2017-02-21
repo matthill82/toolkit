@@ -1,0 +1,11 @@
+<div class="basket-advanced-proposition">
+    <img class="image" ng-src="{{ :: $ctrl.basketItem.imageUrl | relativeUrl }}" alt=" ">
+    <div class="details">
+        <div class="name">{{ :: $ctrl.basketItem.name }}</div>
+        <div class="product-code">{{ :: $ctrl.codeText }} {{ :: $ctrl.basketItem.id }}</div>
+        <uit-price-format
+            class="item-price"
+            number=":: $ctrl.basketItem.price"
+        ></uit-price-format>
+    </div>
+</div>

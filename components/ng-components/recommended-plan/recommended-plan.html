@@ -1,0 +1,123 @@
+<div class="recommended-plan">
+    <div ng-if="$ctrl.messagePosition ==='top'"
+         class="recommended-upsell
+                                recommendations-tabs-carousel__message--top
+                                reward-tier-{{$ctrl.getRewardTier($ctrl.item.offering[0].id)}}">
+        <p ng-if="$ctrl.downsellPlan === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextDownsell}}
+        </p>
+        <p ng-if="$ctrl.recommendedPlan === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextBestMatch}}
+        </p>
+        <p ng-if="$ctrl.upsell1 === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextUpsell1}}
+        </p>
+        <p ng-if="$ctrl.upsell2 === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextUpsell2}}
+        </p>
+        <p ng-if="$ctrl.upsellOther <= $ctrl.item.itemIndex">
+            {{$ctrl.sellTextUpsellOther}}
+        </p>
+    </div>
+    <div class="recommended-cost">
+						<span class="cost">
+							<uit-price-format
+                                number="$ctrl.item.offering[0].monthlyContract.regularInstallmentAmount.net.value"
+                            ></uit-price-format>
+						</span>
+        <span class="cost-label">{{$ctrl.monthlyCostLabel}}</span>
+    </div>
+    <div class="recommended-upfront-cost">
+						<span>
+							<div>{{$ctrl.upfrontCostLabel}}
+                                <span ng-if="$ctrl.item.upfrontPrice.net.value === 0">{{freeLabel}}</span>
+							<span ng-if="$ctrl.item.upfrontPrice.net.value >= 1">
+								<uit-price-format
+                                    number="$ctrl.item.upfrontPrice.net.value"
+                                ></uit-price-format>
+							</span></div>
+						</span>
+    </div>
+    <div class="recommended-benefits">
+        <ul class="head">
+            <li>{{$ctrl.getPlanName($ctrl.item.offering[0].id)}}</li>
+        </ul>
+        <ul class="benefits">
+            <li ng-repeat="benefit in $ctrl.getBenefitsText($ctrl.item.offering[0].id) track by $index">
+                <span class="{{$ctrl.benefitIcon}}"></span>{{benefit}}
+            </li>
+        </ul>
+    </div>
+    <div class="recommended-details">
+        <div class="container-fluid">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="network-logo"
+                     ng-class="$ctrl.getCarrierClass($ctrl.item.serviceProvider)"></div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="detail">
+                    <div class="canvas-wrap">
+                        <graph
+                            canvas-color="{{$ctrl.talkPointsColor}}"
+                            canvas-id="allowance-canvas{{$ctrl.itemIndex}}"
+                            canvas-position="{{$ctrl.getAllowanceGraphPosition($ctrl.item.tariff.talkAllowance.number, $ctrl.item.tariff.talkAllowance.units, $ctrl.item.tariff.talkAllowance.unlimited, $ctrl.talkPoints)}}"
+                        ></graph>
+                    </div>
+                    <span class="value">{{$ctrl.getAllowanceValue($ctrl.item.tariff.talkAllowance.number, $ctrl.item.tariff.talkAllowance.units, $ctrl.item.tariff.talkAllowance.unlimited, $ctrl.unlimitedText)}}</span>
+                    <span class="dlabel">{{$ctrl.talkLabel}}</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="detail">
+                    <div class="canvas-wrap">
+                        <graph
+                            canvas-color="{{$ctrl.pointsDataColor}}"
+                            canvas-id="allowance-canvas{{$ctrl.itemIndex}}"
+                            canvas-position="{{$ctrl.getAllowanceGraphPosition($ctrl.item.tariff.dataAllowance.number, $ctrl.item.tariff.dataAllowance.units, $ctrl.item.tariff.dataAllowance.unlimited, $ctrl.pointsData)}}"
+                        ></graph>
+                    </div>
+                    <span class="value">{{$ctrl.getAllowanceValue($ctrl.item.tariff.dataAllowance.number, $ctrl.item.tariff.dataAllowance.units, $ctrl.item.tariff.dataAllowance.unlimited, $ctrl.unlimitedText)}}</span>
+                    <span class="dlabel">{{$ctrl.labelData}}</span>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="detail">
+                    <div class="canvas-wrap">
+                        <graph
+                            canvas-color="{{$ctrl.textPointsColor}}"
+                            canvas-id="allowance-canvas{{$ctrl.itemIndex}}"
+                            canvas-position="{{$ctrl.getAllowanceGraphPosition($ctrl.item.tariff.textAllowance.number, $ctrl.item.tariff.textAllowance.units, $ctrl.item.tariff.textAllowance.unlimited, $ctrl.textPoints)}}"
+                        ></graph>
+                    </div>
+                    <span class="value">{{$ctrl.getAllowanceValue($ctrl.item.tariff.textAllowance.number, $ctrl.item.tariff.textAllowance.units, $ctrl.item.tariff.textAllowance.unlimited, $ctrl.unlimitedText)}}</span>
+                    <span class="dlabel">{{$ctrl.textLabel}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recommendations-tabs-carousel__choose-plan" ng-if="$ctrl.messagePosition ==='top'"
+         ng-click="$ctrl.goTo($ctrl.url,$ctrl.item.id)">
+        Choose this plan
+    </div>
+    <div ng-if="$ctrl.messagePosition ==='bottom'"
+         class="recommended-upsell reward-tier-{{$ctrl.getRewardTier($ctrl.item.offering[0].id)}}">
+        <p ng-if="$ctrl.downsellPlan === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextDownsell}}
+        </p>
+        <p ng-if="$ctrl.recommendedPlan === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextBestMatch}}
+        </p>
+        <p ng-if="$ctrl.upsell1 === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextUpsell1}}
+        </p>
+        <p ng-if="$ctrl.upsell2 === $ctrl.item.itemIndex">
+            {{$ctrl.sellTextUpsell2}}
+        </p>
+        <p ng-if="$ctrl.upsellOther <= $ctrl.item.itemIndex">
+            {{$ctrl.sellTextUpsellOther}}
+        </p>
+    </div>
+</div>

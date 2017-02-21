@@ -1,0 +1,27 @@
+.product-title {
+  .cwsicon {
+    &.compare-icon {
+      top: 0;
+      right: 5px;
+    }
+  }
+}
+
+.cwsicon {
+  &.compare-icon {
+    font-size: 40px;
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+
+    .details-container & {
+      z-index: 1;
+    }
+  }
+}

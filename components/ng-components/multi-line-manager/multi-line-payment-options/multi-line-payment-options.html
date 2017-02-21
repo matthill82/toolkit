@@ -1,0 +1,18 @@
+<ul class="dropdown-menu list-unstyled">
+    <li
+        ng-repeat="(key, value) in $ctrl.offerings"
+        ng-click="$ctrl.onSelect({customerId: $ctrl.customerId, offeringKey: key})"
+    >
+        <input
+            type="radio"
+            name="customer-{{  $ctrl.customerId  }}"
+            value="{{ key }}"
+            id="customer-{{  $ctrl.customerId  }}-{{ key }}"
+            ng-checked="key === $ctrl.selectedOffering"
+            class="ml-tile-payment-options-input"
+        />
+        <label
+            class="ml-tile-payment-options-label"
+        >{{ value }}</label>
+    </li>
+</ul>

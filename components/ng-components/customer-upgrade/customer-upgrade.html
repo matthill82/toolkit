@@ -1,0 +1,12 @@
+<div class="customerUpgrade">
+    <img class="customerUpgrade__image" src="{{ :: $ctrl.upgradeInfo.image }}"/>
+    <div class="customerUpgrade__details">
+
+        <h2>{{ :: $ctrl.upgradeInfo.title}}</h2>
+        <p>{{ :: $ctrl.upgradeInfo.message }}</p>
+    </div>
+    <div class="customerUpgrade__button-container">
+        <button ng-click="$ctrl.goToRoute($ctrl.upgradeInfo.buttonUrl)" class="customerUpgrade__button">{{ ::
+            $ctrl.upgradeInfo.buttonLabel }}</button>
+    </div>
+</div>

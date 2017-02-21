@@ -1,0 +1,107 @@
+.details-container {
+  .feature {
+    border-bottom: 1px solid $featureicon-border-color;
+  }
+  .icons-features {
+    .row {
+      padding-top: 20px;
+      &:first-of-type {
+        padding-top: 30px;
+      }
+
+      .featurecol {
+        padding-left: 8px;
+        padding-right: 8px;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+        &:last-of-type {
+          padding-right: 0;
+        }
+        .feature-icon {
+          color: $featureicon-icon-color;
+        }
+        .feature-text {
+          color: $featureicon-text-color;
+        }
+      }
+    }
+  }
+}
+
+.icons-features__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons-features--center {
+    .icons-features__container {
+        justify-content: center;
+    }
+}
+
+.icons-features {
+    .feature-icon {
+      font-size: $featureicon-icon-size;
+      height: 50px;
+    }
+  .feature-text {
+    padding-top: 3px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-family: $featureicon-text-font-family;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .featurecol {
+      &:first-of-type {
+        padding-left: 0;
+      }
+      &:last-of-type {
+        padding-right: 0;
+      }
+  }
+}
+
+.vertical-slider-item-body,
+.product-item {
+  .icons-features {
+    border-top: 1px solid $featureicon-border-color;
+  }
+
+  .feature {
+    border-bottom: 1px solid $featureicon-border-color;
+  }
+  .feature-icon {
+    font-size: $featureicon-results-icon-size;
+    height: 36px;
+  }
+  .feature-text {
+    padding-top: 5px;
+    padding-bottom: 1px;
+    text-align: center;
+    font-size: $featureicon-results-text-size;
+  }
+  .row {
+    .featurecol {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      &:first-of-type {
+        padding-left: 30px;
+      }
+      &:nth-child(2) {
+        padding-right: 30px;
+      }
+      .feature-icon {
+        color: $featureicon-results-icon-color;
+      }
+      .feature-text {
+        color: $featureicon-results-text-color;
+      }
+    }
+  }
+}
+

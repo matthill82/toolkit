@@ -1,0 +1,53 @@
+<div class="data-graph-wrapper dr-data-calculator-graph.directive component">
+    <div class="data-graph">
+        <h2>{{usageResultTitle}} <span class="data-calc-total-amount">{{totalUsageInMB_orGB}}</span><span><span
+                class="data-calc-size-unit">{{graphCurUnit}}</span></span></h2>
+
+        <p class="data-calc-chart-intro">{{usageResultText}}</p>
+        <div class="data-calc-chart-yaxis">
+            <div class="data-calc-chart-yaxis-item" style="padding-bottom:{{gb_step_padding}}px"
+                 ng-repeat="value in incrementing_gbs">{{value}}GB -
+            </div>
+            <div class="data-calc-chart-yaxis-item last">0MB -</div>
+        </div>
+        <div class="data-calc-chart-bar">
+            <div class="data-calc-chart-shadow"></div>
+            <div class="data-calc-chart-future" style="height:{{chartFutureHeight}}px">
+                <div class="data-calc-chart-label" ng-hide="futureProofOpen">
+                    <span class="usage"><span class="data-calc-future-amount">{{futureProofInMB_orGB}}</span><span
+                            class="data-calc-size-unit">{{graphFutureUnit}}</span></span>{{futureProofLabel}}
+                </div>
+            </div>
+            <div class="data-calc-chart-current" style="height:{{chartCurrentHeight}}px">
+                <div class="data-calc-chart-label" ng-hide="futureProofOpen">
+                    <span class="usage"><span class="data-calc-current-amount">{{totalUsageInMB_orGB}}</span><span
+                            class="data-calc-size-unit">{{graphCurUnit}}</span></span>{{suggestedAmountLabel}}
+                </div>
+            </div>
+        </div>
+        <div class="data-calc-actions">
+            <div class="data-calc-chart-current" style="height:{{chartCurrentHeight}}px">
+                <!-- replace with the bootstrap button -->
+                <div class="btn-suggested">
+                    <a class="btn btn-cws" role="button" ng-click="pc.viewPlans(totalUsageInMB, linkPath, actionMode, slidersObj)">{{suggestedAmountButtonLabel}}
+                        (<span class="data-calc-current-amount">{{totalUsageInMB_orGB}}</span><span
+                                class="data-calc-size-unit">{{graphCurUnit}}</span>)</a>
+                </div>
+                <div class="btn-futureproof" role="button"
+                     ng-class="{'future-proof-open': futureProofOpen, 'future-proof-detail-disabled': !showFutureProofDetail }">
+                    <div class="future-proof-container" ng-cloak ng-show="futureProofOpen">
+                        <ng-include src="pc.panelContentUrl"></ng-include>
+                    </div>
+                    <a class="btn btn-cws-sec" ng-click="pc.viewPlans(futureProofInMB, linkPath, actionMode, slidersObj)">
+                        {{futureProofButtonLabel}} (<span
+                            class="data-calc-future-amount">{{futureProofInMB_orGB}}</span>
+                        <span class="data-calc-size-unit">{{graphFutureUnit}}</span>)
+                    </a>
+                    <a ng-click="toggleFutureProof()" ng-show="pc.showFutureProofDetail"
+                       class="btn btn-cws-sec future-proof-cta" ng-class="futureProofOpen ? 'detail-open' : 'detail-closed'">{{ futureProofOpen ? 'X' :
+                        '?'}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+
+.data-calc-slider-row {
+  margin-bottom: 5px;
+}
+
+.data-calc-slider-label {
+    display: block;
+    margin-bottom: 0;
+    .rightlabel {
+        float: right;
+    }
+
+
+}
+
+.slider-area {
+  .planslider {
+    display: none;
+  }
+  label {
+      font-weight: 500;
+  }
+}
+
+.slider-area-full {
+  width: 94%;
+  margin: 0 3%;
+}
+
+.slider-area-partial {
+  width: 77%;
+  margin: 0 3%;
+  float: left;
+}
+
+.data-calc-slider-bubble {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: $pds-bubble-bgcolor;
+  display: inline-block;
+  position: relative;
+  border-radius: 6px;
+  line-height: .7em;
+  font-size: $pds-bubble-text;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -8px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid $pds-bubble-bgcolor;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  .units {
+    font-size: $pds-bubble-unit-text;
+  }
+}
+
+.disabled {
+  display: none;
+}
+

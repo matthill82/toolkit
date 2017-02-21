@@ -1,0 +1,280 @@
+.theme1 {
+  .left-navigation {
+    table {
+      .active-state {
+        background-color: $theme1-color;
+      }
+    }
+  }
+	.grid-divider>[class*='col-']:nth-child(n+2):before {
+		border-left: 2px solid $theme1-color;
+	}
+
+	.drcv-breadcrumb {
+		.before-active {
+			background: lighten($theme1-color, 30);
+		}
+		.active {
+			background-color: $theme1-color;
+		}
+	}
+
+  .navigation-bar {
+    .btn {
+      background-color: #fff;
+    }
+  }
+
+	.hero-banner {
+		background-color: $theme1-color;
+		.btn-cws {
+			background: darken($theme1-color, 10%);
+		}
+	}
+
+	.inner-column-control {
+		.separator {
+			.clearfix {
+				border-left: 2px solid $col-separator-border-colour-theme1;
+			}
+		}
+	}
+	.modal-header {
+		&.no-warning {
+			background-color: $modal-header-background-theme1-color;
+			color: $modal-header-text-theme1-color;
+		}
+	}
+
+	hr {
+		background-color: $theme2-color;
+	}
+}
+
+.theme2 {
+  .left-navigation {
+    table {
+      .active-state {
+        background-color: $theme2-color;
+      }
+    }
+  }
+	.grid-divider>[class*='col-']:nth-child(n+2):before {
+		border-left: 2px solid $theme1-color;
+	}
+  .navigation-bar {
+    .btn {
+      background-color: #fff;
+    }
+  }
+
+	.drcv-breadcrumb {
+		.before-active {
+			background: lighten($theme2-color, 30);
+		}
+		.active {
+			background-color: $theme2-color;
+		}
+	}
+
+  .btn-cws {
+    background-color: $theme2-color;
+  }
+
+	.hero-banner {
+		background-color: $theme2-color;
+		.btn-cws {
+			background: darken($theme2-color, 10%);
+		}
+	}
+
+	.inner-column-control {
+		.separator {
+			.clearfix {
+				border-left: 2px solid $col-separator-border-colour-theme2;
+			}
+		}
+	}
+
+	.modal-header {
+		&.no-warning {
+			background-color: $modal-header-background-theme2-color;
+			color: $modal-header-text-theme2-color;
+		}
+	}
+	hr {
+		background-color: $theme2-color;
+	}
+}
+
+.theme3 {
+	.left-navigation {
+		table {
+			.active-state {
+				background-color: $theme3-color;
+			}
+		}
+	}
+
+	h3 {
+		color: $theme3-color;
+	}
+
+	.titleComponent {
+		h3 {
+			color: $theme3-color;
+		}
+	}
+
+	.styled-list-item {
+		color: $theme3-color;
+	}
+
+	.richtext {
+		ul {
+			li {
+				&:before {
+					color: $theme3-color;
+				}
+			}
+		}
+	}
+
+	.drcv-breadcrumb {
+		.before-active {
+			background: lighten($theme3-color, 30);
+		}
+		.active {
+			background-color: $theme3-color;
+		}
+	}
+
+	.navigation-bar {
+		.btn {
+			background-color: #fff;
+		}
+	}
+
+	.btn-cws {
+		background-color: $theme3-color;
+	}
+
+	.hero-banner {
+		background-color: $theme3-color;
+		.btn-cws {
+			background: darken($theme3-color, 10%);
+		}
+	}
+
+	.swiper-select {
+		background-color: $theme3-color;
+	}
+	.swiper-pagination-bullet {
+		background: $theme3-color;
+	}
+	.carouselIndicator__item {
+		background: $theme3-color;
+	}
+	.product-select {
+		background-color: $theme3-color;
+		&.active {
+			background-color: lighten($theme3-color, 30%);
+		}
+	}
+	.keyboard-header {
+		color: $theme3-color;
+	}
+
+	.inner-column-control {
+		.separator>[class*='col-'] {
+			border-left: 2px solid $col-separator-border-colour-theme3;
+		}
+	}
+	.protection-tiles {
+		.tile {
+			border: 2px solid $theme3-color;
+			.title {
+				color: $theme3-color;
+			}
+			.cta {
+				background-color: $theme3-color;
+				&.active {
+					background-color: lighten($theme3-color, 30%);
+				}
+			}
+		}
+	}
+	.modal-header {
+		&.no-warning {
+			background-color: $modal-header-background-theme3-color;
+			color: $modal-header-text-theme3-color;
+		}
+	}
+	hr {
+		background-color: $theme3-color;
+	}
+	.grid-divider>[class*='col-']:nth-child(n+2):before {
+		border-left: 2px solid $theme3-color;
+	}
+	.offer {
+		border: 2px solid $theme3-color;
+		color: $theme3-color;
+	}
+}
+
+.theme4 {
+  .left-navigation {
+    table {
+      .active-state {
+        background-color: $theme4-color;
+      }
+    }
+  }
+
+	.drcv-breadcrumb {
+		.before-active {
+			background: lighten($theme4-color, 30);
+		}
+		.active {
+			background-color: $theme4-color;
+		}
+	}
+
+  .navigation-bar {
+    .btn {
+      background-color: #fff;
+    }
+  }
+
+  .btn-cws {
+    background-color: $theme4-color;
+  }
+
+	.hero-banner {
+		background-color: $theme1-color;
+		.btn-cws {
+			background: darken($theme4-color, 10%);
+		}
+	}
+
+	.inner-column-control {
+		.separator {
+			.clearfix {
+				border-left: 2px solid $col-separator-border-colour-theme4;
+			}
+		}
+	}
+
+	.modal-header {
+		&.no-warning {
+			background-color: $modal-header-background-theme4-color;
+			color: $modal-header-text-theme4-color;
+		}
+	}
+	hr {
+		background-color: $theme4-color;
+	}
+	.grid-divider>[class*='col-']:nth-child(n+2):before {
+		border-left: 2px solid $theme4-color;
+	}
+}

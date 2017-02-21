@@ -1,0 +1,89 @@
+<div
+    id="drcarousel"
+    ng-class="{'device-compare' : isCompare === 'true'}"
+    class="dr-device-carousel component"
+    data-compare="{{isCompare}}"
+    ng-init="mycompare = isCompare"
+>
+    <div ng-if="isCompare === 'true'" id="device-compare">
+		<div class='dr-device-compare component' ng-init="searchResults = loadCompareDevices()">
+			<h1 class="">{{compareTitle | htmlToPlaintext}}</h1>
+			<div class="compare-buttons" ng-if="compareResultsPathLabel !== ''">
+				<a class="btn btn-cws" role="button" ng-click="goTo(compareResultsPath)">{{compareResultsPathLabel}}</a>
+			</div>
+			<p ng-hide="thereAreCompareItems()">{{noResultsMsg}}</p>
+		</div>
+	</div>
+
+	<div ng-if="isCompare !== 'true'">
+        <div ng-init="searchResults = loadProductData(deviceCategory,planType,filterDevices, filterFeatures,useQuestions)"></div>
+    </div>
+
+	<div class="component no-results" ng-if="noResults === true">
+		<p>{{noResultsMsg}}</p>
+	</div>
+
+    <div class="row">
+        <div class="sticky">
+            <div class="sticky-box col-lg-3 col-md-3 col-sm-3 phone-top"
+                 ng-repeat="deviceObj in searchResults" ng-if="$index >= offset"
+                 ng-init="device = deviceObj.item.hits.hits[0]._source.device"
+            >
+                <div class="sticky-item">
+                    <div id="sticky-{{$index}}">
+                        <div class="sticky-content" data-device-name="{{device.name}}">
+                            <img data-ng-src="{{device.available_colours[0].imagery[0].url}}"/>
+                            <div class="sticky-device-name">{{device.model}}</div>
+                            <div class="sticky-device-brand">{{device.manufacturer}}</div>
+                        </div>
+                    </div>
+                    <a ng-class="{ active: getCompare(device.name)}" class="compare" ng-if="isCompare !== 'true'"
+                       data-device="{{device.name}}" ng-click="addRemoveCompare(device)"></a>
+                    <a ng-class="{ active: getCompare(device.name)}" class="bin-compare {{removeCompareIcon}}" ng-if="isCompare === 'true'"
+                       data-device="{{device.name}}" ng-click="removeCompare($index, device)">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-init="index=0">
+        <slick class="slick-carousel col col-xs-12"
+               ng-class="{'decrease-top-padding':noResults === true}"
+               style="visibility: hidden"
+               current-index="index"
+               infinite="false"
+               touch-move="true"
+               draggable="true"
+               touch-threshold="100"
+               css-ease="none"
+               prev-arrow-class={{buttonLeftIcon}}
+               next-arrow-class={{buttonRightIcon}}
+			   ng-if="searchResults.length"
+               init-onload="false"
+               slides-to-show="{{slidesToShow}}"
+               slides-to-scroll="{{slidesToScroll}}"
+               data="searchResults"
+        >
+
+            <device-results dr-cta-text={{viewDetailsText}}
+                            dr-hide-color-options={{hideColorOptions}}
+                            dr-device-link={{redirectUrl}}
+                            dr-available-colours-text={{deviceSwatchText}}
+                            dr-is-compare="{{isCompare}}"
+                            dr-remove-from-compare-icon="{{removeCompareIcon}}"
+                            dr-compare-icon={{addToCompareInactive}}
+                            dr-compare-active={{addToCompareActive}}
+                            dr-device-category={{deviceCategory}}
+                            dr-plan-type={{planType}}
+                            >
+            </device-results>
+
+
+            <!--<span style="display: none" id="slick-index" data-index="{{index}}"></span>-->
+
+            <input type="hidden" id="slick-index" value="{{index}}" />
+
+        </slick>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.http-logger-viewer {
+    line-height: 30px;
+
+    .row {
+        &:first-child {
+            border-bottom: 1px solid $secondary-colour-3;
+            clear: both;
+        }
+
+        &:nth-child(even) {
+            background: $secondary-colour-4;
+        }
+    }
+
+    .asc {
+        &:after {
+            content: ' ↑';
+        }
+    }
+
+    .desc {
+        &:after {
+            content: ' ↓';
+        }
+    }
+
+    .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

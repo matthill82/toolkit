@@ -1,0 +1,95 @@
+<div class="basketItems">
+    <div class="basketItems__extended-price clearfix">
+        <uit-price-format
+                ng-if="$ctrl.items.data.offering[0].offeringType === 'monthlyContract'"
+                class="item-price"
+                number=":: $ctrl.items.upfrontPrice"
+        ></uit-price-format>
+        <uit-price-format
+                ng-if="$ctrl.items.data.offering[0].offeringType === 'monthlyLease'"
+                class="item-price"
+                number=":: $ctrl.items.price"
+        ></uit-price-format>
+        <p class="basketItems__extended-pay-type"
+           ng-if="$ctrl.items.data.offering[0].offeringType == 'monthlyContract'">{{ :: $ctrl.payMonthlyTitle }}</p>
+        <p class="basketItems__extended-pay-type"
+           ng-if="$ctrl.items.data.offering[0].offeringType == 'monthlyLease'">{{ :: $ctrl.payTodayTitle }}</p>
+    </div>
+    <ul class="basketItems__list">
+        <li>
+            <h3 class="basketItems__total"><uit-price-format
+                class="basketItems__list-item-price--right"
+                number=":: $ctrl.items.price"
+            ></uit-price-format></h3>
+            <p class="basketItems__total-title">{{$ctrl.payTotalTitle}}</p>
+        </li>
+        <li class="fl fl--grid-row basketItems__list-item clearfix">
+            <div class="basketItems__list-item--left">
+                <p ng-if="$ctrl.items.data.device.model">{{:: $ctrl.items.data.device.model}} {{:: $ctrl.items.data.device.manufacturer}}</p>
+            </div>
+            <div class="basketItems__list-item--right">
+                <uit-price-format
+                        class="basketItems__list-item-price--right"
+                        number=":: $ctrl.items.upfrontPrice"
+                ></uit-price-format>
+            </div>
+        </li>
+        <li class="fl fl--grid-row basketItems__list-item clearfix" ng-if="$ctrl.items.data.tariff.name">
+            <div class="basketItems__list-item--left">
+                <p>{{ :: $ctrl.items.data.tariff.name }}</p>
+            </div>
+            <div class="basketItems__list-item--right">
+                <uit-price-format
+                        class="basketItems__list-item-price--right"
+                        number=":: $ctrl.items.price"
+                ></uit-price-format>
+            </div>
+        </li>
+        <li ng-show="false" class="fl fl--grid-row basketItems__list-item clearfix">
+            <div class="basketItems__list-item--left" ng-init="$ctrl.initialState = false">
+                <div class="basketItems__list-pricing" ng-click="$ctrl.initialState = !$ctrl.initialState">{{ ::
+                    $ctrl.feesLabel }}
+                    <span class="basketItems__icon {{$ctrl.icon}}"
+                          ng-class="{'basketItems__icon--rotate' : $ctrl.initialState}"></span>
+                </div>
+            </div>
+            <div class="basketItems__list-item--right">
+                <uit-price-format
+                        ng-if="$ctrl.items.data.offering[0].offeringType === 'monthlyLease'"
+                        class="basketItems__list-item-price--right"
+                        number=":: $ctrl.items.upfrontPrice"
+                ></uit-price-format>
+                <uit-price-format
+                        ng-if="$ctrl.items.data.offering[0].offeringType === 'monthlyContract'"
+                        class="basketItems__list-item-price--right"
+                        number=":: $ctrl.items.recurringPrice"
+                ></uit-price-format>
+            </div>
+        </li>
+        <li class="basketItems--dropdown"
+            ng-show='$ctrl.initialState'>
+            <div class="fl fl--grid-row basketItemss--dropdown-item clearfix">
+                <div class="basketItems__list-item--left">
+                    <p>{{:: $ctrl.feesDropLabel1 }}</p>
+                </div>
+                <div class="basketItems__list-item--right">
+                    <uit-price-format
+                            class="basketItems__list-item-price--right"
+                            number=":: $ctrl.items.fees.activation"
+                    ></uit-price-format>
+                </div>
+            </div>
+            <div class="fl fl--grid-row basketItemss--dropdown-item clearfix">
+                <div class="basketItems__list-item--left">
+                    <p>{{:: $ctrl.feesDropLabel2 }}</p>
+                </div>
+                <div class="basketItems__list-item--right">
+                    <uit-price-format
+                            class="basketItems__list-item-price--right"
+                            number=":: $ctrl.items.fees.taxes"
+                    ></uit-price-format>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

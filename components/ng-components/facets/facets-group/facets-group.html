@@ -1,0 +1,47 @@
+<div class="drctv-facets-group prsi" ng-if="facets[facetGroupCriteria].length > 1 + (selectAnyEnabled ? 1 : 0)" ng-class="'prsi-display-mode-'+displayMode+' prsi-show-icons-'+showIcons">
+    <h3 class="prsi-title">{{facetGroupTitle}}</h3>
+
+    <div class="prsi-list-wrapper">
+
+        <button class="prsi-dd-handle" ng-show="displayMode === 'dropdown'" ng-click="toggleDropdown()">
+            <span ng-if="selectedOption.active" class="prsi-list">
+                <span ng-if="selectedOption.role === 'any'" class="prsi-list-button">
+                    <span ng-if="selectAnyIcon" ng-class="selectAnyIcon"></span>
+                    <span class="prsi-any-label">{{selectedOption.key}}</span>
+                </span>
+
+                <span ng-if="selectedOption.role !== 'any'" ng-switch="showIcons" class="prsi-list-button">
+                    <span ng-switch-when="true" class="facet-icon {{ stringToClass(selectedOption.key) }}"></span>
+                    <span ng-switch-when="false">{{selectedOption.key}}</span>
+                </span>
+            </span>
+
+            <span ng-if="!selectedOption.active">
+                {{dropdownLabel}}
+            </span>
+
+            <span class="prsi-dd-handle-icon {{dropdownIcon}}"></span>
+        </button>
+
+        <ul class="prsi-list row" ng-show="optionsVisible">
+            <li ng-repeat="facetButton in facets[facetGroupCriteria] | limitTo: showHideTempLimit" class="col-xs-4 col" ng-class="{'active': facetButton.active}">
+                <button ng-switch="showIcons" ng-if="facetButton.role !== 'any'" ng-click="toggleActive($index)" class="prsi-list-button">
+                    <span ng-switch-when="true" class="facet-icon {{ stringToClass(facetButton.key) }}"></span>
+                    <span ng-switch-when="false">{{facetButton.key}}</span>
+                </button>
+
+
+                <button ng-if="facetButton.role === 'any'" ng-click="toggleActive($index)" class="prsi-list-button">
+                    <span ng-if="selectAnyIcon" ng-class="selectAnyIcon"></span>
+                    <span class="prsi-any-label">{{facetButton.key}}</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button class="prsi-show-hide-button" ng-if="displayMode === 'buttons' && facets[facetGroupCriteria].length > showHideLimit" ng-click="showHide()">
+        <span class="show-hide-icon" ng-class="showHideIcon"></span>
+        {{showHideLabel}}
+    </button>
+
+</div>

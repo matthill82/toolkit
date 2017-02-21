@@ -1,0 +1,7 @@
+<script type="text/ng-template" id="hb/field-templates/enum.html">
+    <select hb-field="node" id="{{node.fullName}}" ng-model="selectedOption"
+            ng-options="option.label for option in options"
+            class="hb form-control" ng-class="{error: node.error}">
+        <option value="" ng-if="hbEnumDefaultText">{{hbEnumDefaultText}}</option>
+    </select>
+</script>

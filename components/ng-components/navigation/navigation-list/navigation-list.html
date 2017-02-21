@@ -1,0 +1,10 @@
+<li ng-click="menu()" class="dr-navigation-list component" ng-class="{'preselect-menu':isPreselectEnabled(preselectEnabled), 'selected':isCurrentPathInList(navList.data)}">
+    <a> {{category}}<span ng-class="iconClass" class="acc_close"></span></a>
+    <ul ng-show="expanded"  class="first-lmenu slide menu-wrap ng-hide" ng-repeat="navitem in navList.data" style="display: none;">
+        <li class="{{isCurrentPath(navitem.cta)}}">
+            <a class='slide' ng-click="deepLink(navitem.id, navitem.cta, navitem.type)">
+                <span class="media-icon {{getIconClass(navitem)}}"></span>
+                {{navitem.name}}</a>
+        </li>
+    </ul>
+</li>

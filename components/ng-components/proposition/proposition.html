@@ -1,0 +1,42 @@
+<div class="proposition-container">
+    <div class="col-xs-3-placeholder">
+        <div class="proposition-img-wrapper">
+            <img ng-src="{{propositionItem.device.imagery[0].url}}" alt="" />
+        </div>
+    </div>
+    <div class="col-xs-9 pull-right proposition-box-inclusion">
+        <div class="row proposition-row">
+            <div class="col-xs-2">
+                <div class="manufacturer-logo {{propc.getManufacturerClass(propositionItem.device.manufacturer)}}"></div>
+            </div>
+            <div class="col-xs-7">
+                <h2 class="proposition-title">{{propositionItem.name}}</h2>
+                <small>Product number:  {{propositionItem.id}}</small> <!-- TODO: data field -->
+            </div>
+            <div class="col-xs-3 proposition-box-price">
+                <p class="price">
+                    <uit-price-format number="propositionItem.upfrontPrice.net.value"></uit-price-format>
+                </p>
+                <!--<p class="saving-amount">-->
+                    <!--Save-->
+                    <!--<price-format fmt-number="{{propositionItem.offering.monthlyContract.regularInstallmentAmount.net.value}}" fmt-rules="{{currencyConfig}}"></price-format> &lt;!&ndash; TODO: data field &ndash;&gt;-->
+                <!--</p>-->
+            </div>
+        </div>
+
+        <div class="row proposition-row proposition-row-details">
+            <div class="col-xs-12 inclusions-container">
+                <div class="row">
+                    <div class="col-xs-15" ng-repeat="feature in displayedFeatures">
+                        <p class="icon {{feature.icon}}"></p>
+                        <p class="value">{{propc.getFeatureValue(propositionItem.device.features, feature.dataPoint)}}</p>
+                        <p class="label">{{feature.label}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button ng-click="propc.goToPropositionCta(propositionItem.id)" ng-if="planCtaEnabled" class="cta"></button>
+
+    </div>
+</div>

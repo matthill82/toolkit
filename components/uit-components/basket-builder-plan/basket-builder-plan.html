@@ -1,0 +1,50 @@
+<div class="basketBuilderPlan" ng-switch="$ctrl.tariffProposition || 'NO_PLAN'">
+    <uit-basket-builder-state-manager
+            not-started-label="{{:: $ctrl.notStartedLabel }}"
+            in-progress-label="{{:: $ctrl.inProgressLabel }}"
+            section-type="{{:: $ctrl.sectionType }}"
+            cta-link="{{:: $ctrl.ctaLink }}"
+            disabled-state="$ctrl.disabledState"
+            ng-switch-when="NO_PLAN"
+    ></uit-basket-builder-state-manager>
+    <div class="basketBuilderPlan__full-state" ng-click="$ctrl.handleClick($event)" ng-switch-default>
+        <uit-title-block title="{{:: $ctrl.title}}" ></uit-title-block>
+        <div class="basketBuilderPlan__allowances">
+            <div class="basketBuilderPlan__data-allowance" ng-switch="$ctrl.tariffProposition.tariff.dataAllowance.unlimited ? 'UNLIMITED' : 'LIMITED'">
+                <h2 ng-switch-when="UNLIMITED">{{:: $ctrl.unlimitedDataLabel }}</h2>
+                <h2 ng-switch-default>{{:: $ctrl.tariffProposition.tariff.dataAllowance.number}} {{:: $ctrl.tariffProposition.tariff.dataAllowance.units}}</h2>
+                <div class="basketBuilderPlan__term-length-units">{{:: $ctrl.perMonthDataLabel }}</div>
+            </div>
+            <div ng-if="$ctrl.expand" class="basketBuilderPlan__traffic-allowance">
+                <uit-device-usage
+                    orientation="vertical"
+                    data="$ctrl.deviceUsage">
+                </uit-device-usage>
+            </div>
+        </div>
+        <div class="basketBuilderPlan__details">
+            <div class="basketBuilderPlan__details-inner">
+                <div class="basketBuilderPlan__details-inner-top">
+                    <div class="basketBuilderPlan__summary">
+                        <h3>{{:: $ctrl.tariffProposition.tariff.name}}</h3>
+                        <div class="basketBuilderPlan__contract-length">
+                            {{:: $ctrl.selectedOffering.termLength}}
+                            {{:: $ctrl.selectedOffering.termLengthUnits}}
+                            {{:: $ctrl.contractLabel}}
+                        </div>
+                    </div>
+                    <ul class="basketBuilderPlan__features-list">
+                        <uit-icon-list
+                                ng-repeat="feature in $ctrl.tariffProposition.features | limitTo:$ctrl.detailsLimit"
+                                list="[{ icon: $ctrl.planFeatureIcon, text: feature.value }]">
+                        </uit-icon-list>
+                    </ul>
+                    <div ng-if="$ctrl.expand" class="basketBuilderPlan__full-plan-details-button">
+                        <div  ng-click="$ctrl.goTo($ctrl.fullPlanLink)"><span class="cwsicon" ng-class="$ctrl.fullPlanIcon"></span>{{:: $ctrl.fullPlanLabel}}</div>
+                    </div>
+                </div>
+                <div ng-if="$ctrl.expand" ng-click="$ctrl.goTo($ctrl.editLink)" class="basketBuilderPlan__edit-button"><span class="cwsicon" ng-class="$ctrl.editIcon"></span>{{:: $ctrl.editLabel}}</div>
+            </div>
+        </div>
+    </div>
+</div>

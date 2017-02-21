@@ -1,0 +1,36 @@
+<div class="phones-stack col-md-12 col-lg-12 dr-device-wave component">
+    <ul class="phones {{DeviceWaveController.running}}" >
+        <li  ng-repeat="phone in DeviceWaveController.phones"
+             ng-style="{ 'width' : 100/DeviceWaveController.phones.length+'%'}" >
+            <a ng-click="DeviceWaveController.clickHandler(phone.id)">
+                <img
+                        ng-src="{{DeviceWaveController.stripName(phone['available_colours'][0]['imagery'][0]['url'])}}"
+                        ng-mouseenter="DeviceWaveController.activePhone = phone.id"
+                        ng-mouseleave="DeviceWaveController.activePhone = ''"
+                        ng-class="{'active': DeviceWaveController.activePhone === phone.id,
+                    'sub-left':DeviceWaveController.activePhone === DeviceWaveController.phones[$index+1].id,
+                    'sub-right':DeviceWaveController.activePhone === DeviceWaveController.phones[$index-1].id}"
+                >
+            </a>
+
+        </li>
+    </ul>
+    <ul class="phones-flipped {{DeviceWaveController.running}}" >
+        <li  ng-repeat="phone in DeviceWaveController.phones"
+             ng-style="{ 'width' : 100/DeviceWaveController.phones.length+'%'}" >
+            <a ng-click="DeviceWaveController.clickHandler(phone.id)">
+                <img
+                        ng-src="{{DeviceWaveController.stripName(phone['available_colours'][0]['imagery'][0]['url'])}}"
+                        ng-mouseenter="DeviceWaveController.activePhone = phone.id"
+                        ng-mouseleave="DeviceWaveController.activePhone = ''"
+                        ng-class="{'active': DeviceWaveController.activePhone === phone.id,
+                    'sub-left':DeviceWaveController.activePhone === DeviceWaveController.phones[$index+1].id,
+                    'sub-right':DeviceWaveController.activePhone === DeviceWaveController.phones[$index-1].id}"
+                >
+            </a>
+
+        </li>
+    </ul>
+
+
+</div>

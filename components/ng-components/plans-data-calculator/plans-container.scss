@@ -1,0 +1,283 @@
+.row-plan-wrapper {
+    margin-top: $row-plan-wrapper-margin-top;
+}
+
+.data-calculator {
+    border-top: 4px solid $dc-calculator-border;
+    background-color: $dc-calculator-color;
+
+    h2 {
+        font-size: $data-calc-h2-size;
+    }
+
+    .planslider {
+        display: none;
+    }
+
+    .data-calc-slider-row {
+        margin-top: 15px;
+    }
+}
+
+.data-graph-wrapper {
+    position: relative;
+    background: $primary-colour-4;
+    margin-top: 10px;
+    padding: 0;
+    border-radius: 3px;
+    height: 600px;
+    padding-bottom: 10px;
+
+}
+
+.data-graph {
+    padding: 20px 10px;
+
+    h2 {
+        font-size: $dc-data-graph-h2-size;
+        font-weight: $dc-data-graph-h2-weight;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    .data-calc-chart-intro {
+        font-weight: $dc-data-graph-intro-weight;
+        margin-left: 5px;
+    }
+}
+
+.data-calc-chart-yaxis {
+    margin: 2px 8px 0 20px;
+    float: left;
+    color: $dc-data-graph-axis-text-color;
+
+    .data-calc-chart-yaxis-item {
+        padding: 0 0 46px;
+        text-align: right;
+
+        .last {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.data-calc-chart-bar {
+    margin: 8px 0 55px;
+    width: 15%;
+    height: 333px;
+    background: $dc-graph-bar;
+    float: left;
+    position: relative;
+
+    .usage {
+        float: right;
+    }
+
+    .data-calc-chart-shadow {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: $dc-graph-shadow;
+        z-index: 3;
+        position: absolute;
+    }
+
+    .data-calc-chart-current {
+        height: 0;
+        background: $dc-graph-bar-current;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        .data-calc-chart-label {
+
+            color: $dc-graph-label;
+            background: $dc-button-suggested-colour;
+            padding: 5px 12px;
+            border-radius: 5px;
+            text-align: left;
+            margin-top: 2px;
+            width: 135px;
+            top: -12px;
+            position: relative;
+            left: 115%;
+            span {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50px;
+                    right: 100%;
+                    margin-top: -47px;
+                    width: 0;
+                    height: 0;
+                    border-right: 8px solid $dc-button-suggested-colour;
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                }
+            }
+        }
+    }
+
+    .data-calc-chart-future {
+        width: 100%;
+        height: 0;
+        background: $dc-graph-bar-future;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+
+        .data-calc-chart-label {
+
+            color: $dc-graph-label;
+            background: $dc-button-futureproof-colour;
+            padding: 5px 12px;
+            border-radius: 5px;
+            text-align: left;
+            margin-top: 2px;
+            width: 135px;
+            position: relative;
+            top: -20px;
+            left: 115%;
+
+            span {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    margin-top: -4px;
+                    width: 0;
+                    height: 0;
+                    border-right: 10px solid $dc-button-futureproof-colour;
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                }
+            }
+        }
+    }
+}
+
+.btn-suggested {
+    padding: 5px;
+    a {
+        font-size: 17px;
+        width: 100%;
+    }
+}
+
+.btn-futureproof {
+    position: relative;
+    padding: 5px;
+    a {
+        font-size: 17px;
+        width: 100%;
+        padding-right: 61px;
+        &.future-proof-cta {
+            font-size: 17px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 8px 0;
+            width: 45px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            &::before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                background-color: $dc-button-futureproof-divider-colour;
+                height: 34px;
+                width: 1px;
+                top: 0;
+                left: 0;
+                margin-top: 3px;
+            }
+            &:hover {
+                background-color: $dc-future-proof-details-background;
+            }
+            &.detail-open {
+                background-color: darken($btn-sec-background-color, 10%);
+            }
+        }
+    }
+    &.future-proof-open {
+        a {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            //border-top: 1px solid $dc-button-futureproof-divider-colour;
+        }
+    }
+    &.future-proof-detail-disabled {
+        a {
+            padding-right: 0;
+        }
+    }
+    .future-proof-container {
+        overflow: hidden;
+        opacity: 1;
+        position: absolute;
+        bottom: 46px;
+        height: 515px;
+        width: 100%;
+        left: 0;
+        z-index: 4;
+        padding: 0 5px;
+        ng-include {
+            .ng-scope {
+                height: 100%;
+                .section {
+                    height: 100%;
+                }
+            }
+        }
+        .future-proof-detail {
+            background-color: $dc-future-proof-details-background;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px 5px;
+            h2 {
+                color: $dc-future-proof-details-font-colour;
+                font-size: 18px;
+                margin-left: 0;
+                text-align: center;
+            }
+            p {
+                color: $dc-future-proof-details-font-colour;
+                font-size: 14px;
+                line-height: 15px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                margin: 0 0 8px;
+            }
+        }
+        &.ng-hide-add {
+            transition: all linear .3s;
+            .future-proof-detail > * {
+                    display: none;
+            }
+        }
+        &.ng-hide-remove {
+            transition: all linear .3s;
+            .future-proof-detail > * {
+                display: none;
+            }
+        }
+        &.ng-hide {
+            line-height: 0;
+            opacity: 0;
+            padding: 0 10px;
+            .future-proof-detail > * {
+                display: none;
+            }
+        }
+    }
+}
+
+

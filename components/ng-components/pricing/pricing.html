@@ -1,0 +1,66 @@
+<div ng-if="$ctrl.offering">
+    <div class="pricing"
+         ng-class="{'no-discount': !$ctrl.offering.previousUpfrontPrice.net.value,
+                 'summary-price': $ctrl.layoutType !== 'details'}">
+        <div class="main-price">
+            <div class="price-holder">
+                <p class="cashback-title">
+                    <span ng-show="$ctrl.cashBack">{{ :: $ctrl.config.afterCashbackText }}</span>
+                    <span ng-show="$ctrl.tradeIn">{{ :: $ctrl.config.afterTradeinText }}</span>
+                </p>
+                <h4 class="product-price" ng-hide="$ctrl.layoutType !== 'details'">
+                    <uit-price-format
+                        number=":: $ctrl.offering.upfrontPrice.net.value - $ctrl.cashBack - $ctrl.tradeIn"
+                    ></uit-price-format>
+                </h4>
+                <h4 class="product-price" ng-show="$ctrl.layoutType !== 'details'">
+                    <uit-price-format
+                        number="$ctrl.offering.upfrontPrice.net.value"
+                    ></uit-price-format>
+                </h4>
+                <p class="product-saving">
+                    {{ :: $ctrl.config.saveText }}&nbsp;
+                    <uit-price-format
+                        number=":: $ctrl.offering.previousUpfrontPrice.net.value - $ctrl.offering.upfrontPrice.net.value"
+                    ></uit-price-format>
+                </p>
+            </div>
+            <p class="cashback-amount">
+                <span ng-show="$ctrl.cashBack">
+                    <uit-price-format
+                        number=":: $ctrl.cashBack"
+                    ></uit-price-format>&nbsp;{{ :: $ctrl.config.cashbackText }}
+                </span>
+                <span ng-show="$ctrl.tradeIn">
+                    <uit-price-format
+                        number=":: $ctrl.tradeIn"
+                    ></uit-price-format>&nbsp;{{ :: $ctrl.tradeinText }}
+                </span>
+            </p>
+        </div>
+        <div class="price-discount"  same-height="discount">
+            <p class="instore-price"
+               ng-class="{'not-visible': !$ctrl.cashBack && !$ctrl.tradeIn}"
+            >
+                {{ :: $ctrl.config.instorePriceText }}&nbsp;
+                <uit-price-format
+                    number=":: $ctrl.offering.upfrontPrice.net.value"
+                ></uit-price-format>
+            </p>
+            <div class="pricing-previous" ng-class="{'not-visible': !$ctrl.offering.previousUpfrontPrice.net.value}">
+                <b>
+                    {{ :: $ctrl.config.wasText }}&nbsp;
+                    <uit-price-format
+                        number=":: $ctrl.offering.previousUpfrontPrice.net.value"
+                    ></uit-price-format>&nbsp;
+                </b>
+                <span class="pricing-date">
+                    {{ :: $ctrl.config.leftBracket }}{{ :: $ctrl.config.fromText }}
+                    {{ :: $ctrl.offering.previousUpfrontPrice.startDate | date : $ctrl.config.dateFormat }}
+                    {{ :: $ctrl.config.toText }}
+                    {{ :: $ctrl.offering.previousUpfrontPrice.endDate | date : $ctrl.config.dateFormat }}{{ :: $ctrl.config.rightBracket }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

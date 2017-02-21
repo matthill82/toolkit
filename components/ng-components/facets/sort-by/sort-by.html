@@ -1,0 +1,6 @@
+<div class="drctv-prop-sort-by">
+    <label for="sortby">{{title}}</label>
+    <select name="sortby" id="sortby" ng-model="sortByOptionIndex" ng-change="sortByOptionUpdate()">
+        <option ng-repeat="option in sortByOptions" value="{{$index}}">{{option.label}}</option>
+    </select>
+</div>

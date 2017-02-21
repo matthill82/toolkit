@@ -1,0 +1,11 @@
+<div id="technical-specifications"  class="col-lg-12 col-md-12 technical-specifications dr-device-specs component">
+	<h1>{{specTitle}}</h1>
+	<div class="col-lg-12 col-md-12 ">
+		<div class="columns" ng-class="{'new-row': startNewRow($index, columnBreak) }" ng-repeat="(key, value) in dd.device.features | groupBy: 'category'">
+			<h4 class="compreResultTopicHead">{{key}}</h4>
+			<div ng-repeat="feature in value">
+				<p><span class="spec-key">{{feature.name}}: </span>{{feature.value}}</p>
+			</div>   	
+		</div>
+	</div>
+</div>

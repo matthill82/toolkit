@@ -1,0 +1,28 @@
+<div class="basketSummaryAdvanced">
+    <basket-summary-header header-title=":: $ctrl.advancedTitle" has-padding="true"></basket-summary-header>
+    <div
+        class="basketSummaryAdvanced__content basketSummaryAdvanced__content--scroll-y basketSummaryAdvanced__content--padding-top">
+        <div>
+            <basket-items
+                ng-if="$ctrl.newBasket[0]"
+                items="$ctrl.newBasket[0]"
+                icon="cwsicon cwsicon-arrow-menu-down"
+                pay-total-title="Pay Today"
+                fees-label="Fees & Extras"
+                fees-drop-label-1="Activation Fee"
+                fees-drop-label-2="Taxes"
+            ></basket-items>
+            <basket-items
+                ng-if="$ctrl.newBasket[1]"
+                items="$ctrl.newBasket[1]"
+                icon="cwsicon cwsicon-arrow-menu-down"
+                pay-total-title="Pay Monthly"
+                fees-label="Fees & Extras"
+                fees-drop-label-1="Activation Fee"
+                fees-drop-label-2="Taxes"
+            ></basket-items>
+        </div>
+    </div>
+    <basket-summary-checkout button-text=" :: $ctrl.advancedButtonText" button-path=":: $ctrl.advancedButtonPath"
+                             has-padding="true"></basket-summary-checkout>
+</div>

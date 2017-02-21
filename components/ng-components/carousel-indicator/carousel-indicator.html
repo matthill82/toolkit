@@ -1,0 +1,7 @@
+<ul class="carouselIndicator carouselIndicator--{{ $ctrl.indicatorTheme }}">
+    <li
+        class="carouselIndicator__item"
+        ng-class="{'carouselIndicator__item--on': $ctrl.CarouselContainerController.visible.indexOf($index) > -1}"
+        ng-repeat="i in [] | addNumbers : $ctrl.CarouselContainerController.items"
+    ></li>
+</ul>

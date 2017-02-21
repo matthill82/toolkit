@@ -1,0 +1,19 @@
+<div class="col-md-12 col-lg-12 dr-fasttrack-container component">
+	<div class="buttons-holder-div">
+		<h1>{{mainTitle}}</h1>
+		<div class="bs-glyphicons">
+			<ul class="bs-glyphicons-list">				
+				<li ng-repeat="qitem in itemjson">					
+					<div class="dr-fasttrack-icons component ng-isolate-scope"> 	
+						<a ng-click="goToLink(iconCta)">
+							<span ng-if="qitem.iconClass !== ''" class="{{qitem.iconClass |  htmlEntities}}" aria-hidden="true"></span>
+							<img ng-if="qitem.image !== ''" ng-src="{{qitem.image | htmlEntities}}"/>
+							<span class="title glyphicon-text">{{ qitem.title | htmlEntities}}</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+

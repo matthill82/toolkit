@@ -1,0 +1,18 @@
+.health-checks {
+    .health-checks-header {
+        border-bottom: 1px solid $health-checks-divider-color;
+        line-height: 30px;
+    }
+
+    .health-checks-scan {
+        background: $health-checks-btn-background;
+        border: 0;
+        color: $health-checks-btn-color;
+        font-size: $health-checks-btn-font-size;
+        margin: 10px 0;
+
+        &:disabled {
+            background: $health-checks-btn-disabled-background;
+        }
+    }
+}

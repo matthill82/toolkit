@@ -1,0 +1,12 @@
+<div class="col-md-4 col-lg-4 col-sm-4 product-slider">
+    <div class="swiper-container swiper-container-{{ :: bracket }}">
+        <div ng-show="devices.length > 1 && limit > 1" class="swiper-pagination swiper-pagination-{{ :: bracket }}"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="product in devices | limitTo: limit">
+                <vertical-slider-item
+                    vsi-product="{{ product }}"
+                ></vertical-slider-item>
+            </div>
+        </div>
+    </div>
+</div>

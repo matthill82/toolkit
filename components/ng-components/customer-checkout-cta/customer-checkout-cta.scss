@@ -1,0 +1,9 @@
+.customerCheckoutCta {
+    background-color: $customerCheckoutCta-button-border-color;
+    text-align: center;
+    padding: 5px;
+
+    &__button-disabled {
+        color: $customerCheckoutCta-button-disabled-color;
+    }
+}

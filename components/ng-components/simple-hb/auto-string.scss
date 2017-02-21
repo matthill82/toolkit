@@ -1,0 +1,24 @@
+.simpleHb {
+
+  .string {
+    &__error-icon {
+      &:before {
+        content: 'a';
+        position: absolute;
+        right: -4px;
+        font-family: 'CWSiconFont';
+        line-height: 1;
+        font-size: 14px;
+        -webkit-font-smoothing: antialiased;
+        color: $error-color;
+        margin-top: 10px;
+      }
+    }
+    &__error-message {
+      display: block;
+      color: $error-color;
+      margin-bottom: 5px;
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+<div class="hb data image">
+    <label class="hb control-label">
+        <span ng-if="node.required" class="simpleHb__asterix">*</span>
+        {{node.title | translate | emptyTranslate}}
+    </label>
+    <div class="hb value">
+        <span class="hb error" ng-show=node.error>{{node.validationMessage | translate}}</span>
+        <signature-pad dataurl="node.value" height="220" width="568"></signature-pad>
+    </div>
+    <div class="hb description">
+        {{node.description}}
+    </div>
+</div>

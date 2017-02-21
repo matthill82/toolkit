@@ -1,0 +1,55 @@
+<div class="http-logger-viewer" ng-switch=":: $ctrl.isEnabled ? 'ENABLED' : 'DISABLED'">
+    <div ng-switch-when="ENABLED">
+        <div class="row">
+            <div class="col-xs-7 ellipsis">
+                <a
+                    ng-class="{asc: $ctrl.orderBy == 'url', desc: $ctrl.orderBy == '-url'}"
+                    ng-click="$ctrl.orderBy = 'url'"
+                >URL</a>
+                <a
+                    ng-click="$ctrl.setUrlFilter()"
+                    ng-if="$ctrl.filter.hostname"
+                    title="Remove URL filter"
+                >(Showing {{ $ctrl.filter.hostname }}{{ $ctrl.filter.pathname }})</a>
+            </div>
+            <div class="col-xs-2">
+                <a
+                    ng-class="{asc: $ctrl.orderBy == 'time', desc: $ctrl.orderBy == '-time'}"
+                    ng-click="$ctrl.orderBy = 'time'"
+                >Response Time</a>
+            </div>
+            <div class="col-xs-3">
+                <a
+                    ng-class="{asc: $ctrl.orderBy == 'status', desc: $ctrl.orderBy == '-status'}"
+                    ng-click="$ctrl.orderBy = 'status'"
+                >Response Code</a>
+                <a
+                    ng-click="$ctrl.filter.status = undefined"
+                    ng-if="$ctrl.filter.status"
+                    title="Remove Response Code filter"
+                >(Showing {{ $ctrl.filter.status}})</a>
+            </div>
+        </div>
+        <div
+            class="row"
+            ng-repeat="log in $ctrl.log | filter : $ctrl.filter | orderBy : $ctrl.orderBy"
+        >
+            <div class="col-xs-7 ellipsis">
+                <a ng-click="$ctrl.setUrlFilter(log)">{{ :: log.method }} {{ :: log.url }}</a>
+            </div>
+            <div class="col-xs-2">
+                {{ :: log.time }}ms
+            </div>
+            <div class="col-xs-3">
+                <a ng-click="$ctrl.filter.status = $ctrl.filter.status == log.status ? undefined : log.status">
+                    {{ :: log.status > -1 ? log.status : '' }}
+                    {{ :: log.status > -1 ? log.statusText : 'Application Error' }}
+                </a>
+                <health-check-indicator level=":: $ctrl.getResponseTimeType(log)"></health-check-indicator>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="DISABLED">
+        The HTTP Logger is not enabled.
+    </div>
+</div>
